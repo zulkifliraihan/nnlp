@@ -64,7 +64,7 @@
                         @isset($ref)
                         <div class="input-form mt-3">
                             <label class="flex flex-col sm:flex-row"> Referral </label>
-                            <input disabled value="{{ $ref }}" type="text" name="ref"
+                            <input id="ref_field" disabled value="{{ $ref }}" type="text" name="ref"
                                 class="intro-x login__input input input--lg border border-gray-300 block mt-2">
                         </div>
                         @endisset

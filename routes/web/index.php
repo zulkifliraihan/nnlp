@@ -10,7 +10,7 @@
     
         // Route::post('/login', 'auth\LoginController@login')->name('auth.login');
         // Route::post('/logout', 'auth\LoginController@logout')->name('auth.logout');
-        Route::post('/pendaftaran', 'Auth\RegisterController@create')->name('acara.daftar');
+        Route::post('/pendaftaran', 'Auth\RegisterController@store')->name('acara.daftar');
     });
     
     require 'auth/index.php';

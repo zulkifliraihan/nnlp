@@ -33,7 +33,8 @@ class RegisterController extends Controller
             'nama_lengkap' => "required",
             'email' => "required|unique:users",
             'no_hp' => "required",
-            'nama_instansi' => "required"
+            'nama_instansi' => "required",
+            'ref' => "sometimes",
         ));
 
         if ($validator->fails()) {
@@ -49,11 +50,18 @@ class RegisterController extends Controller
             'name' => $data['nama_lengkap'],
             'email' => $data['email'],
             'password' => Hash::make($ref),
-            'hp' => $data['hp'],
+            'hp' => $data['no_hp'],
             'instansi' => $data['nama_instansi'],
             'ref' => $ref,
-            'ref' => $ref,
+            'ref_by' => isset($data['ref']) ? $data['ref'] : null,
         );
+
+        $user = User::firstOrCreate($input);
+
+        return response()->json([
+            'status'    => "ok",
+            'messages' => "Berhasil registrasi acara",
+        ], 200);
 
     }
 

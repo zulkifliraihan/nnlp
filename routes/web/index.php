@@ -16,3 +16,4 @@
     });
     
     require 'auth/index.php';
+    require 'admin/index.php';

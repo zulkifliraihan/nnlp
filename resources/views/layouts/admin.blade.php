@@ -13,10 +13,12 @@
 
         <!-- BEGIN: CSS Assets-->
         <link rel="stylesheet" href="{{ asset('mone/css/app.css') }}" />
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.css"/>
         <!-- END: CSS Assets-->
 
         <!-- BEGIN: JS Assets-->
         <script src="{{ asset('jquery/jquery.min.js') }}"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.js"></script>
         <!-- END: JS Assets-->
     </head>
     <!-- END: Head -->

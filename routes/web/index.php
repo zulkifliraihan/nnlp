@@ -5,6 +5,7 @@
     });
 
     Route::get('/referral/peserta', 'ReferralController@index')->name('referral.pendaftaran');
+    Route::get('/referral/terundang', 'ReferralController@terundang')->name('referral.terundang');
 
     Route::prefix('acara')->group(function () {
         // Route::get('/login', 'auth\LoginController@index')->name('view.login');

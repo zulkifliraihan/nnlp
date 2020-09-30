@@ -21,6 +21,9 @@ License: You must have a valid license purchased only from themeforest(the above
         <!-- BEGIN: CSS Assets-->
         <link rel="stylesheet" href="{{asset('mone/css/app.css')}}" />
         <!-- END: CSS Assets-->
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
+        <script src="{{ asset('jquery/jquery.min.js') }}"></script>
     </head>
     <!-- END: Head -->
     <body class="app">
@@ -72,7 +75,6 @@ License: You must have a valid license purchased only from themeforest(the above
         <!-- END: Dark Mode Switcher-->
         <!-- BEGIN: JS Assets-->
         <script src="{{asset('mone/js/app.js')}}"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
         <!-- END: JS Assets-->
     </body>
 </html>

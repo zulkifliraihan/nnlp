@@ -44,4 +44,13 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    public function mengundang(){
+        return $this->hasMany('App\Models\User','ref_by','ref');
+    }
+
+    public function diundang(){
+        return $this->hasOne('App\Models\User','ref','ref_by');
+    }
 }

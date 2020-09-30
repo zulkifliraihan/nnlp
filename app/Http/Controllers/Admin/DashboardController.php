@@ -12,6 +12,9 @@ use Illuminate\Support\Facades\Validator;
 use App\Models\User;
 use App\Models\ReferrCount;
 
+use App\Exports\UsersExport;
+use Maatwebsite\Excel\Facades\Excel;
+
 class DashboardController extends Controller
 {
     public function index()
@@ -26,5 +29,10 @@ class DashboardController extends Controller
         );
 
         return View::make('pages.admin.dashboard', $data);
+    }
+
+    public function export() 
+    {
+        return Excel::download(new UsersExport, 'Export User Data Referral Program.xlsx');
     }
 }

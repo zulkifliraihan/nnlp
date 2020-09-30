@@ -167,8 +167,10 @@
                         <option value="50">50 Data</option>
                         <option value="-1">All</option>
                     </select> 
-                    <button class="button box flex items-center bg-green-800 text-white dark:text-white-300"> <i
+                    <a href="{{ route('admin.export.user') }}" target="_blank">
+                        <button class="button box flex items-center bg-green-800 text-white dark:text-white-300"> <i
                             data-feather="file-text" class="hidden sm:block w-4 h-4 mr-2"></i> Export to Excel </button>
+                    </a>
                 </div>
             </div>
             <div class="intro-y overflow-auto lg:overflow-visible mt-8 sm:mt-0 my-3">

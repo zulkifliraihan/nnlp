@@ -4,6 +4,8 @@
         return redirect('acara/pendaftaran');
     });
 
+    Route::get('/referral/peserta', 'ReferralController@index')->name('referral.pendaftaran');
+
     Route::prefix('acara')->group(function () {
         // Route::get('/login', 'auth\LoginController@index')->name('view.login');
         Route::get('/pendaftaran', 'Auth\RegisterController@index')->name('acara.pendaftaran');

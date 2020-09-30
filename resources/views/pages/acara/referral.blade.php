@@ -17,6 +17,7 @@
     <button class="button text-white bg-theme-1 shadow-md ml-2"> <i class="w-4 h-4" data-feather="copy"></i> </button>
 </div>
 <div class="grid grid-cols-12 gap-6 mt-5" id="terundang">
+    <div v-cloak style="display: none">{{ "wow" }}</div>
     <div class="intro-y col-span-12 flex flex-wrap sm:flex-no-wrap mt-2">
         <div class="hidden md:block text-gray-600">30 orang mendaftar menggunakan link yang Anda bagikan</div>
         <div class="w-full sm:w-auto mt-3 sm:mt-0 ml-auto sm:ml-auto md:ml-auto">
@@ -45,13 +46,13 @@
     <!-- BEGIN: Pagination -->
     <div class="intro-y col-span-12 flex flex-wrap sm:flex-row sm:flex-no-wrap items-center">
         <ul class="pagination">
-            <li>
-                <a class="pagination__link pagination__link--active" v-for="page_index in paginate_total" @click.prevent="updateCurrent(page_index + 1)">
+            <li v-for="page_index in paginate_total" @click.prevent="updateCurrent(page_index + 1)">
+                <a class="pagination__link pagination__link--active">
                     @{{ page_index + 1 }} 
                 </a>
             </li>
-        {{-- </ul>
-        <select class="w-20 input box mt-3 sm:mt-0">
+        </ul>
+        {{-- <select class="w-20 input box mt-3 sm:mt-0">
             <option>10</option>
             <option>25</option>
             <option>35</option>

@@ -21,7 +21,7 @@ class UserSeeder extends Seeder
     {
         $faker = Faker::create('id_ID');
  
-    	for($i = 1; $i <= 1000; $i++){
+    	for($i = 1; $i <= 200; $i++){
             
             $ref = $this->generate_referral(6);
 

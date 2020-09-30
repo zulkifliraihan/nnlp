@@ -13,8 +13,7 @@
         <!-- BEGIN: Account Menu -->
         <div class="intro-x dropdown w-8 h-8">
             <div class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in">
-                <img alt="img"
-                    src="https://avatars.dicebear.com/api/initials/Admin Lpkn.svg">
+                <img alt="img" src="https://avatars.dicebear.com/api/initials/Admin Lpkn.svg">
             </div>
             <div class="dropdown-box w-56">
                 <div class="dropdown-box__content box bg-theme-38 dark:bg-dark-6 text-white">
@@ -32,6 +31,8 @@
         </div>
         <!-- END: Account Menu -->
     </div>
+
+
     <!-- END: Top Bar -->
     <div class="grid grid-cols-12 gap-6">
         <div class="col-span-12 xxl:col-span-9 grid grid-cols-12 gap-6">
@@ -56,7 +57,8 @@
                                                 class="w-4 h-4"></i> </div> --}}
                                     </div>
                                 </div>
-                                <div class="text-3xl font-bold leading-8 mt-6">{{ number_format($total_user, 0, ',', '.') }}</div>
+                                <div class="text-3xl font-bold leading-8 mt-6">
+                                    {{ number_format($total_user, 0, ',', '.') }}</div>
                                 <div class="text-base text-gray-600 mt-1">Total User</div>
                             </div>
                         </div>
@@ -92,30 +94,31 @@
                         @forelse ($users as $user)
                         <tr class="intro-x">
                             <td class="w-40">
-                                @if(isset($user->mengundang) && !empty($user->mengundang))    
+                                @if(isset($user->mengundang) && !empty($user->mengundang))
                                 <div class="flex">
                                     @php
-                                        $counter = 0;  
+                                    $counter = 0;
                                     @endphp
                                     @forelse ($user->mengundang as $mengundang)
-                                        @if ($counter > 2)
-                                            @php
-                                                break;
-                                            @endphp
-                                        @else
-                                            <div class="w-10 h-10 image-fit zoom-in">
-                                                <img alt="img" class="tooltip rounded-full"
-                                                    src="https://avatars.dicebear.com/api/initials/{{ $mengundang->name }}.svg" title="{{ $mengundang->name }}">
-                                            </div>
-                                            @php
-                                                $counter++;
-                                            @endphp
-                                        @endif
+                                    @if ($counter > 2)
+                                    @php
+                                    break;
+                                    @endphp
+                                    @else
+                                    <div class="w-10 h-10 image-fit zoom-in">
+                                        <img alt="img" class="tooltip rounded-full"
+                                            src="https://avatars.dicebear.com/api/initials/{{ $mengundang->name }}.svg"
+                                            title="{{ $mengundang->name }}">
+                                    </div>
+                                    @php
+                                    $counter++;
+                                    @endphp
+                                    @endif
                                     @empty
-                                        
+
                                     @endforelse
-                                    
-                                    @if ($counter > 2 && ($user->mengundang->count() - $counter) != 0)     
+
+                                    @if ($counter > 2 && ($user->mengundang->count() - $counter) != 0)
                                     <div class="w-10 h-10 image-fit">
                                         <div class="rounded-full text-center">
                                             {{ $user->mengundang->count() - $counter }} +
@@ -139,18 +142,18 @@
                             <td class="table-report__action w-56">
                                 <div class="flex justify-center items-center">
                                     @isset($user->diundang->name)
-                                        {{ $user->diundang->name }}
+                                    {{ $user->diundang->name }}
                                     @endisset
                                 </div>
                             </td>
                         </tr>
                         @empty
-                            
+
                         @endforelse
                     </tbody>
                 </table>
             </div>
-            {{-- <div class="intro-y flex flex-wrap sm:flex-row sm:flex-no-wrap items-center mt-3">
+            <div class="intro-y flex flex-wrap sm:flex-row sm:flex-no-wrap items-center mt-3">
                 <ul class="pagination">
                     <li>
                         <a class="pagination__link" href=""> <i class="w-4 h-4" data-feather="chevrons-left"></i> </a>
@@ -176,10 +179,10 @@
                     <option>35</option>
                     <option>50</option>
                 </select>
-            </div> --}}
-        </div>
-        <!-- END: Weekly Top Products -->
+            </div>
+            <!-- END: Weekly Top Products -->
 
+        </div>
     </div>
 </div>
 <!-- END: Content -->

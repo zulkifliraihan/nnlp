@@ -90,6 +90,8 @@
             }
         });
 
+        $('#ref_field').removeAttr('disabled');
+
         $.ajax({
             type: 'post',
             url: $(this).attr("action"),
@@ -100,6 +102,7 @@
             success: function(data) {
                 if(data.status == "ok"){
                     toastr["success"](data.messages);
+                    $('#ref_field').attr('disabled', 'disbled');
                 }
             },
             error: function(data){

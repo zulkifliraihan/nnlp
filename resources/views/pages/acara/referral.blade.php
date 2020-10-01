@@ -3,7 +3,7 @@
 <!-- BEGIN: Top Bar -->
 <div class="top-bar">
     <!-- BEGIN: Breadcrumb -->
-    <div class="-intro-x breadcrumb mr-auto hidden sm:flex"> <a href="" class="">Acara Gratis</a> <i data-feather="chevron-right" class="breadcrumb__icon"></i> <a href="" class="breadcrumb--active">Seminar Nasional</a> </div>
+    <div class="-intro-x breadcrumb mr-auto hidden sm:flex"> <a href="#" class="">Acara Gratis</a> <i data-feather="chevron-right" class="breadcrumb__icon"></i> <a href="#" class="breadcrumb--active">Seminar Nasional</a> </div>
     <!-- END: Breadcrumb -->
 </div>
 <!-- END: Top Bar -->
@@ -12,7 +12,7 @@
 </h2>
 <div class="flex flex-wrap sm:flex-no-wrap w-full sm:w-auto mt-8 sm:mt-0 sm:ml-auto md:ml-0">
     <div class="w-5/6 sm:w-5/6 lg:w-1/2 relative text-gray-700 dark:text-gray-300">
-        <input type="text" class="input w-full box placeholder-theme-13" placeholder="Your Referral" value="https://acara.com/acara/daftar?ref=xr5ty1" id="ref_link">
+        <input type="text" class="input w-full box placeholder-theme-13" placeholder="Your Referral" value="{{ route('acara.pendaftaran') }}?ref={{ $ref }}" id="ref_link">
     </div>
     <button class="button text-white bg-theme-1 shadow-md ml-2" id="button_copy"> <i class="w-4 h-4" data-feather="copy"></i> </button>
 </div>
@@ -124,7 +124,7 @@
         },
         data: {
             current: 1,
-            terundang: {!! json_encode($data) !!},
+            terundang: {!! json_encode($mengundang) !!},
             paginate: 12,
             paginate_total: 0,
             search_filter: '',

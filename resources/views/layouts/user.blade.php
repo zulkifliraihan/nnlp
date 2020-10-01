@@ -20,10 +20,14 @@ License: You must have a valid license purchased only from themeforest(the above
         <title>Referral</title>
         <!-- BEGIN: CSS Assets-->
         <link rel="stylesheet" href="{{asset('mone/css/app.css')}}" />
+        <link rel="stylesheet" href="{{asset('mone/css/perfect-scrollbar.css')}}" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/rrssb@1.14.0/css/rrssb.css" integrity="sha256-s4zpIQ3pRcSZ1dlTRAD+Rwi4lJWJGm8BuPJY6WeogTY=" crossorigin="anonymous">
         <!-- END: CSS Assets-->
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
         <script src="{{ asset('jquery/jquery.min.js') }}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/rrssb@1.14.0/js/rrssb.min.js" integrity="sha256-xrFsHw7ZJJpMLC2mt+vC4lrvWZjduLMR4xKpz+ICR7Q=" crossorigin="anonymous"></script>
+        <script src="{{ asset('mone/js/perfect-scrollbar.min.js') }}"></script>
     </head>
     <!-- END: Head -->
     <body class="app">

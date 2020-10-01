@@ -15,13 +15,11 @@ class UserSeeder extends Seeder
      * @return void
      */
 
-    private $last_ref = "0BNTCV";
-
     public function run()
     {
         $faker = Faker::create('id_ID');
  
-    	for($i = 1; $i <= 200; $i++){
+    	for($i = 1; $i <= 100; $i++){
             
             $ref = $this->generate_referral(6);
 
@@ -33,11 +31,9 @@ class UserSeeder extends Seeder
                     'hp' =>"08387192083". $i,
                     'instansi' => "LPKN",
                     'ref' => $ref,
-                    'ref_by' => $this->last_ref
+                    'ref_by' => "ZJC6M4"
                 ]
             );
-
-            $this->last_ref = $ref;
  
     	}
     }

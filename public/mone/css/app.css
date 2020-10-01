@@ -38490,8 +38490,9 @@ video {
 .pagination li .pagination__link.pagination__link--active {
   box-shadow: 0px 3px 20px #0000000b;
   --bg-opacity: 1;
-  background-color: #fff;
-  background-color: rgba(255, 255, 255, var(--bg-opacity));
+  background-color: #2e51bb;
+  background-color: rgba(46, 81, 187, var(--bg-opacity));
+  color: #fff;
   border-radius: 0.375rem;
   position: relative;
   font-weight: 500;

@@ -18,7 +18,11 @@ class LandingController extends Controller
 
         $params = $request->all();
 
-        $data = array();
+        $total_user = User::query()->count();
+
+        $data = array(
+            'total_user' => $total_user
+        );
 
         if(isset($params['ref'])){
             $data['ref'] = $params['ref'];

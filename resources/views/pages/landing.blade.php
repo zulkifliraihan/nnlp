@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <!-- Title -->
-  <title>LPKN | Seminar Gratis</title>
+  <title>Classic Business | Front - Responsive Website Template</title>
 
   <!-- Required Meta Tags Always Come First -->
   <meta charset="utf-8">
@@ -41,9 +41,9 @@
               <span class="u-header__navbar-brand-text">LP<span class="text-danger">K</span>N</span>
             </a>
             <!-- End Logo -->
-            
+
             <!-- Responsive Toggle Button -->
-            {{-- <button type="button" class="navbar-toggler btn u-hamburger u-hamburger--white"
+            <button type="button" class="navbar-toggler btn u-hamburger u-hamburger--white"
                     aria-label="Toggle navigation"
                     aria-expanded="false"
                     aria-controls="navBar"
@@ -52,7 +52,7 @@
               <span id="hamburgerTrigger" class="u-hamburger__box">
                 <span class="u-hamburger__inner"></span>
               </span>
-            </button> --}}
+            </button>
             <!-- End Responsive Toggle Button -->
           </div>
 
@@ -166,8 +166,8 @@
             <div class="w-100 h-100 d-none d-lg-inline-block bg-primary u-hero-v1__last">
               <div class="u-hero-v1__last-inner">
                 <h3 class="h3 text-white">
-                  <strong>Jumlah peserta:</strong>
-                  <span>12093 orang</span>
+                  <strong>Jumlah peserta:</strong> <br>
+                  <span>{{ isset($total_user) ? number_format($total_user, 0 ,".", ",") : 0 }} orang</span>
                 </h3>
                 {{-- <p class="text-white-70 mb-0">Let visitors to view your content from their choice of device.</p> --}}
               </div>
@@ -388,10 +388,10 @@
 
       @if(!session("lpkn_ref_email"))
       <div class="row">
-          <div class="col-md-8 offset-md-2">
+          <div class="col-8 offset-2">
             <form id="acaraForm" action="{{ route("acara.daftar") }}" method="POST">
                 <div class="row">
-                    <div class="form-group col-md-6">
+                    <div class="form-group col-6">
                         <label for="exampleFormControlInput1">Nama Lengkap</label>
                         <div class="input-group input-group-sm mb-3">
                             <div class="input-group-prepend">
@@ -400,7 +400,7 @@
                             <input type="text" name="nama_lengkap" class="form-control" placeholder="Masukkan Nama">
                         </div>
                     </div>
-                    <div class="form-group col-md-6">
+                    <div class="form-group col-6">
                         <label for="exampleFormControlInput1">Email address</label>
                         <div class="input-group input-group-sm mb-3">
                             <div class="input-group-prepend">
@@ -409,7 +409,7 @@
                             <input type="text" name="email" class="form-control" placeholder="user@example.com">
                         </div>
                     </div>
-                    <div class="form-group col-md-6">
+                    <div class="form-group col-6">
                         <label for="exampleFormControlInput1">No. Handphone</label>
                         <div class="input-group input-group-sm mb-3">
                             <div class="input-group-prepend">
@@ -418,7 +418,7 @@
                             <input type="text" name="no_hp" class="form-control" placeholder="0821...">
                         </div>
                     </div>
-                    <div class="form-group col-md-6">
+                    <div class="form-group col-6">
                         <label for="exampleFormControlInput1">Instansi</label>
                         <div class="input-group input-group-sm mb-3">
                             <div class="input-group-prepend">

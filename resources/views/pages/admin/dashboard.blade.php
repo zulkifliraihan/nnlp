@@ -255,20 +255,18 @@
 <!-- END: Content -->
 
 <script>
-    $(document).ready(function(){
-        var table = $('#userTableData').DataTable({
-            dom : 'Brtp',
-            aaSorting: [],
-            pageLength: 5
-        });
+    var table = $('#userTableData').DataTable({
+        dom : 'Brtp',
+        aaSorting: [],
+        pageLength: 5
+    });
 
-        $('#db-search').keyup(function(){
-            table.search( $(this).val() ).draw();
-        });
+    $('#db-search').keyup(function(){
+        table.search( $(this).val() ).draw();
+    });
 
-        $('#db-jumlah').on('change', function(){
-            table.page.len($(this).val()).draw();
-        });
+    $('#db-jumlah').on('change', function(){
+        table.page.len($(this).val()).draw();
     });
 </script>
 @endsection

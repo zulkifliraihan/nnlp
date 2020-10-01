@@ -13250,6 +13250,11 @@ video {
   background-color: rgba(42, 67, 101, var(--bg-opacity));
 }
 
+.bg-blue-primary{
+  --bg-opacity: 1;
+  background-color: #377DFF;
+}
+
 .bg-indigo-100{
   --bg-opacity: 1;
   background-color: #ebf4ff;

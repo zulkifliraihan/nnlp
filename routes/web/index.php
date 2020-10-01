@@ -1,8 +1,6 @@
 <?php
 
-    Route::get('/', function(){
-        return redirect('acara/pendaftaran');
-    });
+    Route::get('/', 'LandingController@index')->name('landing');
 
     Route::get('/referral/peserta', 'ReferralController@index')->name('referral.pendaftaran');
     Route::get('/referral/terundang', 'ReferralController@terundang')->name('referral.terundang');

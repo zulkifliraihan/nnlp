@@ -440,7 +440,7 @@
                     @endisset
                 </div>
                 @isset($ref)
-                    <span>Referral: <span class="text-primary">{{$ref}}</span></span>
+                    <span class="float-left">Referral: <span class="text-primary">{{$ref}}</span></span>
                 @endisset
                 <button type="submit" class="btn btn-primary btn-sm float-right">Daftar</button>
               </form>

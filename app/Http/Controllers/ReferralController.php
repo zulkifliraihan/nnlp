@@ -12,9 +12,14 @@ use App\Models\User;
 
 class ReferralController extends Controller
 {
+
     public function index()
-    {   
-        $user = User::with('mengundang:ref_by,name,instansi','diundang')->where('email', 'eriksantiago@gmail.com')->first();
+    {      
+        if(!session("lpkn_ref_email")){
+            return redirect()->route('acara.pendaftaran');
+        }
+
+        $user = User::with('mengundang:ref_by,name,instansi','diundang')->where('email', session('lpkn_ref_email'))->first();
 
         $data = [
             "msg_wa" => "Acara Gratis!\n\n".strtoupper("*Seminar Daring Membangun Ekonomi dan Keuangan Digital Indonesia Tahun 2025*")."\n\n_Segera mendaftar dengan link di bawah ini!_\n\n",
@@ -28,7 +33,7 @@ class ReferralController extends Controller
 
     public function terundang()
     {
-        $user = User::with('mengundang:ref_by,name,instansi','diundang')->where('email', 'eriksantiago@gmail.com')->first();
+        $user = User::with('mengundang:ref_by,name,instansi','diundang')->where('email', session('lpkn_ref_email'))->first();
 
         return response($user['mengundang']);
     }

@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers\Acara;
 
 use View;
+use Session;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -13,8 +14,13 @@ use App\Models\User;
 
 class RegisterController extends Controller
 {
+    
     public function index(Request $request)
     {
+        if(session("lpkn_ref_email")){
+            return redirect()->route('referral.pendaftaran');
+        }
+
         $params = $request->all();
 
         $data = array();
@@ -58,9 +64,12 @@ class RegisterController extends Controller
 
         $user = User::firstOrCreate($input);
 
+        Session::put('lpkn_ref_email', $data['email']);
+
         return response()->json([
             'status'    => "ok",
             'messages' => "Berhasil registrasi acara",
+            'route' => route('referral.pendaftaran')
         ], 200);
 
     }

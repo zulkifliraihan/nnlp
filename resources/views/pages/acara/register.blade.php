@@ -101,14 +101,14 @@
             contentType: false,
             success: function(data) {
                 if(data.status == "ok"){
-                    toastr["success"](data.messages);
                     $('#ref_field').attr('disabled', 'disbled');
+                    window.location.href = data.route;
                 }
             },
             error: function(data){
                 var data = data.responseJSON;
                 if(data.status == "fail"){
-                    toastr["error"](data.messages);
+                    // toastr["error"](data.messages);
                 }
             }
         });

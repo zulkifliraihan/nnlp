@@ -12,7 +12,7 @@
 </h2>
 <div class="flex flex-wrap sm:flex-no-wrap w-full sm:w-auto mt-8 sm:mt-0 sm:ml-auto md:ml-0">
     <div class="w-5/6 sm:w-5/6 lg:w-1/2 relative text-gray-700 dark:text-gray-300">
-        <input type="text" class="input w-full box placeholder-theme-13" placeholder="Your Referral" value="{{ route('acara.pendaftaran') }}?ref={{ $user['ref'] }}" id="ref_link">
+        <input type="text" class="input w-full box placeholder-theme-13" placeholder="Your Referral" value="{{ route('landing') }}?ref={{ $user['ref'] }}" id="ref_link">
     </div>
     <button class="button text-white bg-theme-1 shadow-md ml-2" id="button_copy"> <i class="w-4 h-4" data-feather="copy"></i> </button>
 </div>

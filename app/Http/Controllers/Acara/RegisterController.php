@@ -14,16 +14,13 @@ use App\Models\User;
 
 class RegisterController extends Controller
 {
-    public function __construct(){
-        if(!session("lpkn_ref_email")){
-            return redirect()->route('acara.pendaftaran');
-        }else{
-            return redirect()->route('referral.pendaftaran');
-        }
-    }
     
     public function index(Request $request)
     {
+        if(session("lpkn_ref_email")){
+            return redirect()->route('referral.pendaftaran');
+        }
+
         $params = $request->all();
 
         $data = array();

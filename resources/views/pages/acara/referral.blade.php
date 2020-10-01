@@ -26,10 +26,10 @@
     </div>
     {{-- END: Button share --}}
     <div class="intro-y col-span-12 flex flex-wrap sm:flex-no-wrap mt-2">
-        <div class="hidden md:block text-gray-600">@{{ terundang.length }} orang mendaftar menggunakan link yang Anda bagikan</div>
+        <div class="block text-gray-600"><span class="text-orange-600">@{{ terundang.length }}</span> orang mendaftar menggunakan link yang Anda bagikan</div>
         <div class="w-full sm:w-auto mt-3 sm:mt-0 ml-auto sm:ml-auto md:ml-auto">
-            <div class="w-56 relative text-gray-700 dark:text-gray-300">
-                <input type="text" class="input w-56 box pr-10 placeholder-theme-13" placeholder="Search..." v-model="search_filter" @keyup="updatePaginate">
+            <div class="w-full md:w-56 relative text-gray-700 dark:text-gray-300">
+                <input type="text" class="input w-full md:w-56 box pr-10 placeholder-theme-13" placeholder="Search..." v-model="search_filter" @keyup="updatePaginate">
                 <i class="w-4 h-4 absolute my-auto inset-y-0 mr-3 right-0" data-feather="search"></i> 
             </div>
         </div>

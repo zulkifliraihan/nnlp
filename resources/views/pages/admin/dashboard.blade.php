@@ -68,7 +68,7 @@
                                 </div>
                                 <div class="text-3xl font-bold leading-8 mt-6">
                                     {{ number_format($total_user, 0, ',', '.') }}</div>
-                                <div class="text-base text-gray-600 mt-1">Total User</div>
+                                <div class="text-base text-gray-600 mt-1">Total Pendaftar</div>
                             </div>
                             
                         </div>
@@ -232,7 +232,8 @@
     var table = $('#userTableData').DataTable({
         dom : 'Brtp',
         aaSorting: [],
-        pageLength: 5
+        pageLength: 5,
+        order: [[ 2, "desc" ]]
     });
 
     $('#db-search').keyup(function(){

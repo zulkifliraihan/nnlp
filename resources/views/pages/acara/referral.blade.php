@@ -12,12 +12,19 @@
 </h2>
 <div class="flex flex-wrap sm:flex-no-wrap w-full sm:w-auto mt-8 sm:mt-0 sm:ml-auto md:ml-0">
     <div class="w-5/6 sm:w-5/6 lg:w-1/2 relative text-gray-700 dark:text-gray-300">
-        <input type="text" class="input w-full box placeholder-theme-13" placeholder="Your Referral" value="{{ route('acara.pendaftaran') }}?ref={{ $ref }}" id="ref_link">
+        <input type="text" class="input w-full box placeholder-theme-13" placeholder="Your Referral" value="{{ route('acara.pendaftaran') }}?ref={{ $user['ref'] }}" id="ref_link">
     </div>
     <button class="button text-white bg-theme-1 shadow-md ml-2" id="button_copy"> <i class="w-4 h-4" data-feather="copy"></i> </button>
 </div>
 <div class="grid grid-cols-12 gap-6 mt-5" id="terundang">
     <div v-cloak style="display: none">{{ "wow" }}</div>
+    {{-- BEGIN: Button share --}}
+    <div class="intro-y col-span-12  flex flex-wrap sm:flex-no-wrap mt-2">
+        <a href="https://api.whatsapp.com/send?text={{ urlencode($msg_wa.route('acara.pendaftaran').'?ref='.$user['ref']) }}" class="button text-white bg-green-600 shadow-md mr-2" id="button_copy"> WhatsApp </a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('acara.pendaftaran').'?ref='.$user['ref']) }}&quote={{ urlencode($msg_fb.route('acara.pendaftaran').'?ref='.$user['ref']) }}" class="button text-white bg-blue-800 shadow-md mr-2" id="button_copy"> Facebook </a>
+        <a href="https://twitter.com/intent/tweet?text={{ urlencode($msg_twitter.route('acara.pendaftaran').'?ref='.$user['ref']) }}" class="button text-white bg-blue-500 shadow-md mr-2" id="button_copy"> Twitter </a>
+    </div>
+    {{-- END: Button share --}}
     <div class="intro-y col-span-12 flex flex-wrap sm:flex-no-wrap mt-2">
         <div class="hidden md:block text-gray-600">@{{ terundang.length }} orang mendaftar menggunakan link yang Anda bagikan</div>
         <div class="w-full sm:w-auto mt-3 sm:mt-0 ml-auto sm:ml-auto md:ml-auto">
@@ -124,7 +131,7 @@
         },
         data: {
             current: 1,
-            terundang: {!! json_encode($mengundang) !!},
+            terundang: {!! json_encode($user['mengundang']) !!},
             paginate: 12,
             paginate_total: 0,
             search_filter: '',

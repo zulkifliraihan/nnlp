@@ -8,7 +8,7 @@
 </div>
 <!-- END: Top Bar -->
 <h2 class="intro-y text-lg font-medium mt-10 mb-5">
-    Erik Santiago
+    {{ $user->name }}
 </h2>
 <div class="flex flex-wrap sm:flex-no-wrap w-full sm:w-auto mt-8 sm:mt-0 sm:ml-auto md:ml-0">
     <div class="w-5/6 sm:w-5/6 lg:w-1/2 relative text-gray-700 dark:text-gray-300">

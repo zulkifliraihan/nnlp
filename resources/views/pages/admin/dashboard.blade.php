@@ -73,13 +73,28 @@
                             
                         </div>
                     </div>
+
+                    @php
+                        $color = array(
+                            'bg-theme-12',
+                            'bg-theme-1',
+                            'bg-theme-9'
+                        );
+                        $rank = array(
+                            'st',
+                            'nd',
+                            'rd'
+                        );
+                    @endphp
+
+                    @forelse ($pemenang as $item)
                     <div class="col-span-12 sm:col-span-6 xl:col-span-3 intro-y">
                         <div class="report-box zoom-in">
                             <div class="box p-5">
                                 <div class="flex">
                                     {{-- <span class="text-base report-box__indicator bg-yellow-500">1 <sup>st</sup> Winner</span> --}}
                                     <div class="mt-3"> 
-                                        <span class="px-2 py-1 rounded-full bg-theme-12 text-white mr-1">1<sup>st</sup> Winner</span> 
+                                        <span class="px-2 py-1 rounded-full {{ $color[$loop->index] }} text-white mr-1">{{ $loop->index + 1 }}<sup>{{ $rank[$loop->index] }}</sup> Winner</span> 
                                     </div>
                                     {{-- <div class="ml-auto">
                                         <div class="report-box__indicator bg-theme-9 tooltip cursor-pointer"
@@ -88,58 +103,17 @@
                                     </div> --}}
                                 </div>
                                 <div class="text-3xl font-bold leading-8 mt-6">
-                                    {{ isset($pemenang) ? $pemenang[0]->user->name : "Belum ada pemenang" }}
+                                    {{ isset($item->user) ? $item->user->name : "Belum ada pemenang" }}
                                 </div>
                                 <div class="text-base text-gray-600 mt-1">
-                                    {{ isset($pemenang) ? $pemenang[0]->jumlah : 0 }} Undangan
+                                    {{ isset($item->user) ? $item->jumlah : 0 }} Undangan
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-span-12 sm:col-span-6 xl:col-span-3 intro-y">
-                        <div class="report-box zoom-in">
-                            <div class="box p-5">
-                                <div class="flex">
-                                    <div class="mt-3"> 
-                                        <span class="px-2 py-1 rounded-full bg-theme-1 text-white mr-1">2<sup>nd</sup> Winner</span> 
-                                    </div>
-                                    <div class="ml-auto">
-                                        {{-- <div class="report-box__indicator bg-theme-9 tooltip cursor-pointer"
-                                            title="22% Higher than last month"> 22% <i data-feather="chevron-up"
-                                                class="w-4 h-4"></i> </div> --}}
-                                    </div>
-                                </div>
-                                <div class="text-3xl font-bold leading-8 mt-6">
-                                    {{ isset($pemenang) ? $pemenang[1]->user->name : "Belum ada pemenang" }}
-                                </div>
-                                <div class="text-base text-gray-600 mt-1">
-                                    {{ isset($pemenang) ? $pemenang[1]->jumlah : 0 }} Undangan
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-span-12 sm:col-span-6 xl:col-span-3 intro-y">
-                        <div class="report-box zoom-in">
-                            <div class="box p-5">
-                                <div class="flex">
-                                    <div class="mt-3"> 
-                                        <span class="px-2 py-1 rounded-full bg-theme-9 text-white mr-1">3<sup>rd</sup> Winner</span> 
-                                    </div>
-                                    <div class="ml-auto">
-                                        {{-- <div class="report-box__indicator bg-theme-9 tooltip cursor-pointer"
-                                            title="22% Higher than last month"> 22% <i data-feather="chevron-up"
-                                                class="w-4 h-4"></i> </div> --}}
-                                    </div>
-                                </div>
-                                <div class="text-3xl font-bold leading-8 mt-6">
-                                    {{ isset($pemenang) ? $pemenang[2]->user->name : "Belum ada pemenang" }}
-                                </div>
-                                <div class="text-base text-gray-600 mt-1">
-                                    {{ isset($pemenang) ? $pemenang[2]->jumlah : 0 }} Undangan
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @empty
+                        
+                    @endforelse
                 </div>
                 
             </div>

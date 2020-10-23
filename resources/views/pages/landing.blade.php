@@ -38,7 +38,8 @@
           <div class="u-header-center-aligned-nav__col">
             <!-- Logo -->
             <a class="navbar-brand u-header__navbar-brand u-header__navbar-brand-center u-header__navbar-brand-text-white" href="index.html" aria-label="Front">
-              <span class="u-header__navbar-brand-text">LP<span class="text-danger">K</span>N</span>
+              <img src="{{ asset("pron/img/logo.png")}}">
+              <!-- <span class="u-header__navbar-brand-text">L<span class="text-danger">P</span>KN</span> -->
             </a>
             <!-- End Logo -->
 
@@ -92,19 +93,28 @@
            data-nav-for="#heroNavThumb">
         <div class="js-slide">
           <!-- Slide #1 -->
-          <div class="d-lg-flex align-items-lg-center u-hero-v1__main" style="background-image: url({{ asset("pron/img/1920x800/img2.jpg")}});">
+          <!-- <div class="d-lg-flex align-items-lg-center u-hero-v1__main" style="background-image: url({{ asset("pron/img/1920x800/img2.jpg")}});"> -->
+          <div class="d-lg-flex align-items-lg-center u-hero-v1__main" style="background-image: url({{ asset("pron/img/header.jpg")}});">
             <div class="container space-3 space-top-md-5 space-top-lg-3">
               <div class="row">
                 <div class="col-md-8 col-lg-9 position-relative">
                   <span class="d-block h4 text-white font-weight-light mb-2"
                         data-scs-animation-in="fadeInUp">
-                    Acara Gratis
+                    Workshop Online – Gratis
                   </span>
                   <h1 class="text-white display-4 font-size-md-down-5 mb-0"
                       data-scs-animation-in="fadeInUp"
                       data-scs-animation-delay="200">
-                    Seminar membangun <span class="font-weight-semi-bold">Ekonomi & Keuangan</span> Digital Indonesia Tahun 2025
+                    KONSEP DAN IMPLEMENTASI SISTEM MANAJEMEN MUTU<!--  <span class="font-weight-semi-bold">Ekonomi & Keuangan</span> Digital Indonesia Tahun 2025 -->
                   </h1>
+                  <span class="d-block h4 text-white font-weight-light mb-2"
+                        data-scs-animation-in="fadeInUp">
+                    (Understanding and Impelementing ISO 9001 : 2015)
+                  </span>
+                  <span class="d-block h4 text-white font-weight-light mb-2"
+                        data-scs-animation-in="fadeInUp">
+                    Kamis, 5 November 2020 (13.00 – 15.00 WIB)
+                  </span>
                 </div>
               </div>
             </div>
@@ -209,18 +219,260 @@
 
     <hr class="my-0">
 
+    <div id="SVGwave1BottomSMShape" class="position-relative gradient-half-primary-v1" style="">
+      <div class="container space-2 space-md-3">
+        <div class="row justify-content-between align-items-center">
+          <!-- Testimonials -->
+          <div class="col-lg-5 mb-7 mb-lg-0 text-center">
+          <!-- <div class="text-center"> -->
+  <!--           <div class="u-avatar mx-auto mb-4">
+              <img class="img-fluid rounded-circle" src="../../assets/img/100x100/img2.jpg" alt="Image Description">
+            </div> -->
+            <h1 class="text-white display-4 font-size-md-down-5 mb-0"
+                        data-scs-animation-in="fadeInUp"
+                        data-scs-animation-delay="200">GRATIS :</h1>
+            <div class="w-md-80 w-lg-20 text-left mx-md-auto mb-7">
+              <blockquote class="h4 text-white font-weight-light mb-0">
+                <ul>
+                  <li>Mengikuti Workshop</li>
+                  <li>Materi</li>
+                  <li>E-Sertifikat</li>
+                  <li>Video Pembelajaran</li>
+                </ul>
+              </blockquote>
+            </div>
+                @if(!session("lpkn_ref_email"))
+                  <a class="btn btn-sm btn-warning btn-wide transition-3d-hover" href="#footer">Daftar Sekarang <span class="fas fa-angle-right ml-2"></span></a>
+                @endif
+            <!-- <h4 class="h5 text-warning mb-0">Maria Muszynska</h4> -->
+          </div>
+          <!-- End Testimonials -->
+
+          <div class="col-lg-6 position-relative">
+            <!-- Image Gallery -->
+            <div class="row mx-gutters-2">
+              <div class="col-5 align-self-end px-2 mb-3">
+                <!-- Fancybox -->
+                <a class="js-fancybox u-media-viewer" href="javascript:;"
+                   data-src="{{ asset("pron/img/1920x1080/img2.jpg")}}"
+                   data-fancybox="lightbox-gallery-hidden"
+                   data-caption="Front in frames - image #01"
+                   data-speed="700">
+                  <img class="img-fluid rounded" src="{{ asset("pron/img/320x320/img1.jpg")}}" alt="Image Description">
+
+                  <span class="u-media-viewer__container">
+                    <span class="u-media-viewer__icon">
+                      <span class="fas fa-plus u-media-viewer__icon-inner"></span>
+                    </span>
+                  </span>
+                </a>
+                <!-- End Fancybox -->
+              </div>
+
+              <div class="col-7 px-2 mb-3">
+                <!-- Fancybox -->
+                <a class="js-fancybox u-media-viewer" href="javascript:;"
+                   data-src="{{ asset("pron/img/1920x1080/img4.jpg")}}"
+                   data-fancybox="lightbox-gallery-hidden"
+                   data-caption="Front in frames - image #02"
+                   data-speed="700">
+                  <img class="img-fluid rounded" src="{{ asset("pron/img/450x450/img1.jpg")}}" alt="Image Description">
+
+                  <span class="u-media-viewer__container">
+                    <span class="u-media-viewer__icon">
+                      <span class="fas fa-plus u-media-viewer__icon-inner"></span>
+                    </span>
+                  </span>
+                </a>
+                <!-- End Fancybox -->
+              </div>
+
+
+            </div>
+            <!-- End Image Gallery -->
+          </div>
+        </div>
+      </div>
+
+      <!-- SVG Quote -->
+      <figure class="w-25 position-absolute top-0 right-0 left-0 left-15x">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 8 8" style="enable-background:new 0 0 8 8;" xml:space="preserve">
+          <path class="fill-white" opacity=".075" d="M3,1.3C2,1.7,1.2,2.7,1.2,3.6c0,0.2,0,0.4,0.1,0.5c0.2-0.2,0.5-0.3,0.9-0.3c0.8,0,1.5,0.6,1.5,1.5c0,0.9-0.7,1.5-1.5,1.5
+            C1.4,6.9,1,6.6,0.7,6.1C0.4,5.6,0.3,4.9,0.3,4.5c0-1.6,0.8-2.9,2.5-3.7L3,1.3z M7.1,1.3c-1,0.4-1.8,1.4-1.8,2.3
+            c0,0.2,0,0.4,0.1,0.5c0.2-0.2,0.5-0.3,0.9-0.3c0.8,0,1.5,0.6,1.5,1.5c0,0.9-0.7,1.5-1.5,1.5c-0.7,0-1.1-0.3-1.4-0.8
+            C4.4,5.6,4.4,4.9,4.4,4.5c0-1.6,0.8-2.9,2.5-3.7L7.1,1.3z"></path>
+        </svg>
+      </figure>
+      <!-- End SVG Quote -->
+
+      <!-- SVG Background 
+      <figure class="position-absolute right-0 bottom-0 left-0">
+        <img class="js-svg-injector" src="" alt="Image Description" data-parent="#SVGwave1BottomSMShape">
+      </figure>
+       End SVG Background Section -->
+    </div>
+
+
     <!-- Front in Frames Section -->
     <div class="overflow-hidden">
       <div class="container space-2 space-md-3">
+        <div class="text-center w-md-90 mx-auto mb-7">
+                <span class="u-label u-label--sm u-label--success mb-2">Tentang Workshop</span>
+          <h2 class="text-primary">Pengantar</h2>
+                <p class="text-left">&nbsp;&nbsp;&nbsp;&nbsp;Saat ini hampir semua sendi kehidupan kita menuntut adanya Kualitas atau Mutu, berbicara tentang Mutu, maka terkait dengan bagimana kita memberikan Output yang memberikan Nilai sesuai dengan ekspektasi atau harapan pelanggan atau orang yang menggunakan barang atau jasa yang kita hasilkan.</p>
+                <p class="text-left">&nbsp;&nbsp;&nbsp;&nbsp;Salahsatu konsep standarisasi yang banyak di implementasikan saat ini adalah Sistem Manajemen Mutu ISO 9001, dimana Sistem standar manajemen mutu yang dirancang untuk membantu organisasi dalam memastikan bahwa organisasi dapat memenuhi kebutuhan pelanggan dan stakeholdernya serta dapat memenuhi persyaratan Perundangan, hukum dan peraturan yang terkait dengan produk atau jasanya.</p>
+                <p class="text-left">&nbsp;&nbsp;&nbsp;&nbsp;Konsep dan Standar Sistem Manajemen Mutu tersebut dapat di implementasikan diberbagai aspek pekerjaan, baik yang berbentuk Organisasi maupun Individual, intinya kita memahami bagaimana menghasilkan suatu produk yang memberikan Value secara berkelanjutan melalui berbagai rantai alurnya.</p>
+        </div>
         <div class="row justify-content-between align-items-center">
+
+          <div class="col-lg-6 position-relative">
+            <!-- Image Gallery -->
+            <div class="row mx-gutters-2">
+              <div class="col-5 align-self-end px-2 mb-3">
+                <!-- Fancybox -->
+                <a class="js-fancybox u-media-viewer" href="javascript:;"
+                   data-src="{{ asset("pron/img/1920x1080/img2.jpg")}}"
+                   data-fancybox="lightbox-gallery-hidden"
+                   data-caption="Front in frames - image #01"
+                   data-speed="700">
+                  <img class="img-fluid rounded" src="{{ asset("pron/img/320x320/img1.jpg")}}" alt="Image Description">
+
+                  <span class="u-media-viewer__container">
+                    <span class="u-media-viewer__icon">
+                      <span class="fas fa-plus u-media-viewer__icon-inner"></span>
+                    </span>
+                  </span>
+                </a>
+                <!-- End Fancybox -->
+              </div>
+
+              <div class="col-7 px-2 mb-3">
+                <!-- Fancybox -->
+                <a class="js-fancybox u-media-viewer" href="javascript:;"
+                   data-src="{{ asset("pron/img/1920x1080/img4.jpg")}}"
+                   data-fancybox="lightbox-gallery-hidden"
+                   data-caption="Front in frames - image #02"
+                   data-speed="700">
+                  <img class="img-fluid rounded" src="{{ asset("pron/img/450x450/img1.jpg")}}" alt="Image Description">
+
+                  <span class="u-media-viewer__container">
+                    <span class="u-media-viewer__icon">
+                      <span class="fas fa-plus u-media-viewer__icon-inner"></span>
+                    </span>
+                  </span>
+                </a>
+                <!-- End Fancybox -->
+              </div>
+
+              <div class="col-5 offset-1 px-2 mb-3">
+                <!-- Fancybox -->
+                <a class="js-fancybox u-media-viewer" href="javascript:;"
+                   data-src="{{ asset("pron/img/1920x1920/img1.jpg")}}"
+                   data-fancybox="lightbox-gallery-hidden"
+                   data-caption="Front in frames - image #03"
+                   data-speed="700">
+                  <img class="img-fluid rounded" src="{{ asset("pron/img/280x310/img1.jpg")}}" alt="Image Description">
+
+                  <span class="u-media-viewer__container">
+                    <span class="u-media-viewer__icon">
+                      <span class="fas fa-plus u-media-viewer__icon-inner"></span>
+                    </span>
+                  </span>
+                </a>
+                <!-- End Fancybox -->
+              </div>
+
+              <div class="col-5 px-2 mb-3">
+                <!-- Fancybox -->
+                <a class="js-fancybox u-media-viewer" href="javascript:;"
+                   data-src="{{ asset("pron/img/1920x1080/img3.jpg")}}"
+                   data-fancybox="lightbox-gallery-hidden"
+                   data-caption="Front in frames - image #04"
+                   data-speed="700">
+                  <img class="img-fluid rounded" src="{{ asset("pron/img/300x180/img1.jpg")}}" alt="Image Description">
+
+                  <span class="u-media-viewer__container">
+                    <span class="u-media-viewer__icon">
+                      <span class="fas fa-plus u-media-viewer__icon-inner"></span>
+                    </span>
+                  </span>
+                </a>
+                <!-- End Fancybox -->
+              </div>
+            </div>
+            <!-- End Image Gallery -->
+
+            <!-- SVG Background Shape -->
+            <div id="SVGbgShapeID1" class="svg-preloader w-100 content-centered-y z-index-n1">
+              <figure class="ie-soft-triangle-shape">
+                <img class="js-svg-injector" src="{{ asset("pron/svg/components/soft-triangle-shape.svg")}}" alt="Image Description"
+                     data-parent="#SVGbgShapeID1">
+              </figure>
+            </div>
+            <!-- End SVG Background Shape -->
+          </div>
+
           <div class="col-lg-5 mb-7 mb-lg-0">
             <div class="pr-md-4">
               <!-- Title -->
               <div class="mb-7">
-                <span class="u-label u-label--sm u-label--success mb-2">Tentang seminar</span>
-                <h2 class="text-primary">Ekonomi & Keuangan <span class="font-weight-semi-bold">digital</span></h2>
-                <p>Bersiaplah dengan digitalisasi ekonomi dan keuangan di Indonesia pada 2025.</p>
-                <p>Pelajari keahlian-keahlian digital yang dapat membantu anda menjadi pribadi yang lebih sukses dalam perkembangan ekonomi dan keuangan digital di Indonesia dan mancanegara.</p>
+                <!-- <span class="u-label u-label--sm u-label--success mb-2">Tentang Workshop</span> -->
+                <h2 class="text-primary">Prinsip-prinsip sistem manajemen mutu antara lain  : 
+                  <!-- <span class="font-weight-semi-bold">digital</span> -->
+                </h2>
+                <p>
+                  <ol>
+                    <li>Fokus Pelanggan</li>
+                    <li>Kepemimpinan</li>
+                    <li>Keterlibatan Orang Lain</li>
+                    <li>Pendekatan Proses Bisnis</li>
+                    <li>Peningkatan Terus-Menerus</li>
+                    <li>Pendekatan Faktual dalam Pembuatan Keputusan</li>
+                    <li>Hubungan Pemasok yang Saling menguntungkan</li>
+                  </ol>
+                </p>
+              </div>
+              <!-- End Title -->
+
+              @if(!session("lpkn_ref_email"))
+                <a class="btn btn-sm btn-primary btn-wide transition-3d-hover" href="#footer">Daftar Sekarang <span class="fas fa-angle-right ml-2"></span></a>
+              @endif
+            </div>
+          </div>
+
+          <div class="col-lg-5 mb-7 mb-lg-0">
+            <div class="pr-md-4">
+              <!-- Title -->
+              <div class="mb-7">
+                <!-- <span class="u-label u-label--sm u-label--success mb-2">Tentang Workshop</span> -->
+                <h2 class="text-primary">Materi : 
+                  <!-- <span class="font-weight-semi-bold">digital</span> -->
+                </h2>
+                <p>
+                  <ul>
+                    <li>Mengenal Konsep dan Tujuan Penerapan Mutu</li>
+                    <li>Memahami perkembangan ISO 9000 seri dan konsep-konsep sistem manajemen mutu</li>
+                    <li>Memahami Konsep Sistem Manajemen Mutu ISO 9001:2015</li>
+                    <li>Memahami persyaratan-persyaratan standar ISO 9001: 2015</li>
+                    <li>Strategi Implementasi Sistem Manajemen Mutu </li>
+                  </ul>
+                </p>
+              </div>
+              <!-- End Title -->
+              <div class="mb-7">
+                <!-- <span class="u-label u-label--sm u-label--success mb-2">Tentang Workshop</span> -->
+                <h2 class="text-primary">Ketentuan Pelatihan :
+                  <!-- <span class="font-weight-semi-bold">digital</span> -->
+                </h2>
+                <p>
+                  <ul>
+                    <li>Peserta Melakukan Registrasi</li>
+                    <li>Link ZOOM akan dikirimkan Via email dan WA</li>
+                    <li>Materi Pelatihan, e-sertifikat, dan Video Pembelajaran akan dikirimkan setelah kegiatan selesai</li>
+                    <li>Kegiatan ini 100% Gratis</li>
+                    <li>Peserta telah hadir masuk ke ZOOM min 15 menit sebelum acara dimulai.</li>
+                  </ul>
+                </p>
               </div>
               <!-- End Title -->
 
@@ -316,24 +568,61 @@
             </div>
             <!-- End SVG Background Shape -->
           </div>
+
+
         </div>
       </div>
     </div>
     <!-- End Front in Frames Section -->
 
+
+
     <!-- Devices v2 Section -->
     <div id="SVGSubscribe" class="svg-preloader bg-primary u-devices-v2">
       <div class="container space-2 space-md-3 position-relative z-index-2">
         <!-- Title -->
-        <div class="w-md-80 w-lg-50 text-center mx-md-auto">
+        <div class="w-md-80 text-center w-lg-50 mx-md-auto">
           <span class="btn btn-lg btn-icon btn-white rounded-circle mb-4">
-            <span class="fas fa-house-damage text-primary btn-icon__inner"></span>
+            <span class="fas fa-gift text-primary btn-icon__inner"></span>
           </span>
-          <h2 class="h1 text-white">Stay <span class="font-weight-semi-bold">at</span> Home</h2>
-          <p class="lead text-white mb-0">Anda tidak perlu ke luar rumah karena seminar dilaksanakan secara daring.</p>
+          <h2 class="h1 text-white"><span class="font-weight-semi-bold">Hadian </span> dan <span class="font-weight-semi-bold">Doorprize</span></h2>
+        </div>
+        <div class="w-md-80 w-lg-50 mx-md-auto">
+          <ol>
+            <h4 class="h4 text-white">
+            <li>
+            <span class="font-weight-semi-bold">DoorPrize</span> pada akhir acara, yang akan diundi secara Online
+            </h4>
+            <blockquote class="h4 text-white font-weight-light mb-0">
+              <ul class="text-white">
+                <li>Hadiah 1 : 1.000.000,- + Voucer Pelatihan</li>
+                <li>Hadiah 2 : 750.000,- + Voucer Pelatihan</li>
+                <li>Hadiah 3 : 500.000,- + Voucer Pelatihan</li>
+              </ul>
+            </blockquote>
+            </br>
+            </li>
+            <!--
+            <h4 class="h4 text-white">
+            <li>
+              Hadiah bagi para peserta yang terbanyak mendapatkan peserta melalui link registrasi
+            </h4>
+            <blockquote class="h4 text-white font-weight-light mb-0">
+              <ul class="text-white">
+                <li>Hadiah 1 : 2.000.000,-</li>
+                <li>Hadiah 2 : 2.000.000,-</li>
+                <li>Hadiah 3 : 500.000,-</li>
+              </ul>
+            </blockquote>
+            </br>
+            </li>
+          -->
+          </ol>
         </div>
         <!-- End Title -->
       </div>
+
+
 
       <!-- Devices v2 -->
       <div class="d-none d-lg-block">
@@ -397,7 +686,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="inputGroup-sizing-sm"><i class="fas fa-user text-dark"></i></span>
                             </div>
-                            <input type="text" name="nama_lengkap" class="form-control" placeholder="Masukkan Nama">
+                            <input type="text" name="nama_lengkap" class="form-control" placeholder="Nama Untuk Sertifikat">
                         </div>
                     </div>
                     <div class="form-group col-md-6">
@@ -419,12 +708,12 @@
                         </div>
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="exampleFormControlInput1">Instansi</label>
+                        <label for="exampleFormControlInput1">Profesi</label>
                         <div class="input-group input-group-sm mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="inputGroup-sizing-sm"><i class="fas fa-building text-dark"></i></span>
                             </div>
-                            <input type="text" name="nama_instansi" class="form-control" placeholder="Masukkan Lembaga">
+                            <input type="text" name="nama_instansi" class="form-control" placeholder="Masukkan Profesi Anda">
                         </div>
                     </div>
                     @isset($ref)

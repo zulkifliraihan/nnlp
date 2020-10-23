@@ -26,6 +26,29 @@
     </div>
     {{-- END: Button share --}}
     <div class="intro-y col-span-12 flex flex-wrap sm:flex-no-wrap mt-2">
+        <textarea class="input w-full box placeholder-theme-13" rows="5">
+KABAR GEMBIRA
+
+Ikuti Seminar Bisnis Digital
+
+*100% GRATIS* dan seminar ini sudah mendapatkan *REKOR MURI* sebagai *Seminar Digital Dengan Peserta TERBANYAK di Indonesia*
+
+*Seminarnya ONLINE* pakai Aplikasi *ZOOM*
+Hari *Minggu, 25 Okt 2020*
+Jam *08:30 Sampai 11:30 WIB*
+
+Anda akan belajar Bagaimana *Membangun Bisnis Semakin DAHSYAT di ERA DIGITAL & TANPA BIAYA IKLAN*
+
+Ya, anda *tidak perlu lagi keluar biaya iklan setelah ikuti Seminar Ini*
+
+Buruan daftar, *Terbatas Hanya untuk 10.000 Peserta*
+
+*Info Lengkap dan Pendaftaran* :
+Klik {{ route('landing') }}?ref={{ $user['ref'] }}
+        </textarea>
+
+    </div>
+    <div class="intro-y col-span-12 flex flex-wrap sm:flex-no-wrap mt-2">
         <div class="block text-gray-600"><span class="text-orange-600">@{{ terundang.length }}</span> orang mendaftar menggunakan link yang Anda bagikan</div>
         <div class="w-full sm:w-auto mt-3 sm:mt-0 ml-auto sm:ml-auto md:ml-auto">
             <div class="w-full md:w-56 relative text-gray-700 dark:text-gray-300">

@@ -61,6 +61,13 @@
                             <input type="text" name="nama_instansi"
                                 class="intro-x login__input input input--lg border border-gray-300 block mt-2">
                         </div>
+                        <div class="input-form mt-3">
+                            <label class="flex flex-col sm:flex-row"> Jenis Kelamin <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Required</span> </label>
+                                <select class="form-control" name="jenis_kelamin" id="jenis_kelamin">
+                                  <option value="Laki-laki">Laki-laki</option>
+                                  <option value="Perempuan">Perempuan</option>
+                                </select>
+                        </div>
                         @isset($ref)
                         <div class="input-form mt-3">
                             <label class="flex flex-col sm:flex-row"> Referral </label>

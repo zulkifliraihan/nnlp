@@ -319,9 +319,9 @@
         <div class="text-center w-md-90 mx-auto mb-7">
                 <span class="u-label u-label--sm u-label--success mb-2">Tentang Workshop</span>
           <h2 class="text-primary">Pengantar</h2>
-                <p class="text-left">&nbsp;&nbsp;&nbsp;&nbsp;Saat ini hampir semua sendi kehidupan kita menuntut adanya Kualitas atau Mutu, berbicara tentang Mutu, maka terkait dengan bagimana kita memberikan Output yang memberikan Nilai sesuai dengan ekspektasi atau harapan pelanggan atau orang yang menggunakan barang atau jasa yang kita hasilkan.</p>
-                <p class="text-left">&nbsp;&nbsp;&nbsp;&nbsp;Salahsatu konsep standarisasi yang banyak di implementasikan saat ini adalah Sistem Manajemen Mutu ISO 9001, dimana Sistem standar manajemen mutu yang dirancang untuk membantu organisasi dalam memastikan bahwa organisasi dapat memenuhi kebutuhan pelanggan dan stakeholdernya serta dapat memenuhi persyaratan Perundangan, hukum dan peraturan yang terkait dengan produk atau jasanya.</p>
-                <p class="text-left">&nbsp;&nbsp;&nbsp;&nbsp;Konsep dan Standar Sistem Manajemen Mutu tersebut dapat di implementasikan diberbagai aspek pekerjaan, baik yang berbentuk Organisasi maupun Individual, intinya kita memahami bagaimana menghasilkan suatu produk yang memberikan Value secara berkelanjutan melalui berbagai rantai alurnya.</p>
+          <p style="text-align:justify">Saat ini hampir semua sendi kehidupan kita menuntut adanya Kualitas atau Mutu, berbicara tentang Mutu, maka terkait dengan bagimana kita memberikan Output yang memberikan Nilai sesuai dengan ekspektasi atau harapan pelanggan atau orang yang menggunakan barang atau jasa yang kita hasilkan.</p>
+          <p style="text-align:justify">Salah satu konsep standarisasi yang banyak di implementasikan saat ini adalah Sistem Manajemen Mutu ISO 9001, dimana Sistem standar manajemen mutu yang dirancang untuk membantu organisasi dalam memastikan bahwa organisasi dapat memenuhi kebutuhan pelanggan dan stakeholdernya serta dapat memenuhi persyaratan Perundangan, hukum dan peraturan yang terkait dengan produk atau jasanya.</p>      
+          <p style="text-align:justify">Konsep dan Standar Sistem Manajemen Mutu tersebut dapat di implementasikan diberbagai aspek pekerjaan, baik yang berbentuk Organisasi maupun Individual, intinya kita memahami bagaimana menghasilkan suatu produk yang memberikan Value secara berkelanjutan melalui berbagai rantai alurnya.</p>     
         </div>
         <div class="row justify-content-between align-items-center">
 
@@ -585,23 +585,20 @@
           <span class="btn btn-lg btn-icon btn-white rounded-circle mb-4">
             <span class="fas fa-gift text-primary btn-icon__inner"></span>
           </span>
-          <h2 class="h1 text-white"><span class="font-weight-semi-bold">Hadian </span> dan <span class="font-weight-semi-bold">Doorprize</span></h2>
+          <h2 class="h1 text-white"><span class="font-weight-semi-bold">Hadiah </span></h2>
         </div>
         <div class="w-md-80 w-lg-50 mx-md-auto">
-          <ol>
             <h4 class="h4 text-white">
-            <li>
-            <span class="font-weight-semi-bold">DoorPrize</span> pada akhir acara, yang akan diundi secara Online
+            <span class="font-weight-semi-bold">Hadiah</span>  bagi <span class="font-weight-semi-bold">3</span> peserta terbanyak mengajak peserta lain melalui link registrasi
             </h4>
             <blockquote class="h4 text-white font-weight-light mb-0">
               <ul class="text-white">
-                <li>Hadiah 1 : 1.000.000,- + Voucer Pelatihan</li>
-                <li>Hadiah 2 : 750.000,- + Voucer Pelatihan</li>
-                <li>Hadiah 3 : 500.000,- + Voucer Pelatihan</li>
+                <li>Hadiah 1 	: 2.000.000,-</li>
+                <li>Hadiah 2	: 1.000.000,-</li>
+                <li>Hadiah 3	:  500.000,-</li>
               </ul>
             </blockquote>
             </br>
-            </li>
             <!--
             <h4 class="h4 text-white">
             <li>
@@ -666,9 +663,9 @@
     <!-- End Devices v2 Section -->
 
     <!-- Team Section -->
-    <div class="container space-top-2 space-top-md-2 text-center" id="daftar_section">
+    <div class="container space-top-2 space-top-md-2" id="daftar_section">
       <!-- Title -->
-      <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-9">
+      <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-9 text-center">
         <span class="u-label u-label--sm u-label--success mb-2">LPKN</span>
         <h2 class="text-primary">Segera <span class="font-weight-semi-bold">Mendaftar</span></h2>
         <p>Ayo kembangkan diri Anda</p>
@@ -686,7 +683,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="inputGroup-sizing-sm"><i class="fas fa-user text-dark"></i></span>
                             </div>
-                            <input type="text" name="nama_lengkap" class="form-control" placeholder="Nama Untuk Sertifikat">
+                            <input type="text" name="nama_lengkap" class="form-control" placeholder="Nama Untuk Sertifikat" required>
                         </div>
                     </div>
                     <div class="form-group col-md-6">
@@ -695,7 +692,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="inputGroup-sizing-sm"><i class="fas fa-envelope-open text-dark"></i></span>
                             </div>
-                            <input type="text" name="email" class="form-control" placeholder="user@example.com">
+                            <input type="text" name="email" class="form-control" placeholder="user@example.com" required>
                         </div>
                     </div>
                     <div class="form-group col-md-6">
@@ -704,7 +701,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="inputGroup-sizing-sm"><i class="fas fa-phone text-dark"></i></span>
                             </div>
-                            <input type="text" name="no_hp" class="form-control" placeholder="0821...">
+                            <input type="text" name="no_hp" class="form-control" placeholder="0821..." required>
                         </div>
                     </div>
                     <div class="form-group col-md-6">
@@ -713,7 +710,21 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="inputGroup-sizing-sm"><i class="fas fa-building text-dark"></i></span>
                             </div>
-                            <input type="text" name="nama_instansi" class="form-control" placeholder="Masukkan Profesi Anda">
+                            <input type="text" name="nama_instansi" class="form-control" placeholder="Masukkan Profesi Anda" required>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="exampleFormControlInput1">Jenis Kelamin</label>
+                        <div class="custom-control custom-radio">
+                          <input type="radio" id="Laki-laki" name="jenis_kelamin" class="custom-control-input" value="Laki-laki">
+                          <label class="custom-control-label" for="Laki-laki">Laki-laki</label>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="exampleFormControlInput1"></label>
+                        <div class="custom-control custom-radio mt-2">
+                          <input type="radio" id="Perempuan" name="jenis_kelamin" class="custom-control-input" value="Perempuan">
+                          <label class="custom-control-label" for="Perempuan">Perempuan</label>
                         </div>
                     </div>
                     @isset($ref)
@@ -731,7 +742,9 @@
                 @isset($ref)
                     <span class="float-left">Referral: <span class="text-primary">{{$ref}}</span></span>
                 @endisset
-                <button type="submit" class="btn btn-primary btn-sm float-right">Daftar</button>
+                <div class="col-6 offset-3 mt-2">
+                  <center><button type="submit" class="btn btn-primary btn-sm btn-block">Daftar</button></center>
+                </div>
               </form>
           </div>
       </div>
@@ -1178,6 +1191,10 @@
   <script src="{{ asset("pron/js/components/hs.svg-injector.js")}}"></script>
   <script src="{{ asset("pron/js/components/hs.go-to.js")}}"></script>
 
+  <!-- toastr -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css">
+
   <!-- JS Plugins Init. -->
   <script>
     $(window).on('load', function () {
@@ -1245,14 +1262,14 @@
             error: function(data){
                 var data = data.responseJSON;
                 if(data.status == "fail"){
-                    // toastr["error"](data.messages);
+                     toastr["error"](data.messages);
                 }
             }
         });
     });
 
     // Set the date we're counting down to
-    var countDownDate = new Date("Oct 9, 2020 10:00:00").getTime();
+    var countDownDate = new Date("Nov 5, 2020 13:00:00").getTime();
 
     // Update the count down every 1 second
     var x = setInterval(function() {
@@ -1289,6 +1306,27 @@
             });
         });
     });
+
+    @if(Session::has('message'))
+    var type = "{{ Session::get('alert-type', 'info') }}";
+    switch(type){
+        case 'info':
+            toastr.info("{{ Session::get('message') }}");
+            break;
+
+        case 'warning':
+            toastr.warning("{{ Session::get('message') }}");
+            break;
+
+        case 'success':
+            toastr.success("{{ Session::get('message') }}");
+            break;
+
+        case 'error':
+            toastr.error("{{ Session::get('message') }}");
+            break;
+    }
+  @endif
   </script>
 </body>
 </html>

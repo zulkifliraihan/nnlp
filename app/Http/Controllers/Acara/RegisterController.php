@@ -40,6 +40,7 @@ class RegisterController extends Controller
             'email' => "required|unique:users",
             'no_hp' => "required",
             'nama_instansi' => "required",
+            'jenis_kelamin' => "required",
             'ref' => "sometimes",
         ));
 
@@ -57,6 +58,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($ref),
             'hp' => $data['no_hp'],
+            'jenis_kelamin' => $data['jenis_kelamin'],
             'instansi' => $data['nama_instansi'],
             'ref' => $ref,
             'ref_by' => isset($data['ref']) ? $data['ref'] : null,

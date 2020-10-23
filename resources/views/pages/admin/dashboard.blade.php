@@ -70,7 +70,7 @@
                                     {{ number_format($total_user, 0, ',', '.') }}</div>
                                 <div class="text-base text-gray-600 mt-1">Total Pendaftar</div>
                             </div>
-                            
+
                         </div>
                     </div>
 
@@ -93,8 +93,8 @@
                             <div class="box p-5">
                                 <div class="flex">
                                     {{-- <span class="text-base report-box__indicator bg-yellow-500">1 <sup>st</sup> Winner</span> --}}
-                                    <div class="mt-3"> 
-                                        <span class="px-2 py-1 rounded-full {{ $color[$loop->index] }} text-white mr-1">{{ $loop->index + 1 }}<sup>{{ $rank[$loop->index] }}</sup> Winner</span> 
+                                    <div class="mt-3">
+                                        <span class="px-2 py-1 rounded-full {{ $color[$loop->index] }} text-white mr-1">{{ $loop->index + 1 }}<sup>{{ $rank[$loop->index] }}</sup> Winner</span>
                                     </div>
                                     {{-- <div class="ml-auto">
                                         <div class="report-box__indicator bg-theme-9 tooltip cursor-pointer"
@@ -112,10 +112,10 @@
                         </div>
                     </div>
                     @empty
-                        
+
                     @endforelse
                 </div>
-                
+
             </div>
             <!-- END: General Report -->
         </div>
@@ -140,7 +140,7 @@
                         <option value="40">40 Data</option>
                         <option value="50">50 Data</option>
                         <option value="-1">All</option>
-                    </select> 
+                    </select>
                     <a href="{{ route('admin.export.user') }}" target="_blank">
                         <button class="button box flex items-center bg-green-800 text-white dark:text-white-300"> <i
                             data-feather="file-text" class="hidden sm:block w-4 h-4 mr-2"></i> Export to Excel </button>

@@ -53,10 +53,69 @@ Klik {{ route('landing') }}?ref={{ $user['ref'] }}
         <div class="w-full sm:w-auto mt-3 sm:mt-0 ml-auto sm:ml-auto md:ml-auto">
             <div class="w-full md:w-56 relative text-gray-700 dark:text-gray-300">
                 <input type="text" class="input w-full md:w-56 box pr-10 placeholder-theme-13" placeholder="Search..." v-model="search_filter" @keyup="updatePaginate" id="searchbar">
-                <i class="w-4 h-4 absolute my-auto inset-y-0 mr-3 right-0" data-feather="search"></i> 
+                <i class="w-4 h-4 absolute my-auto inset-y-0 mr-3 right-0" data-feather="search"></i>
             </div>
         </div>
     </div>
+
+    @php
+        $color = array(
+            'bg-theme-12',
+            'bg-theme-1',
+            'bg-theme-9'
+        );
+        $rank = array(
+            'st',
+            'nd',
+            'rd'
+        );
+    @endphp
+
+    @forelse ($pemenang as $item)
+    <div class="col-span-12 sm:col-span-6 xl:col-span-3 intro-y">
+        <div class="report-box zoom-in">
+            <div class="box p-5">
+                <div class="flex">
+                    {{-- <span class="text-base report-box__indicator bg-yellow-500">1 <sup>st</sup> Winner</span> --}}
+                    <div class="mt-3">
+                        <span class="px-2 py-1 rounded-full {{ $color[$loop->index] }} text-white mr-1">{{ $loop->index + 1 }}<sup>{{ $rank[$loop->index] }}</sup> Winner</span>
+                    </div>
+                    {{-- <div class="ml-auto">
+                        <div class="report-box__indicator bg-theme-9 tooltip cursor-pointer"
+                            title="22% Higher than last month"> 22% <i data-feather="chevron-up"
+                                class="w-4 h-4"></i> </div>
+                    </div> --}}
+                </div>
+                <div class="text-3xl font-bold leading-8 mt-6">
+                    {{ isset($item->user) ? $item->user->name : "Belum ada pemenang" }}
+                </div>
+                <div class="text-base text-gray-600 mt-1">
+                    {{ isset($item->user) ? $item->jumlah : 0 }} Undangan
+                </div>
+            </div>
+        </div>
+    </div>
+    @empty
+
+    @endforelse
+
+    @php
+        $no = 0;
+    @endphp
+
+    @forelse ($ref_count as $item)
+        @php
+            $no +=1;
+        @endphp
+        @if ($item->ref_by == $user->ref)
+            <div class="intro-y col-span-12 flex flex-wrap sm:flex-no-wrap mt-2">
+                <div class="block text-gray-600"><span class="text-orange-600"> Anda Berada diurutan :  {{$no}}</div>
+            </div>
+        @else
+        @endif
+    @empty
+    @endforelse
+
     <!-- BEGIN: Users Layout  -->
     <div class="intro-y col-span-6 md:col-span-4" v-for="orang in terundang | filterBy search_filter in 'name'" v-show="setPaginate($index)" id="item">
         <div class="box">
@@ -65,7 +124,7 @@ Klik {{ route('landing') }}?ref={{ $user['ref'] }}
                     <img alt="@{{ orang.name }}" class="rounded-full" :src="'https://avatars.dicebear.com/api/initials/' + orang.name + '.svg'">
                 </div>
                 <div class="lg:ml-2 lg:mr-auto text-center lg:text-left mt-3 lg:mt-0">
-                    <a href="" class="font-medium">@{{ orang.name }}</a> 
+                    <a href="" class="font-medium">@{{ orang.name }}</a>
                     <div class="text-gray-600 text-xs">@{{ orang.instansi }}</div>
                 </div>
             </div>
@@ -78,7 +137,7 @@ Klik {{ route('landing') }}?ref={{ $user['ref'] }}
         <ul class="pagination flex flex-no-wrap" style="overflow-x: auto;">
             <li v-for="page_index in paginate_total" v-if="Math.abs(page_index - current) < 3 || page_index == paginate_total - 1 || page_index == 0" @click.prevent="updateCurrent(page_index + 1)">
                 <a v-bind:class = "((page_index + 1) == current)?'pagination__link pagination__link--active':'pagination__link'">
-                    @{{ page_index + 1 }} 
+                    @{{ page_index + 1 }}
                 </a>
             </li>
         </ul>
@@ -124,7 +183,7 @@ Klik {{ route('landing') }}?ref={{ $user['ref'] }}
         var currentFocus = document.activeElement;
         target.focus();
         target.setSelectionRange(0, target.value.length);
-        
+
         // copy the selection
         var succeed;
         try {
@@ -136,7 +195,7 @@ Klik {{ route('landing') }}?ref={{ $user['ref'] }}
         if (currentFocus && typeof currentFocus.focus === "function") {
             currentFocus.focus();
         }
-        
+
         if (isInput) {
             // restore prior selection
             elem.setSelectionRange(origSelectionStart, origSelectionEnd);
@@ -189,7 +248,7 @@ Klik {{ route('landing') }}?ref={{ $user['ref'] }}
             },
             setStatus: function (status) {
                 this.status_filter = status;
-                
+
                 this.$nextTick(function () {
                     this.updatePaginate();
                 });

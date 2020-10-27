@@ -41,8 +41,6 @@ class DashboardController extends Controller
                                 $counter++;
                             }
                         }
-
-                        $ret .= '</div>';
                         
                         if($counter > 2 && ($query->mengundang->count() - $counter) != 0){
                             $diff = $query->mengundang->count() - $counter;
@@ -54,6 +52,7 @@ class DashboardController extends Controller
                             </div>
                             ';
                         }
+                        $ret .= '</div>';
                     }else{
                         $ret .= '</div>';
                     }

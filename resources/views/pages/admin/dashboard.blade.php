@@ -106,7 +106,7 @@
                                     {{ isset($item->user) ? $item->user->name : "Belum ada pemenang" }}
                                 </div>
                                 <div class="text-base text-gray-600 mt-1">
-                                    {{ isset($item->user) ? $item->jumlah : 0 }} Undangan
+                                    {{ isset($item->user) ? number_format($item->jumlah,0,',','.') : 0 }} Undangan
                                 </div>
                             </div>
                         </div>

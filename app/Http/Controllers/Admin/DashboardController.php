@@ -70,7 +70,7 @@ class DashboardController extends Controller
         }
 
         $users = User::query()->with('mengundang','diundang');
-        $pemenang = ReferrCount::with('user')->orderBy('jumlah', 'desc')->limit(3)->get();
+        $pemenang = ReferrCount::with('user')->orderBy('jumlah', 'desc')->limit(10)->get();
 
         $data = array(
             'total_user' => $users->count(),

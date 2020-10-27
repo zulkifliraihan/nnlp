@@ -64,10 +64,10 @@ class ReferralController extends Controller
                 ->addColumn('nama', function($query){
                     return $query->name;
                 })
-                ->addColumn('profesi', function($query){
-                    return $query->instansi;
+                ->addColumn('status_pembayaran', function($query){
+                    return $query->status_pembayaran;
                 })
-                ->rawColumns(['nama', 'profesi'])
+                ->rawColumns(['nama', 'status_pembayaran'])
                 ->addIndexColumn()
                 ->make(true);
         }

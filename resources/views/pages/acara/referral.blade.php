@@ -4671,7 +4671,7 @@ Panitia : 0811 1102 991 / 0813 1888 6103
                                                   <tr>
                                                       <th class="whitespace-no-wrap bg-white">No.</th>
                                                       <th class="whitespace-no-wrap bg-white">Nama Lengkap</th>
-                                                      <th class="text-center whitespace-no-wrap bg-white">Profesi</th>                                              
+                                                      <th class="text-center whitespace-no-wrap bg-white">Status Pembayaran</th>                                              
                                                   </tr>
                                               </thead>
                                             </table>

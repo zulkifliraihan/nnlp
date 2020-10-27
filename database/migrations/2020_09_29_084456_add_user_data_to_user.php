@@ -18,6 +18,7 @@ class AddUserDataToUser extends Migration
             $table->string('instansi')->nullable()->after("hp");
             $table->string('ref')->nullable()->after("instansi");
             $table->string('ref_by')->nullable()->after("ref");
+            $table->unsignedInteger('status_pembayaran')->default(0)->after("ref_by");
         });
     }
 
@@ -33,6 +34,7 @@ class AddUserDataToUser extends Migration
             $table->dropColumn('instansi');
             $table->dropColumn('ref');
             $table->dropColumn('ref_by');
+            $table->dropColumn('status_pembayaran');
         });
     }
 }

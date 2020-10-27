@@ -17,7 +17,7 @@ class ReferralController extends Controller
     public function index()
     {
         if(!session("lpkn_ref_email")){
-            return redirect()->route('acara.pendaftaran');
+            return redirect()->route('landing');
         }
 
         $user = User::with('mengundang:ref_by,name,instansi','diundang')->where('email', session('lpkn_ref_email'))->first();

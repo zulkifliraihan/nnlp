@@ -78,12 +78,31 @@
                         $color = array(
                             'bg-theme-12',
                             'bg-theme-1',
-                            'bg-theme-9'
+                            'bg-theme-9',
+                            'bg-theme-12',
+                            'bg-theme-1',
+                            'bg-theme-9',
+                            'bg-theme-12',
+                            'bg-theme-1',
+                            'bg-theme-9',
+                            'bg-theme-12',
+                            'bg-theme-1',
+                            'bg-theme-9',
+                            'bg-theme-12',
+                            'bg-theme-1',
+                            'bg-theme-9',
                         );
                         $rank = array(
                             'st',
                             'nd',
-                            'rd'
+                            'rd',
+                            'th',
+                            'th',
+                            'th',
+                            'th',
+                            'th',
+                            'th',
+                            'th'
                         );
                     @endphp
 

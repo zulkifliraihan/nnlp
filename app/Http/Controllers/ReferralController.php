@@ -56,10 +56,26 @@ class ReferralController extends Controller
     }
 
     public function terundang()
-    {
-        $user = User::with('mengundang:ref_by,name,instansi','diundang')->where('email', session('lpkn_ref_email'))->first();
+    {   
+        if(request()->ajax() || !request()->ajax()) {
+            $query = User::with('mengundang','diundang')->where('email', session('lpkn_ref_email'))->first()->mengundang;
+            // die(json_encode($query));
+            return datatables()->of($query)
+                ->addColumn('nama', function($query){
+                    return $query->name;
+                })
+                ->addColumn('profesi', function($query){
+                    return $query->instansi;
+                })
+                ->rawColumns(['nama', 'profesi'])
+                ->addIndexColumn()
+                ->make(true);
+        }
 
-        return response($user['mengundang']);
+
+        // $user = User::with('mengundang:ref_by,name,instansi','diundang')->where('email', session('lpkn_ref_email'))->first();
+
+        // return response($user['mengundang']);
     }
 
     public function send_wa($user){

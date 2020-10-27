@@ -42,7 +42,6 @@
   </script>
   <!-- / Yoast SEO plugin. -->
 
-
   <link rel="alternate" type="application/rss+xml" title="Bimtek Pengadaan Dan Pelatihan Pendidikan » Feed"
     href="https://www.sekolahpengadaan.id/feed/">
   <link rel="stylesheet" id="wp-block-library-css" href="{{ asset("pron/instalasi/style.min.css") }}" type="text/css"
@@ -4649,48 +4648,32 @@ Panitia : 0811 1102 991 / 0813 1888 6103
                                 </div>
                                 <!--/Card image-->
 
+                                
+                                <!-- BEGIN: CSS Assets-->
+                                <link rel="stylesheet" href="{{ asset('mone/css/app.css') }}" />
+                                <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.css"/>
+                                <!-- END: CSS Assets-->
+
+                                <!-- BEGIN: JS Assets-->
+                                <script src="{{ asset('jquery/jquery.min.js') }}"></script>
+                                <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.js"></script>
+                                <!-- END: JS Assets-->
+
+
                                 <div class="row">
-                                    <div class="col-md-2"></div>
-                                    <div class="col-md-10">
+                                    <div class="col-md-12">
                                         <div class="px-4">
 
                                         <div class="table-wrapper">
                                             <!--Table-->
-                                            <table class="table table-hover mb-0 table-responsive" id="affiliate_table">
-
-                                            <!--Table head-->
-                                            <thead>
-                                                <tr>
-                                                <th class="th-lg">
-                                                    <a>Nama Lengkap
-                                                    </a>
-                                                </th>
-                                                <th class="th-lg">
-                                                    <a href="">Jumlah Mengundang
-                                                    </a>
-                                                </th>
-                                                <th class="th-lg">
-                                                    <a href="">Status
-                                                    </a>
-                                                </th>
-                                                </tr>
-                                            </thead>
-                                            <!--Table head-->
-
-                                            <!--Table body-->
-                                            <tbody>
-                                                <tr>
-                                                <td>Mark</td>
-                                                <td>Otto</td>
-                                                <td><span class="badge badge-pill badge-success">Sudah Bayar</span></td>
-                                                </tr>
-                                                <tr>
-                                                <td>Mark</td>
-                                                <td>Otto</td>
-                                                <td><span class="badge badge-pill badge-danger">Teregistrasi</span></td>
-                                                </tr>
-                                            </tbody>
-                                            <!--Table body-->
+                                            <table class="table table-report sm:mt-2" id="affiliate_table">
+                                              <thead>
+                                                  <tr>
+                                                      <th class="whitespace-no-wrap bg-white">No.</th>
+                                                      <th class="whitespace-no-wrap bg-white">Nama Lengkap</th>
+                                                      <th class="text-center whitespace-no-wrap bg-white">Profesi</th>                                              
+                                                  </tr>
+                                              </thead>
                                             </table>
                                             <!--Table-->
                                         </div>
@@ -5043,7 +5026,31 @@ var aepc_pixel_events = {"custom_events":{"AdvancedEvents":[{"params":{"login_st
       </script>
 
       <script type="text/javascript">
-        $('.file-upload').file_upload();
+        // $('.file-upload').file_upload();
+
+        var table = $('#affiliate_table').DataTable({
+            dom : 'Brtp',
+            processing: true,
+            serverSide: true,
+            ajax: "{{ route('referral.terundang') }}",
+            aaSorting: [],
+            pageLength: 5,
+            columns: [
+                // {data: 'mengundang', name: 'mengundang', orderable: false, searchable: false},
+                {data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: false, searchable: false},
+                {data: 'name', name: 'name'},
+                // {data: 'total_mengundang', name: 'total_mengundang'},
+                {data: 'profesi', name: 'profesi'},
+                // {data: 'diundang_oleh', name: 'diundang_oleh'}
+            ]
+        });
+        // $('#db-search').keyup(function(){
+        //     table.search( $(this).val() ).draw();
+        // });
+
+        // $('#db-jumlah').on('change', function(){
+        //     table.page.len($(this).val()).draw();
+        // });
       </script>
       <!--[if LandingPress]></body></html><![endif]-->
       <!-- </body></html> -->

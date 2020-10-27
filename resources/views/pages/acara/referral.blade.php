@@ -5061,9 +5061,9 @@ var aepc_pixel_events = {"custom_events":{"AdvancedEvents":[{"params":{"login_st
                 {data: 'status_pembayaran', name: 'status_pembayaran', 
                   render: function(data, type, row, meta){
                     if (data == 'Teregistrasi') {
-                      return '<span class="badge badge-warning">'+data+'<span>';
+                      return '<div class="text-center"><span class="badge badge-warning">'+data+'</span></div>';
                     } else {
-                      return '<span class="badge badge-success">'+data+'<span>';
+                      return '<div class="text-center"><span class="badge badge-success">'+data+'</span></div>';
                     }
                   },
                 },

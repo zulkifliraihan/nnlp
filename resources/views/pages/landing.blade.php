@@ -5611,7 +5611,7 @@ var okewa_ui_data = {"z_index":"1"};
 								</select>
 
 								@isset($ref)
-								<input type="text" name="ref" id="ref_field" value="{{ $ref }}" class="form-control mb-4"
+								<input hidden type="text" name="ref" id="ref_field" value="{{ $ref }}" class="form-control mb-4"
 									placeholder="Profesi">
 								@endisset
 

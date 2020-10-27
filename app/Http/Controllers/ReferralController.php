@@ -65,7 +65,7 @@ class ReferralController extends Controller
                     return $query->name;
                 })
                 ->addColumn('status_pembayaran', function($query){
-                    return $query->status_pembayaran;
+                    return $query->status_pembayaran == 1 ? 'Sudah membayar' : 'Teregistrasi';
                 })
                 ->rawColumns(['nama', 'status_pembayaran'])
                 ->addIndexColumn()

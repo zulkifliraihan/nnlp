@@ -5032,15 +5032,41 @@ var aepc_pixel_events = {"custom_events":{"AdvancedEvents":[{"params":{"login_st
             dom : 'Brtp',
             processing: true,
             serverSide: true,
+            searching: true,
+            pagingType: "full_numbers",
+            pagingType: "full_numbers",
+            stateSave: true,
+            stateDuration: 60 * 60 * 10,
+            lengthMenu: [
+                [5, 10, 25, 50, 100, -1],
+                [5, 10, 25, 50, 100, 'Semua']
+            ],
+            language: {
+                paginate: {
+                    previous: "prev",
+                    next: "next",
+                    first: "&lt;",
+                    last: "&gt;"
+
+                },
+            },
+            dom: 'lfrtip',
             ajax: "{{ route('referral.terundang') }}",
             aaSorting: [],
-            pageLength: 5,
             columns: [
                 // {data: 'mengundang', name: 'mengundang', orderable: false, searchable: false},
                 {data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: false, searchable: false},
                 {data: 'name', name: 'name'},
                 // {data: 'total_mengundang', name: 'total_mengundang'},
-                {data: 'profesi', name: 'profesi'},
+                {data: 'status_pembayaran', name: 'status_pembayaran', 
+                  render: function(data, type, row, meta){
+                    if (data == 'Teregistrasi') {
+                      return '<span class="badge badge-warning">'+data+'<span>';
+                    } else {
+                      return '<span class="badge badge-success">'+data+'<span>';
+                    }
+                  },
+                },
                 // {data: 'diundang_oleh', name: 'diundang_oleh'}
             ]
         });

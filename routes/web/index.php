@@ -5,7 +5,7 @@
 
     Route::get('/referral/peserta', 'ReferralController@index')->name('referral.pendaftaran');
     Route::get('/referral/terundang', 'ReferralController@terundang')->name('referral.terundang');
-    Route::get('/referral/download_brosur', 'ReferralController@download_brosur')->name('download.brosur');
+    Route::get('/download_brosur', 'ReferralController@download_brosur')->name('download.brosur');
     Route::get('/acara/pendaftaran', 'Acara\RegisterController@index')->name('acara.pendaftaran');
     Route::post('/acara/pendaftaran', 'Acara\RegisterController@store')->name('acara.daftar');
 

@@ -40,7 +40,7 @@ class ReferralController extends Controller
             "msg_twitter" => "Workshop Online\nPanduan Instalasi Program Bermanfaat ke Pikiran Bawah Sadar + Bonus Kelas “8 Life Skills Untuk Meraih Sukses”\n\nSabtu, 21 November 2020, 09.30 – 15.00 WIB\n\nHarga Promosi Rp. 145.000,-\n\nSelengkapnya Klik ",
             "msg_fb" => "Ikuti Workshop Online\nPanduan Instalasi Program Bermanfaat ke Pikiran Bawah Sadar\n+ Bonus Kelas “8 Life Skills Untuk Meraih Sukses”\n\n Bagaimana cara menanamkan program sukses di pikiran bawah sadar, sehingga apapun goal yang Anda inginkan, dapat lebih mudah dan lebih cepat tercapai?\n\n*Sabtu, 21 November 2020, 09.30 – 15.00 WIB*\n\nHarga Promosi Rp. 145.000,-\n(GRATIS Bonus Kelas SenilaI Rp. 450.000,-)\n\n*Fasilitas*\n•	Mengikuti 2 sesi Kelas\n•	Materi Paparan\n•	E- Sertifikat\n•	Video Rekaman\n•	Bonus Kelas Senilasi Rp. 450.000,-\n\nSelengkapnya Klik ",
             "msg_akhir_wa" =>"*\n\nSampai Ketemu Via Online pada Sabtu, 21 November 2020",
-            "msg_akhir" =>"Download Brosur ".route('download.brosur'),
+            "msg_akhir" =>"Download Brosur ".url('/download_brosur'),
             "user" => $user,
             "ref_count" => $ref_count,
             "pemenang" => $pemenang

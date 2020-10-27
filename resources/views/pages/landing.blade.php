@@ -4437,11 +4437,11 @@ var okewa_ui_data = {"z_index":"1"};
 												<div class="elementor-button-wrapper">
 
 													@if (session('lpkn_ref_email'))
-													<a href="#daftar" style="color: white"
+													<a href="{{ route('referral.pendaftaran') }}" style="color: white"
 														class="elementor-button-link elementor-button elementor-size-m elementor-animation-grow btn-outline-warning"
 														role="button">
 														<span class="elementor-button-content-wrapper">
-															<span class="elementor-button-text">Referral Sayaa</span>
+															<span class="elementor-button-text">Referral Saya</span>
 														</span>
 													</a>
 													@else
@@ -4453,6 +4453,10 @@ var okewa_ui_data = {"z_index":"1"};
 																juga</span>
 														</span>
 													</a>
+													<br>
+													<button type="button" class="btn btn-info mt-4" data-toggle="modal" data-target="#refModal">
+														Sudah mendaftar? check referral anda.
+													</button>
 													@endif
 												</div>
 											</div>
@@ -5527,7 +5531,35 @@ var okewa_ui_data = {"z_index":"1"};
 		</div><b><b>
 			</b></b>
 	</div><b><b>
-
+		<div class="modal fade" id="refModal" tabindex="-1" aria-labelledby="refModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <h5 class="modal-title" id="exampleModalLabel">Harap masukan email anda..</h5>
+				  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				  </button>
+				</div>
+				<form id="refGetForm" action="{{ route('referral.set.sess') }}" method="POST">
+				<div class="modal-body">
+					  <div class="form-group">
+							  <label for="exampleFormControlInput1">Email address</label>
+							  <div class="input-group input-group-sm mb-3">
+								  <div class="input-group-prepend">
+									  <span class="input-group-text" id="inputGroup-sizing-sm"><i class="fas fa-envelope-open text-dark"></i></span>
+								  </div>
+								  <input type="text" name="email" class="form-control" placeholder="user@example.com" required>
+							  </div>
+						  </div>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				  <button class="btn btn-primary">Submit</button>
+				</div>
+				</form>
+			  </div>
+			</div>
+		  </div>
 			<!-- Modal Daftar -->
 			<div class="modal fade right" id="fullHeightModalRight" tabindex="-1" role="dialog"
 				aria-labelledby="myModalLabel" aria-hidden="true">

@@ -29,9 +29,7 @@ class ReferralController extends Controller
             "msg_twitter" => "Ikuti Workshop Online – GRATIS\nSISTEM MANAJEMEN MUTU\n(Understanding and Implementing ISO 9001 : 2015)\n\nHari Kamis, 12 November 2020\nJam 13.00 – 15.00 WIB\n\nSelengkapnya :Klik ",
             "msg_fb" => "Ikuti Workshop Online – GRATIS\nSISTEM MANAJEMEN MUTU\n(Understanding and Implementing ISO 9001 : 2015)\n\nHari Kamis, 12 November 2020\nJam 13.00 – 15.00 WIB\n\nSelengkapnya :Klik ",
             "msg_akhir_wa" =>"*\n\nSampai Ketemu Via Online pada Kamis, 12 November 2020",
-            "msg_akhir" =>"
-            
-Download Brosur https://diklatonline.id/brosur.jpg",
+            "msg_akhir" =>"Download Brosur https://diklatonline.id/brosur.jpg",
             "user" => $user,
             "ref_count" => $ref_count,
             "pemenang" => $pemenang

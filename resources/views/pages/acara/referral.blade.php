@@ -4245,7 +4245,7 @@
   <link rel="stylesheet" id="landingpress-css" href="{{ asset("pron/instalasi/style.css") }}" type="text/css"
     media="all">
   <link rel="stylesheet" id="google-fonts-1-css" href="{{ asset("pron/instalasi/css") }}" type="text/css" media="all">
-<link rel="stylesheet" id="elementor-icons-shared-0-css" href="{{ asset("pron/instalasi/fontawesome.min.css") }}"
+  <link rel="stylesheet" id="elementor-icons-shared-0-css" href="{{ asset("pron/instalasi/fontawesome.min.css") }}"
     type="text/css" media="all">
   <link rel="stylesheet" id="elementor-icons-fa-solid-css" href="{{ asset("pron/instalasi/solid.min.css") }}"
     type="text/css" media="all">
@@ -4284,47 +4284,58 @@ var okewa_ui_data = {"z_index":"1"};
         });
 });
   </script><!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async=""
-    src="{{ asset("pron/instalasi/js") }}"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
+  <script async="" src="{{ asset("pron/instalasi/js") }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'UA-132065222-1');
-</script>
-<!-- Facebook Pixel Code -->
-<script type="text/javascript">
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  </script>
+  <!-- Facebook Pixel Code -->
+  <script type="text/javascript">
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
 n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
 document,'script','https://connect.facebook.net/en_US/fbevents.js');
-</script>
-<!-- End Facebook Pixel Code -->
-<script type="text/javascript">
-  fbq('init', '768452387035809', {}, {
+  </script>
+  <!-- End Facebook Pixel Code -->
+  <script type="text/javascript">
+    fbq('init', '768452387035809', {}, {
     "agent": "wordpress-5.5.1-2.2.0"
 });
-</script><script type="text/javascript">
-  fbq('track', 'PageView', []);
-</script>
-<!-- Facebook Pixel Code -->
-<noscript>
-<img height="1" width="1" style="display:none" alt="fbpx"
-src="https://www.facebook.com/tr?id=768452387035809&ev=PageView&noscript=1" />
-</noscript>
-<!-- End Facebook Pixel Code -->
-<style type="text/css">
-svg { width: 1em; height: 1em; fill: currentColor; display: inline-block; vertical-align: middle; margin-top: -2px; } 
-</style>
-<link rel="icon" href="https://www.sekolahpengadaan.id/wp-content/uploads/2018/07/cropped-LOGO-LPKN2-32x32.png" sizes="32x32">
-<link rel="icon" href="https://www.sekolahpengadaan.id/wp-content/uploads/2018/07/cropped-LOGO-LPKN2-192x192.png" sizes="192x192">
-<link rel="apple-touch-icon" href="https://www.sekolahpengadaan.id/wp-content/uploads/2018/07/cropped-LOGO-LPKN2-180x180.png">
-<meta name="msapplication-TileImage" content="https://www.sekolahpengadaan.id/wp-content/uploads/2018/07/cropped-LOGO-LPKN2-270x270.png">
-        <!-- Facebook Pixel Code -->
-        <script>
-                        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  </script>
+  <script type="text/javascript">
+    fbq('track', 'PageView', []);
+  </script>
+  <!-- Facebook Pixel Code -->
+  <noscript>
+    <img height="1" width="1" style="display:none" alt="fbpx"
+      src="https://www.facebook.com/tr?id=768452387035809&ev=PageView&noscript=1" />
+  </noscript>
+  <!-- End Facebook Pixel Code -->
+  <style type="text/css">
+    svg {
+      width: 1em;
+      height: 1em;
+      fill: currentColor;
+      display: inline-block;
+      vertical-align: middle;
+      margin-top: -2px;
+    }
+  </style>
+  <link rel="icon" href="https://www.sekolahpengadaan.id/wp-content/uploads/2018/07/cropped-LOGO-LPKN2-32x32.png"
+    sizes="32x32">
+  <link rel="icon" href="https://www.sekolahpengadaan.id/wp-content/uploads/2018/07/cropped-LOGO-LPKN2-192x192.png"
+    sizes="192x192">
+  <link rel="apple-touch-icon"
+    href="https://www.sekolahpengadaan.id/wp-content/uploads/2018/07/cropped-LOGO-LPKN2-180x180.png">
+  <meta name="msapplication-TileImage"
+    content="https://www.sekolahpengadaan.id/wp-content/uploads/2018/07/cropped-LOGO-LPKN2-270x270.png">
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
                 n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
                 n.push=n;n.loaded=!0;n.version='2.0';n.agent='dvpixelcaffeinewordpress';n.queue=[];t=b.createElement(e);t.async=!0;
                 t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
@@ -4357,151 +4368,199 @@ svg { width: 1em; height: 1em; fill: currentColor; display: inline-block; vertic
                         setTimeout( function() {
                 fbq('track', "PageView", aepc_pixel_args);
             }, aepc_pixel.fire_delay * 1000 );
-                    </script>
-                <noscript><img height="1" width="1" style="display:none"
-                       src="https://www.facebook.com/tr?id=324138344664067&ev=PageView&noscript=1"
-            /></noscript>
-                <!-- End Facebook Pixel Code -->
-            <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"></head>
-<body class="page-template page-template-elementor_canvas page page-id-8078 header-active header-menu-active header-menu-sticky header-menu-after footer-active elementor-default elementor-template-canvas elementor-kit-6581 elementor-page elementor-page-8078" data-elementor-device-mode="desktop">
-    <div class="alert alert-danger text-center" role="alert">
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=324138344664067&ev=PageView&noscript=1" /></noscript>
+  <!-- End Facebook Pixel Code -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+</head>
+
+<body
+  class="page-template page-template-elementor_canvas page page-id-8078 header-active header-menu-active header-menu-sticky header-menu-after footer-active elementor-default elementor-template-canvas elementor-kit-6581 elementor-page elementor-page-8078"
+  data-elementor-device-mode="desktop">
+  @if ($user->status_pembayaran == 0)  
+  <div class="alert alert-danger text-center" role="alert">
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-      <h4 class="alert-heading">Anda Belum Melakukan Pembayaran</h4>
-      <p>Harap Lakukan Pembayaran dengan Klik Tombol Berikut :</p>
-      <a target="_blank" style="color: white" href="https://lpkn.orderonline.id/PanduanInstalasiReferral" class="btn btn-warning">Klik untuk Melakukan Pembayaran</a>
-      <br><br>
-      <b>*Jika Telah Melakukan Pembayaran Harap Abaikan Notifikasi Ini</b>
-    </div>
-            <div data-elementor-type="wp-page" data-elementor-id="8078" class="elementor elementor-8078" data-elementor-settings="[]">
-                        <div class="elementor-inner">
-                            <div class="elementor-section-wrap">
-                            <section class="elementor-section elementor-top-section elementor-element elementor-element-3372cd0f elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="3372cd0f" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                            <div class="elementor-background-overlay"></div>
-                            <div class="elementor-container elementor-column-gap-default">
-                            <div class="elementor-row">
-                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-a19b22f" data-id="a19b22f" data-element_type="column">
-            <div class="elementor-column-wrap elementor-element-populated">
-                            <div class="elementor-widget-wrap">
-                        <div class="elementor-element elementor-element-412aa26 elementor-widget elementor-widget-heading" data-id="412aa26" data-element_type="widget" data-widget_type="heading.default">
-                <div class="elementor-widget-container">
-                <p style="color: white" class="elementor-heading-title elementor-size-default">{{ $user->name }}</p>
-                </div>
-                </div>
-                <div class="elementor-element elementor-element-2f2e7ebc elementor-widget elementor-widget-heading" data-id="2f2e7ebc" data-element_type="widget" data-widget_type="heading.default">
-                <div class="elementor-widget-container">
-                    <p  style="font-size: 15pt" class="elementor-heading-title elementor-size-default"><span style="color: #FFA300;">Referral Saya</span></p>
-                    <p style="font-size: 25pt" class="elementor-heading-title elementor-size-default">{{ $user->ref }}</p>    
-                </div>
-                </div>
-                <div class="elementor-element elementor-element-820db07 elementor-align-center elementor-widget elementor-widget-button" data-id="820db07" data-element_type="widget" data-widget_type="button.default">
-                    <div class="row">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <h4 class="alert-heading">Anda Belum Melakukan Pembayaran</h4>
+    <p>Harap Lakukan Pembayaran dengan Klik Tombol Berikut :</p>
+    <a target="_blank" style="color: white" href="https://lpkn.orderonline.id/PanduanInstalasiReferral"
+      class="btn btn-warning">Klik untuk Melakukan Pembayaran</a>
+    <br><br>
+    <b>*Jika Telah Melakukan Pembayaran Harap Abaikan Notifikasi Ini</b>
+  </div>
+  @endif
+  <div data-elementor-type="wp-page" data-elementor-id="8078" class="elementor elementor-8078"
+    data-elementor-settings="[]">
+    <div class="elementor-inner">
+      <div class="elementor-section-wrap">
+        <section
+          class="elementor-section elementor-top-section elementor-element elementor-element-3372cd0f elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+          data-id="3372cd0f" data-element_type="section"
+          data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+          <div class="elementor-background-overlay"></div>
+          <div class="elementor-container elementor-column-gap-default">
+            <div class="elementor-row">
+              <div
+                class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-a19b22f"
+                data-id="a19b22f" data-element_type="column">
+                <div class="elementor-column-wrap elementor-element-populated">
+                  <div class="elementor-widget-wrap">
+                    <div class="elementor-element elementor-element-412aa26 elementor-widget elementor-widget-heading"
+                      data-id="412aa26" data-element_type="widget" data-widget_type="heading.default">
+                      <div class="elementor-widget-container">
+                        <p style="color: white" class="elementor-heading-title elementor-size-default">{{ $user->name }}
+                        </p>
+                      </div>
+                    </div>
+                    <div class="elementor-element elementor-element-2f2e7ebc elementor-widget elementor-widget-heading"
+                      data-id="2f2e7ebc" data-element_type="widget" data-widget_type="heading.default">
+                      <div class="elementor-widget-container">
+                        <p style="font-size: 15pt" class="elementor-heading-title elementor-size-default"><span
+                            style="color: #FFA300;">Referral Saya</span></p>
+                        <p style="font-size: 25pt" class="elementor-heading-title elementor-size-default">
+                          {{ $user->ref }}</p>
+                      </div>
+                    </div>
+                    <div
+                      class="elementor-element elementor-element-820db07 elementor-align-center elementor-widget elementor-widget-button"
+                      data-id="820db07" data-element_type="widget" data-widget_type="button.default">
+                      <div class="row">
                         <div class="col-md-3"></div>
                         <div class="col-md-6">
-                            <textarea class="text-center" style="font-size: 15pt" rows="1">https://iso.diklatonline.id/?ref={{ $user->ref }}</textarea>   
+                          <textarea class="text-center" style="font-size: 15pt"
+                            rows="1">{{ route("landing") }}?ref={{ $user->ref }}</textarea>
                         </div>
                         <div class="col-md-3"></div>
+                      </div>
                     </div>
+
+                  </div>
                 </div>
-                
-                        </div>
-                    </div>
-        </div>
-                                </div>
-                    </div>
-        </section>
-                <section class="elementor-section elementor-top-section elementor-element elementor-element-11abf90c elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="11abf90c" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                            <div class="elementor-background-overlay"></div>
-                            <div class="elementor-container elementor-column-gap-wide">
-                            <div class="elementor-row">
-                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4df4b21d" data-id="4df4b21d" data-element_type="column">
-            <div class="elementor-column-wrap elementor-element-populated">
-            <div class="elementor-widget-wrap">
-            <div class="elementor-element elementor-element-221c6426 elementor-widget elementor-widget-heading" data-id="221c6426" data-element_type="widget" data-widget_type="heading.default">
-                <div class="elementor-widget-container mb-3">
-                    <p class="elementor-heading-title elementor-size-default mb-2">Apakah anda tertarik bergabung  <span style="color: #FFA300;">menjadi affiliate kami?</span> Berpeluang mendapatkan hadiah</p>
-                    <span class="fas fa-gift text-warning fa-3x btn-icon__inner"></span>
-                </div>
-                <h5 class="mb-3"><span class="elementor-icon-list-icon">
-                    <i class="fas fa-check"></i>
-                </span><b>Juara 1 :</b> Rp. 3.000.000,-</h5>
-                <h5 class="mb-3"><span class="elementor-icon-list-icon">
-                    <i class="fas fa-check"></i>
-                </span><b>Juara 2 :</b> Rp. 2.000.000,-</h5>
-                <h5 class="mb-3"><span class="elementor-icon-list-icon">
-                    <i class="fas fa-check"></i>
-                </span><b>Juara 3 :</b> Rp. 1.000.000,-</h5>
-                <h5><span class="elementor-icon-list-icon">
-                    <i class="fas fa-check"></i>
-                </span><b>Juara 4-10   :</b>  Rp. 500.000</h5>
+              </div>
             </div>
-                <!-- <div class="elementor-element elementor-element-b6a929b elementor-widget elementor-widget-text-editor" data-id="b6a929b" data-element_type="widget" data-widget_type="text-editor.default">
+          </div>
+        </section>
+        <section
+          class="elementor-section elementor-top-section elementor-element elementor-element-11abf90c elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+          data-id="11abf90c" data-element_type="section"
+          data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+          <div class="elementor-background-overlay"></div>
+          <div class="elementor-container elementor-column-gap-wide">
+            <div class="elementor-row">
+              <div
+                class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4df4b21d"
+                data-id="4df4b21d" data-element_type="column">
+                <div class="elementor-column-wrap elementor-element-populated">
+                  <div class="elementor-widget-wrap">
+                    <div class="elementor-element elementor-element-221c6426 elementor-widget elementor-widget-heading"
+                      data-id="221c6426" data-element_type="widget" data-widget_type="heading.default">
+                      <div class="elementor-widget-container mb-3">
+                        <p class="elementor-heading-title elementor-size-default mb-2">Apakah anda tertarik bergabung
+                          <span style="color: #FFA300;">menjadi affiliate kami?</span> Berpeluang mendapatkan hadiah</p>
+                        <span class="fas fa-gift text-warning fa-3x btn-icon__inner"></span>
+                      </div>
+                      <h5 class="mb-3"><span class="elementor-icon-list-icon">
+                          <i class="fas fa-check"></i>
+                        </span><b>Juara 1 :</b> Rp. 3.000.000,-</h5>
+                      <h5 class="mb-3"><span class="elementor-icon-list-icon">
+                          <i class="fas fa-check"></i>
+                        </span><b>Juara 2 :</b> Rp. 2.000.000,-</h5>
+                      <h5 class="mb-3"><span class="elementor-icon-list-icon">
+                          <i class="fas fa-check"></i>
+                        </span><b>Juara 3 :</b> Rp. 1.000.000,-</h5>
+                      <h5><span class="elementor-icon-list-icon">
+                          <i class="fas fa-check"></i>
+                        </span><b>Juara 4-10 :</b> Rp. 500.000</h5>
+                    </div>
+                    <!-- <div class="elementor-element elementor-element-b6a929b elementor-widget elementor-widget-text-editor" data-id="b6a929b" data-element_type="widget" data-widget_type="text-editor.default">
                 <div class="elementor-widget-container">
                     <div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;">“Pelajari cara meraih goal dengan instalasi program sukses di pikiran bawah sadar”</p></div>
                 </div>
                 </div> -->
-                        </div>
-                    </div>
-        </div>
-                                </div>
-                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
-                <b><b>
-                <section class="elementor-section elementor-top-section elementor-element elementor-element-4edc18 elementor-reverse-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="4edc18" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                            <div class="elementor-background-overlay"></div>
-                            <div class="elementor-container elementor-column-gap-wide">
-                            <div class="elementor-row">
-                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4a8871be" data-id="4a8871be" data-element_type="column">
-            <div class="elementor-column-wrap elementor-element-populated">
-                            <div class="elementor-widget-wrap">
-                        <div class="elementor-element elementor-element-2fed5ba elementor-widget elementor-widget-heading" data-id="2fed5ba" data-element_type="widget" data-widget_type="heading.default">
-                <div class="elementor-widget-container">
-                    <p class="elementor-heading-title elementor-size-default">Ketentuan Hadiah</p>
-                </div>
-                </div>
-                <div class="elementor-element elementor-element-afcd5bf elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="afcd5bf" data-element_type="widget" data-widget_type="icon-list.default">
-                <div class="elementor-widget-container">
-                    <ul class="elementor-icon-list-items">
-                            <li class="elementor-icon-list-item">
-                                    <span class="elementor-icon-list-icon">
-                                    <i aria-hidden="true" class="fas fa-clipboard-list"></i>                        </span>
-                                <span class="elementor-icon-list-text">Silahkan Bagikan Promosi ini ke Teman atau rekan anda, anda akan Berpeluang Mendapatkan Hadiah.</span>
-                            </li>
-                            <li class="elementor-icon-list-item">
-                                    <span class="elementor-icon-list-icon">
-                                    <i aria-hidden="true" class="fas fa-clipboard-list"></i>                        </span>
-                                <span class="elementor-icon-list-text">Pendaftaran di Tutup H-2, dan sekaligus Penetapan Pemenang.</span>
-                            </li>
-                            <li class="elementor-icon-list-item">
-                                    <span class="elementor-icon-list-icon">
-                                    <i aria-hidden="true" class="fas fa-clipboard-list"></i>                        </span>
-                                <span class="elementor-icon-list-text">Hadiah akan di Transfer ke Para Pemenang, Panitia akan menghubungi.</span>
-                            </li>
-                    </ul>
-                </div>
-                </div>
+        <b><b>
+            <section
+              class="elementor-section elementor-top-section elementor-element elementor-element-4edc18 elementor-reverse-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+              data-id="4edc18" data-element_type="section"
+              data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+              <div class="elementor-background-overlay"></div>
+              <div class="elementor-container elementor-column-gap-wide">
+                <div class="elementor-row">
+                  <div
+                    class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4a8871be"
+                    data-id="4a8871be" data-element_type="column">
+                    <div class="elementor-column-wrap elementor-element-populated">
+                      <div class="elementor-widget-wrap">
+                        <div
+                          class="elementor-element elementor-element-2fed5ba elementor-widget elementor-widget-heading"
+                          data-id="2fed5ba" data-element_type="widget" data-widget_type="heading.default">
+                          <div class="elementor-widget-container">
+                            <p class="elementor-heading-title elementor-size-default">Ketentuan Hadiah</p>
+                          </div>
                         </div>
+                        <div
+                          class="elementor-element elementor-element-afcd5bf elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                          data-id="afcd5bf" data-element_type="widget" data-widget_type="icon-list.default">
+                          <div class="elementor-widget-container">
+                            <ul class="elementor-icon-list-items">
+                              <li class="elementor-icon-list-item">
+                                <span class="elementor-icon-list-icon">
+                                  <i aria-hidden="true" class="fas fa-clipboard-list"></i> </span>
+                                <span class="elementor-icon-list-text">Silahkan Bagikan Promosi ini ke Teman atau rekan
+                                  anda, anda akan Berpeluang Mendapatkan Hadiah.</span>
+                              </li>
+                              <li class="elementor-icon-list-item">
+                                <span class="elementor-icon-list-icon">
+                                  <i aria-hidden="true" class="fas fa-clipboard-list"></i> </span>
+                                <span class="elementor-icon-list-text">Pendaftaran di Tutup H-2, dan sekaligus Penetapan
+                                  Pemenang.</span>
+                              </li>
+                              <li class="elementor-icon-list-item">
+                                <span class="elementor-icon-list-icon">
+                                  <i aria-hidden="true" class="fas fa-clipboard-list"></i> </span>
+                                <span class="elementor-icon-list-text">Hadiah akan di Transfer ke Para Pemenang, Panitia
+                                  akan menghubungi.</span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-        </div>
-                                </div>
-                    </div>
-        </section>
-        <section class="elementor-section elementor-top-section elementor-element elementor-element-5ab879cd elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5ab879cd" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                            <div class="elementor-background-overlay"></div>
-                            <div class="elementor-container elementor-column-gap-default">
-                            <div class="elementor-row">
-                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-27fe692" data-id="27fe692" data-element_type="column">
-            <div class="elementor-column-wrap elementor-element-populated">
-                            <div class="elementor-widget-wrap">
-                        <div class="elementor-element elementor-element-2b873f05 elementor-widget elementor-widget-heading" data-id="2b873f05" data-element_type="widget" data-widget_type="heading.default">
-                <div class="elementor-widget-container">
-                    <h3>Text untuk dibagikan ke Rekan-rekan anda</h3>   
+                  </div>
                 </div>
-                </div>
-                <div class="elementor-element elementor-element-4960bd4d elementor-widget elementor-widget-text-editor" data-id="4960bd4d" data-element_type="widget" data-widget_type="text-editor.default">
-                <div class="elementor-widget-container">
-<textarea class="input w-full box placeholder-theme-13" rows="18" style="font-size: 14pt">
+              </div>
+            </section>
+            <section
+              class="elementor-section elementor-top-section elementor-element elementor-element-5ab879cd elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+              data-id="5ab879cd" data-element_type="section"
+              data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+              <div class="elementor-background-overlay"></div>
+              <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-row">
+                  <div
+                    class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-27fe692"
+                    data-id="27fe692" data-element_type="column">
+                    <div class="elementor-column-wrap elementor-element-populated">
+                      <div class="elementor-widget-wrap">
+                        <div
+                          class="elementor-element elementor-element-2b873f05 elementor-widget elementor-widget-heading"
+                          data-id="2b873f05" data-element_type="widget" data-widget_type="heading.default">
+                          <div class="elementor-widget-container">
+                            <h3>Text untuk dibagikan ke Rekan-rekan anda</h3>
+                          </div>
+                        </div>
+                        <div
+                          class="elementor-element elementor-element-4960bd4d elementor-widget elementor-widget-text-editor"
+                          data-id="4960bd4d" data-element_type="widget" data-widget_type="text-editor.default">
+                          <div class="elementor-widget-container">
+                            <textarea class="input w-full box placeholder-theme-13" rows="18" style="font-size: 14pt">
 *Ikuti Workshop Online*
 *SISTEM MANAJEMEN MUTU*
 (Understanding and Implementing ISO 9001 : 2015)
@@ -4523,175 +4582,210 @@ Jam *13.00 – 15.00 WIB*
 •  Video Pembelajaran
 Buruan daftar, *Terbatas Hanya untuk 5.000 Peserta*
 
-Selengkapnya :Klik https://iso.diklatonline.id?ref=0EO4DX
+Selengkapnya :Klik {{ route("landing") }}?ref=0EO4DX
 
 Sampai Ketemu Via Online pada Kamis, 12 November 2020
 </textarea>
 
-<h4 class="mt-3">Bagikan Melalui : </h4>
-<div class="row">
-    <div class="col-md-12 col-sm-6">
-        <a href="https://api.whatsapp.com/send?text={{ urlencode($msg_wa.route('acara.pendaftaran').'?ref='.$user['ref']) }}"
-    target="_blank" type="button" style="color: white" class="btn btn-success"><i class="fab fa-whatsapp pr-1"></i> Whatsapp</a>
-        <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('acara.pendaftaran').'?ref='.$user['ref']) }}&quote={{ urlencode($msg_fb.route('acara.pendaftaran').'?ref='.$user['ref']) }}" type="button"  style="color: white" class="btn btn-primary"><i class="fab fa-facebook-f pr-1"></i> Facebook</a>
-        <a href="https://twitter.com/intent/tweet?text={{ urlencode($msg_twitter.route('acara.pendaftaran').'?ref='.$user['ref']) }}" target="_blank" style="color: white" type="button" class="btn btn-info"><i class="fab fa-twitter pr-1"></i> Twitter</a>
-    </div>
-</div>
-<div class="elementor-widget-container mt-3">
-    <div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;">0 <span style="color: #ff9900;">orang mendaftar menggunakan link yang Anda bagikan</span></p>
-    <p style="text-align: center;">Anda berada diurutan : </p>
-    </div>
-</div>
+                            <h4 class="mt-3">Bagikan Melalui : </h4>
+                            <div class="row">
+                              <div class="col-md-12 col-sm-6">
+                                <a href="https://api.whatsapp.com/send?text={{ urlencode($msg_wa.route('landing').'?ref='.$user['ref']) }}"
+                                  target="_blank" type="button" style="color: white" class="btn btn-success"><i
+                                    class="fab fa-whatsapp pr-1"></i> Whatsapp</a>
+                                <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('landing').'?ref='.$user['ref']) }}&quote={{ urlencode($msg_fb.route('acara.pendaftaran').'?ref='.$user['ref']) }}"
+                                  type="button" style="color: white" class="btn btn-primary"><i
+                                    class="fab fa-facebook-f pr-1"></i> Facebook</a>
+                                <a href="https://twitter.com/intent/tweet?text={{ urlencode($msg_twitter.route('landing').'?ref='.$user['ref']) }}"
+                                  target="_blank" style="color: white" type="button" class="btn btn-info"><i
+                                    class="fab fa-twitter pr-1"></i> Twitter</a>
+                              </div>
+                            </div>
+                            <div class="elementor-widget-container mt-3">
+                              <div class="elementor-text-editor elementor-clearfix">
+                                <p style="text-align: center;">0 <span style="color: #ff9900;">orang mendaftar
+                                    menggunakan link yang Anda bagikan</span></p>
+                                <p style="text-align: center;">Anda berada diurutan : </p>
+                              </div>
+                            </div>
 
-                </div>
-                </div>
+                          </div>
                         </div>
+                      </div>
                     </div>
-        </div>
-                                </div>
-                    </div>
-        </section>
-                <section class="elementor-section elementor-top-section elementor-element elementor-element-6295434d elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="6295434d" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                            <div class="elementor-background-overlay" style="background-color: #FFF;"></div>
-                            <div class="elementor-container elementor-column-gap-wide">
-                            <div class="elementor-row">
-                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4e3cf52" data-id="4e3cf52" data-element_type="column">
-            <div class="elementor-column-wrap elementor-element-populated">
-                            <div class="elementor-widget-wrap">
-                        <div class="elementor-element elementor-element-32eef1d5 elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-id="32eef1d5" data-element_type="widget" data-widget_type="image-box.default">
-                <div class="elementor-widget-container">
-            <div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img width="1264" height="390" src="{{ asset("pron/instalasi/LPKN-Logo-02.png") }}" class="attachment-full size-full" alt="" loading="lazy"></figure><div class="elementor-image-box-content"><p class="elementor-image-box-title" style="color: #000">LPKN</p><p class="elementor-image-box-description" style="color: #000">All Right Reserved</p></div></div>     </div>
+                  </div>
                 </div>
-                <div class="elementor-element elementor-element-69d4c599 elementor-widget elementor-widget-divider" data-id="69d4c599" data-element_type="widget" data-widget_type="divider.default">
-                <div class="elementor-widget-container">
-                    <div class="elementor-divider">
-            <span class="elementor-divider-separator">
-                        </span>
-        </div>
-                </div>
-                </div>
+              </div>
+            </section>
+            <section
+              class="elementor-section elementor-top-section elementor-element elementor-element-6295434d elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+              data-id="6295434d" data-element_type="section"
+              data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+              <div class="elementor-background-overlay" style="background-color: #FFF;"></div>
+              <div class="elementor-container elementor-column-gap-wide">
+                <div class="elementor-row">
+                  <div
+                    class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4e3cf52"
+                    data-id="4e3cf52" data-element_type="column">
+                    <div class="elementor-column-wrap elementor-element-populated">
+                      <div class="elementor-widget-wrap">
+                        <div
+                          class="elementor-element elementor-element-32eef1d5 elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box"
+                          data-id="32eef1d5" data-element_type="widget" data-widget_type="image-box.default">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-image-box-wrapper">
+                              <figure class="elementor-image-box-img"><img width="1264" height="390"
+                                  src="{{ asset("pron/instalasi/LPKN-Logo-02.png") }}" class="attachment-full size-full"
+                                  alt="" loading="lazy"></figure>
+                              <div class="elementor-image-box-content">
+                                <p class="elementor-image-box-title" style="color: #000">LPKN</p>
+                                <p class="elementor-image-box-description" style="color: #000">All Right Reserved</p>
+                              </div>
+                            </div>
+                          </div>
                         </div>
+                        <div
+                          class="elementor-element elementor-element-69d4c599 elementor-widget elementor-widget-divider"
+                          data-id="69d4c599" data-element_type="widget" data-widget_type="divider.default">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-divider">
+                              <span class="elementor-divider-separator">
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-        </div>
-                                </div>
-                    </div>
-        </section>
-                        </b></b></div><b><b>
-                        </b></b></div><b><b>
-                    </b></b></div><b><b>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </b></b>
+      </div><b><b>
+        </b></b>
+    </div><b><b>
+      </b></b>
+  </div><b><b>
 
-<!-- Modal Daftar -->
-<div class="modal fade right" id="fullHeightModalRight" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-  aria-hidden="true">
+      <!-- Modal Daftar -->
+      <div class="modal fade right" id="fullHeightModalRight" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
 
-  <!-- Add class .modal-full-height and then add class .modal-right (or other classes from list above) to set a position to the modal -->
-  <div class="modal-dialog modal-full-height modal-right" role="document">
+        <!-- Add class .modal-full-height and then add class .modal-right (or other classes from list above) to set a position to the modal -->
+        <div class="modal-dialog modal-full-height modal-right" role="document">
 
 
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title w-100" id="myModalLabel">Daftar Workshop Online</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-       <!-- Default form login -->
-        <form  action="#!">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title w-100" id="myModalLabel">Daftar Workshop Online</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <!-- Default form login -->
+              <form action="#!">
 
-            <center><img style="height: 40px" class="mb-4 mt-3" src="{{ asset("pron/instalasi/lpkn-logo.png") }}" alt="" loading="lazy"></center>
-            <p class="h6 mb-1 text-center"> PANDUAN INSTALASI PROGRAM BERMANFAAT Ke Pikiran Bawah Sadar</p>
-            <p style="font-size: 9pt" class="text-muted text-center mb-4">Sabtu, 21 November 2020, 09.00 - 12.00 WIB</p>
+                <center><img style="height: 40px" class="mb-4 mt-3" src="{{ asset("pron/instalasi/lpkn-logo.png") }}"
+                    alt="" loading="lazy"></center>
+                <p class="h6 mb-1 text-center"> PANDUAN INSTALASI PROGRAM BERMANFAAT Ke Pikiran Bawah Sadar</p>
+                <p style="font-size: 9pt" class="text-muted text-center mb-4">Sabtu, 21 November 2020, 09.00 - 12.00 WIB
+                </p>
 
-            <!-- Nama -->
-            <input type="text" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="Nama di e-Sertifikat">
-            
-            <!-- Email -->
-            <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+                <!-- Nama -->
+                <input type="text" id="defaultLoginFormEmail" class="form-control mb-4"
+                  placeholder="Nama di e-Sertifikat">
 
-            <!-- No HP -->
-            <input type="text" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="No Whatsapp">
+                <!-- Email -->
+                <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
 
-            <!-- Profesi -->
-            <input type="text" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="Profesi">
+                <!-- No HP -->
+                <input type="text" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="No Whatsapp">
 
-            <!-- Jenis Kelamin -->
-            <select class="browser-default custom-select">
-              <option>Pilih Jenis Kelamin</option>
-              <option value="0">Laki-laki</option>
-              <option value="1">Perempuan</option>
-            </select>
+                <!-- Profesi -->
+                <input type="text" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="Profesi">
 
-            <!-- Sign in button -->
-            <button class="btn btn-warning btn-block my-4" style="color: black" type="submit"><b>Submit</b></button>
+                <!-- Jenis Kelamin -->
+                <select class="browser-default custom-select">
+                  <option>Pilih Jenis Kelamin</option>
+                  <option value="0">Laki-laki</option>
+                  <option value="1">Perempuan</option>
+                </select>
 
-        </form>
-        <!-- Default form login -->
-      </div>
-      <!-- <div class="modal-footer justify-content-center">
+                <!-- Sign in button -->
+                <button class="btn btn-warning btn-block my-4" style="color: black" type="submit"><b>Submit</b></button>
+
+              </form>
+              <!-- Default form login -->
+            </div>
+            <!-- <div class="modal-footer justify-content-center">
         <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
         <button type="button" style="color:black" class="btn btn-warning">Simpan</button>
       </div> -->
-    </div>
-  </div>
-</div>
-<!-- end Modal Daftar -->
-
-<!-- Modal Upload Bukti Pembayaran -->
-<div class="modal fade left" id="modalPembayaran" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-  aria-hidden="true">
-
-  <div class="modal-dialog modal-full-height modal-left" role="document">
-
-
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title w-100" id="myModalLabel">Upload Bukti Pembayaran</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+          </div>
+        </div>
       </div>
-      <div class="modal-body">
-        <p class="h6 mb-2">Silahkan transfer sejumlah <b>Rp.145.000</b> ke rekening berikut :</p>
-        <form  action="#!">
-            <div class="text-center border border-light p-3 mb-4">
-                <img width="120" height="30" src="{{ asset("pron/instalasi/BRI.png")}}" class="attachment-large size-large" alt="" loading="lazy">
-                <p class="text-muted mb-2">No. Rek. 213501000250301</p>
-                <p style="font-size: 10pt">Atas Nama: <b>Lembaga Pengembangan dan Konsultasi Nasional</b></p>
+      <!-- end Modal Daftar -->
+
+      <!-- Modal Upload Bukti Pembayaran -->
+      <div class="modal fade left" id="modalPembayaran" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+
+        <div class="modal-dialog modal-full-height modal-left" role="document">
+
+
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title w-100" id="myModalLabel">Upload Bukti Pembayaran</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
             </div>
+            <div class="modal-body">
+              <p class="h6 mb-2">Silahkan transfer sejumlah <b>Rp.145.000</b> ke rekening berikut :</p>
+              <form action="#!">
+                <div class="text-center border border-light p-3 mb-4">
+                  <img width="120" height="30" src="{{ asset("pron/instalasi/BRI.png")}}"
+                    class="attachment-large size-large" alt="" loading="lazy">
+                  <p class="text-muted mb-2">No. Rek. 213501000250301</p>
+                  <p style="font-size: 10pt">Atas Nama: <b>Lembaga Pengembangan dan Konsultasi Nasional</b></p>
+                </div>
 
-            <p class="h6 mb-3 text-center"> Upload Bukti Pembayaran</p>
+                <p class="h6 mb-3 text-center"> Upload Bukti Pembayaran</p>
 
-            <input type="text" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="Nama Pemilik Rekening" required>
+                <input type="text" id="defaultLoginFormEmail" class="form-control mb-4"
+                  placeholder="Nama Pemilik Rekening" required>
 
-            <input type="text" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="No Rekening" required>
+                <input type="text" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="No Rekening"
+                  required>
 
-            <input type="text" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="Jumlah Transfer" required>
-            
-            <div class="input-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroupFileAddon01"><i class="fas fa-file-upload"></i></span>
-              </div>
-              <div class="custom-file">
-                <input type="file" class="custom-file-input" id="inputGroupFile01"
-                  aria-describedby="inputGroupFileAddon01" required>
-                <label class="custom-file-label" for="inputGroupFile01">Bukti Transfer</label>
-              </div>
+                <input type="text" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="Jumlah Transfer"
+                  required>
+
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroupFileAddon01"><i class="fas fa-file-upload"></i></span>
+                  </div>
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="inputGroupFile01"
+                      aria-describedby="inputGroupFileAddon01" required>
+                    <label class="custom-file-label" for="inputGroupFile01">Bukti Transfer</label>
+                  </div>
+                </div>
+              </form>
             </div>
-        </form>
+            <div class="modal-footer justify-content-center">
+              <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+              <button type="button" style="color: white" class="btn btn-warning">Simpan</button>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="modal-footer justify-content-center">
-        <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
-        <button type="button" style="color: white" class="btn btn-warning">Simpan</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Full Height Modal Right -->
-        
-                
-                <script type="text/javascript">
-                jQuery(function ($) {
+      <!-- Full Height Modal Right -->
+
+
+      <script type="text/javascript">
+        jQuery(function ($) {
                    $(document).ready(function() {
                                            $("#okewa-floating_cta, .open-wa").click(function(e) {
                           e.preventDefault();
@@ -4789,75 +4883,79 @@ Sampai Ketemu Via Online pada Kamis, 12 November 2020
                     });
 
                 });
-                </script>
-  <div id="back-to-top" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-      <path
-        d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z">
-      </path>
-    </svg></div>
-  <style>
-    #wp-admin-bar-new-elementor_lead {
-      display: none;
-    }
+      </script>
+      <div id="back-to-top" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+          <path
+            d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z">
+          </path>
+        </svg></div>
+      <style>
+        #wp-admin-bar-new-elementor_lead {
+          display: none;
+        }
 
-    body.post-type-elementor_lead .wrap a.page-title-action {
-      display: none;
-    }
-  </style>
-  <script type="text/javascript" src="{{ asset("pron/instalasi/core.min.js") }}" defer="defer" id="jquery-ui-core-js">
-  </script>
-  <script type="text/javascript" src="{{ asset("pron/instalasi/effect.min.js") }}" defer="defer"
-    id="jquery-effects-core-js"></script>
-  <script type="text/javascript" src="{{ asset("pron/instalasi/effect-shake.min.js") }}" defer="defer"
-    id="jquery-effects-shake-js"></script>
-  <script type="text/javascript" id="aepc-pixel-events-js-extra">
-    /* <![CDATA[ */
+        body.post-type-elementor_lead .wrap a.page-title-action {
+          display: none;
+        }
+      </style>
+      <script type="text/javascript" src="{{ asset("pron/instalasi/core.min.js") }}" defer="defer"
+        id="jquery-ui-core-js">
+      </script>
+      <script type="text/javascript" src="{{ asset("pron/instalasi/effect.min.js") }}" defer="defer"
+        id="jquery-effects-core-js"></script>
+      <script type="text/javascript" src="{{ asset("pron/instalasi/effect-shake.min.js") }}" defer="defer"
+        id="jquery-effects-shake-js"></script>
+      <script type="text/javascript" id="aepc-pixel-events-js-extra">
+        /* <![CDATA[ */
 var aepc_pixel_events = {"custom_events":{"AdvancedEvents":[{"params":{"login_status":"not_logged_in","post_type":"page","object_id":8078,"object_type":"page"},"delay":0}]}};
 /* ]]> */
-  </script>
-  <script type="text/javascript" src="{{ asset("pron/instalasi/frontend.js") }}" defer="defer"
-    id="aepc-pixel-events-js"></script>
-  <script type="text/javascript" src="{{ asset("pron/instalasi/frontend-modules.min.js") }}" defer="defer"
-    id="elementor-frontend-modules-js"></script>
-  <script type="text/javascript" src="{{ asset("pron/instalasi/jquery.sticky.min.js") }}" defer="defer"
-    id="elementor-sticky-js"></script>
-  <script type="text/javascript" id="elementor-pro-frontend-js-before">
-    var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/www.sekolahpengadaan.id\/wp-admin\/admin-ajax.php","nonce":"439a97afb2","i18n":{"toc_no_headings_found":"No headings were found on this page."},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"google":{"title":"Google+","has_counter":true},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"delicious":{"title":"Delicious"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"},"weixin":{"title":"WeChat"},"weibo":{"title":"Weibo"}},"facebook_sdk":{"lang":"en_US","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/www.sekolahpengadaan.id\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
-  </script>
-  <script type="text/javascript" src="{{ asset("pron/instalasi/frontend.min.js") }}" defer="defer"
-    id="elementor-pro-frontend-js"></script>
-  <script type="text/javascript" src="{{ asset("pron/instalasi/countdown.min.js") }}" defer="defer"
-    id="landingSuite-countdown-frontend-js"></script>
-  <script type="text/javascript" src="{{ asset("pron/instalasi/position.min.js") }}" defer="defer"
-    id="jquery-ui-position-js"></script>
-  <script type="text/javascript" src="{{ asset("pron/instalasi/dialog.min.js") }}" defer="defer"
-    id="elementor-dialog-js"></script>
-  <script type="text/javascript" src="{{ asset("pron/instalasi/waypoints.min.js") }}" defer="defer"
-    id="elementor-waypoints-js"></script>
-  <script type="text/javascript" src="{{ asset("pron/instalasi/swiper.min.js") }}" defer="defer" id="swiper-js">
-  </script>
-  <script type="text/javascript" src="{{ asset("pron/instalasi/share-link.min.js") }}" defer="defer" id="share-link-js">
-  </script>
-  <script type="text/javascript" id="elementor-frontend-js-before">
-    var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"3.0.7","is_static":false,"legacyMode":{"elementWrappers":true},"urls":{"assets":"https:\/\/www.sekolahpengadaan.id\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"editorPreferences":[]},"kit":{"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":8078,"title":"Panduan%20Instalasi%20Program%20Bermanfaat%20ke%20Pikiran%20Bawah%20Sadar%20-%20Bimtek%20Pengadaan%20Dan%20Pelatihan%20Pendidikan","excerpt":"","featuredImage":false}};
-  </script>
-  <script type="text/javascript" src="{{ asset("pron/instalasi/frontend.min(3).js") }}" defer="defer"
-    id="elementor-frontend-js"></script>
-  <script type="text/javascript" src="{{ asset("pron/instalasi/pp-bg-effects.js") }}" defer="defer"
-    id="pp-bg-effects-js"></script>
-  <script type="text/javascript" src="{{ asset("pron/instalasi/script.min.js") }}" defer="defer" id="landingpress-js">
-  </script>
-  <script>
-    jQuery(function($){ $(".widget_meta a[href='https://www.sekolahpengadaan.id/comments/feed/']").parent().remove(); }); 
-  </script>
+      </script>
+      <script type="text/javascript" src="{{ asset("pron/instalasi/frontend.js") }}" defer="defer"
+        id="aepc-pixel-events-js"></script>
+      <script type="text/javascript" src="{{ asset("pron/instalasi/frontend-modules.min.js") }}" defer="defer"
+        id="elementor-frontend-modules-js"></script>
+      <script type="text/javascript" src="{{ asset("pron/instalasi/jquery.sticky.min.js") }}" defer="defer"
+        id="elementor-sticky-js"></script>
+      <script type="text/javascript" id="elementor-pro-frontend-js-before">
+        var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/www.sekolahpengadaan.id\/wp-admin\/admin-ajax.php","nonce":"439a97afb2","i18n":{"toc_no_headings_found":"No headings were found on this page."},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"google":{"title":"Google+","has_counter":true},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"delicious":{"title":"Delicious"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"},"weixin":{"title":"WeChat"},"weibo":{"title":"Weibo"}},"facebook_sdk":{"lang":"en_US","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/www.sekolahpengadaan.id\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+      </script>
+      <script type="text/javascript" src="{{ asset("pron/instalasi/frontend.min.js") }}" defer="defer"
+        id="elementor-pro-frontend-js"></script>
+      <script type="text/javascript" src="{{ asset("pron/instalasi/countdown.min.js") }}" defer="defer"
+        id="landingSuite-countdown-frontend-js"></script>
+      <script type="text/javascript" src="{{ asset("pron/instalasi/position.min.js") }}" defer="defer"
+        id="jquery-ui-position-js"></script>
+      <script type="text/javascript" src="{{ asset("pron/instalasi/dialog.min.js") }}" defer="defer"
+        id="elementor-dialog-js"></script>
+      <script type="text/javascript" src="{{ asset("pron/instalasi/waypoints.min.js") }}" defer="defer"
+        id="elementor-waypoints-js"></script>
+      <script type="text/javascript" src="{{ asset("pron/instalasi/swiper.min.js") }}" defer="defer" id="swiper-js">
+      </script>
+      <script type="text/javascript" src="{{ asset("pron/instalasi/share-link.min.js") }}" defer="defer"
+        id="share-link-js">
+      </script>
+      <script type="text/javascript" id="elementor-frontend-js-before">
+        var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"3.0.7","is_static":false,"legacyMode":{"elementWrappers":true},"urls":{"assets":"https:\/\/www.sekolahpengadaan.id\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"editorPreferences":[]},"kit":{"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":8078,"title":"Panduan%20Instalasi%20Program%20Bermanfaat%20ke%20Pikiran%20Bawah%20Sadar%20-%20Bimtek%20Pengadaan%20Dan%20Pelatihan%20Pendidikan","excerpt":"","featuredImage":false}};
+      </script>
+      <script type="text/javascript" src="{{ asset("pron/instalasi/frontend.min(3).js") }}" defer="defer"
+        id="elementor-frontend-js"></script>
+      <script type="text/javascript" src="{{ asset("pron/instalasi/pp-bg-effects.js") }}" defer="defer"
+        id="pp-bg-effects-js"></script>
+      <script type="text/javascript" src="{{ asset("pron/instalasi/script.min.js") }}" defer="defer"
+        id="landingpress-js">
+      </script>
+      <script>
+        jQuery(function($){ $(".widget_meta a[href='https://www.sekolahpengadaan.id/comments/feed/']").parent().remove(); }); 
+      </script>
 
-  <script type="text/javascript">
-    $('.file-upload').file_upload();
-  </script>
-  <!--[if LandingPress]></body></html><![endif]-->
-  <!-- </body></html> -->
+      <script type="text/javascript">
+        $('.file-upload').file_upload();
+      </script>
+      <!--[if LandingPress]></body></html><![endif]-->
+      <!-- </body></html> -->
 
 
-  </b></b><span id="elementor-device-mode" class="elementor-screen-only"></span></body>
+    </b></b><span id="elementor-device-mode" class="elementor-screen-only"></span>
+</body>
 
 </html>

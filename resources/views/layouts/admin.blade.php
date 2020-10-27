@@ -19,6 +19,11 @@
         <!-- BEGIN: JS Assets-->
         <script src="{{ asset('jquery/jquery.min.js') }}"></script>
         <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.js"></script>
+
+        <!-- toastr -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css">
+
         <!-- END: JS Assets-->
     </head>
     <!-- END: Head -->

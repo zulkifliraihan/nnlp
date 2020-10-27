@@ -13,6 +13,7 @@ use App\Models\User;
 use App\Models\ReferrCount;
 
 use App\Exports\UsersExport;
+use App\Imports\OrderOnlineImport;
 use Maatwebsite\Excel\Facades\Excel;
 
 class DashboardController extends Controller
@@ -64,7 +65,18 @@ class DashboardController extends Controller
                 ->addColumn('diundang_oleh', function($query){
                     return isset($query->diundang) ? $query->diundang->name : "";
                 })
-                ->rawColumns(['mengundang', 'total_mengundang', 'diundang_oleh'])
+                ->addColumn('status_pembayaran', function($query){
+                    if($query->status_pembayaran == 0){
+                        return '
+                        <span class="px-2 py-1 rounded-full bg-theme-12 text-white mr-1">Belum diverifikasi</span>
+                        ';
+                    }else{
+                        return '
+                        <span class="px-2 py-1 rounded-full bg-theme-1 text-white mr-1">Pembayaran terverifikasi</span>
+                        ';
+                    }
+                })
+                ->rawColumns(['mengundang', 'total_mengundang', 'diundang_oleh', 'status_pembayaran'])
                 ->addIndexColumn()
                 ->make(true);
         }
@@ -83,5 +95,29 @@ class DashboardController extends Controller
     public function export() 
     {
         return Excel::download(new UsersExport, 'Export User Data Referral Program.xlsx');
+    }
+
+    public function import_order_online(Request $request)
+    {
+
+        $data = $request->all();
+
+        $validator = Validator::make($data, array(
+            'file' => "required|mimes:xls,xlsx",
+        ));
+
+        if ($validator->fails()) {
+            return response()->json([
+                'status'    => "fail",
+                'messages' => $validator->errors()->first(),
+            ], 422);
+        }
+
+        Excel::import(new OrderOnlineImport, request()->file('file'));
+
+        return response()->json([
+            'status'    => "ok",
+            'messages' => "Data berhasil diperbarui"
+        ], 200);
     }
 }

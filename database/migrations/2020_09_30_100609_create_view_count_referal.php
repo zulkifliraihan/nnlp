@@ -20,8 +20,7 @@ class CreateViewCountReferal extends Migration
             VIEW referr_count AS
             SELECT
                 users.ref_by as ref_by,
-                count(users.ref_by) as jumlah,
-                users.status_pembayaran
+                count(users.ref_by) as jumlah
             FROM users
             WHERE users.ref_by IS NOT NULL
             GROUP BY users.ref_by

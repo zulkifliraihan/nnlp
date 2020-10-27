@@ -35,7 +35,7 @@ License: You must have a valid license purchased only from themeforest(the above
         <div class="mobile-menu md:hidden">
             <div class="mobile-menu-bar">
                 <a href="{{ route("landing") }}" class="flex mr-auto">
-                    <img alt="Midone Tailwind HTML Admin Template" class="w-6" src="{{asset('mone/images/logo.svg')}}">
+                    <img alt="Midone Tailwind HTML Admin Template" class="w-32" src="{{ asset('pron/img/logo_putih.png') }}">
                 </a>
                 <a href="javascript:;" id="mobile-menu-toggler"> <i data-feather="bar-chart-2" class="w-8 h-8 text-white transform -rotate-90"></i> </a>
             </div>
@@ -53,8 +53,8 @@ License: You must have a valid license purchased only from themeforest(the above
             <!-- BEGIN: Side Menu -->
             <nav class="side-nav">
                 <a href="{{ route("landing") }}" class="intro-x flex items-center pl-5 pt-4">
-                    <img alt="Midone Tailwind HTML Admin Template" class="w-6" src="{{asset('mone/images/logo.svg')}}">
-                    <span class="hidden xl:block text-white text-lg ml-3"> LPKN </span>
+                    <img alt="Midone Tailwind HTML Admin Template" class="w-56" src="{{ asset('pron/img/logo_putih.png') }}">
+                    <!--<span class="hidden xl:block text-white text-lg ml-3"> LPKN </span>-->
                 </a>
                 <div class="side-nav__devider my-6"></div>
                 <ul>

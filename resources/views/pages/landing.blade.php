@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <!-- Title -->
-  <title>LPKN | Seminar Gratis</title>
+  <title>LPKN | Workshop Gratis</title>
 
   <!-- Required Meta Tags Always Come First -->
   <meta charset="utf-8">
@@ -37,8 +37,8 @@
         <nav class="js-mega-menu navbar navbar-expand-md u-header__navbar u-header__navbar--no-space">
           <div class="u-header-center-aligned-nav__col">
             <!-- Logo -->
-            <a class="navbar-brand u-header__navbar-brand u-header__navbar-brand-center u-header__navbar-brand-text-white" href="index.html" aria-label="Front">
-              <img src="{{ asset("pron/img/logo.png")}}">
+            <a class="navbar-brand u-header__navbar-brand u-header__navbar-brand-center u-header__navbar-brand-text-white" href="#" aria-label="Front">
+              <img src="{{ asset("pron/img/logo_putih.png")}}">
               <!-- <span class="u-header__navbar-brand-text">L<span class="text-danger">P</span>KN</span> -->
             </a>
             <!-- End Logo -->
@@ -94,7 +94,7 @@
         <div class="js-slide">
           <!-- Slide #1 -->
           <!-- <div class="d-lg-flex align-items-lg-center u-hero-v1__main" style="background-image: url({{ asset("pron/img/1920x800/img2.jpg")}});"> -->
-          <div class="d-lg-flex align-items-lg-center u-hero-v1__main" style="background-image: url({{ asset("pron/img/header.jpg")}});">
+          <div class="d-lg-flex align-items-lg-center u-hero-v1__main" style="background-image: url({{ asset("pron/img/header_2.jpg")}});">
             <div class="container space-3 space-top-md-5 space-top-lg-3">
               <div class="row">
                 <div class="col-md-8 col-lg-9 position-relative">
@@ -105,15 +105,19 @@
                   <h1 class="text-white display-4 font-size-md-down-5 mb-0"
                       data-scs-animation-in="fadeInUp"
                       data-scs-animation-delay="200">
-                    KONSEP DAN IMPLEMENTASI SISTEM MANAJEMEN MUTU<!--  <span class="font-weight-semi-bold">Ekonomi & Keuangan</span> Digital Indonesia Tahun 2025 -->
+                    SISTEM MANAJEMEN MUTU<!--  <span class="font-weight-semi-bold">Ekonomi & Keuangan</span> Digital Indonesia Tahun 2025 -->
                   </h1>
                   <span class="d-block h4 text-white font-weight-light mb-2"
                         data-scs-animation-in="fadeInUp">
-                    (Understanding and Impelementing ISO 9001 : 2015)
+                    (Understanding and Implementing ISO 9001 : 2015)
                   </span>
                   <span class="d-block h4 text-white font-weight-light mb-2"
                         data-scs-animation-in="fadeInUp">
-                    Kamis, 5 November 2020 (13.00 – 15.00 WIB)
+                    Kamis, 12 November 2020 (13.00 – 15.00 WIB)
+                  </span>
+                  <span class="d-block h4 text-warning font-weight-light mb-2"
+                        data-scs-animation-in="fadeInUp">
+                    Quota Terbatas Hanya Untuk 5000 Peserta
                   </span>
                 </div>
               </div>
@@ -146,11 +150,11 @@
       </div>
       <!-- End Hero Carousel Main -->
 
-      <!-- Slick Paging -->
+      <!-- Slick Paging 
       <div class="container position-relative">
         <div id="slickPaging" class="u-slick__paging"></div>
       </div>
-      <!-- End Slick Paging -->
+       End Slick Paging -->
 
       <!-- Hero Carousel Secondary -->
       <div id="heroNavThumb" class="js-slick-carousel u-slick"
@@ -168,6 +172,10 @@
                     <span class="d-block">Pendaftaran berakhir pada</span>
                     <span class="d-block text-primary" id="countdown"></span>
                   </h2>
+                  <!--<h3 class="mt-4 d-block d-md-none">-->
+                  <!--  <strong>Jumlah peserta:</strong> <br>-->
+                  <!--  <span>{{ isset($total_user) ? number_format($total_user, 0 ,".", ",") : 0 }} orang</span>-->
+                  <!--</h3>-->
                   {{-- <p class="mb-0">Modify any aspect of your website or pages with Front.</p> --}}
                 </div>
               </div>
@@ -175,10 +183,10 @@
 
             <div class="w-100 h-100 d-none d-lg-inline-block bg-primary u-hero-v1__last">
               <div class="u-hero-v1__last-inner">
-                <h3 class="h3 text-white">
-                  <strong>Jumlah peserta:</strong> <br>
-                  <span>{{ isset($total_user) ? number_format($total_user, 0 ,".", ",") : 0 }} orang</span>
-                </h3>
+                <!--<h3 class="h3 text-white">-->
+                <!--  <strong>Jumlah peserta:</strong> <br>-->
+                <!--  <span>{{ isset($total_user) ? number_format($total_user, 0 ,".", ",") : 0 }} orang</span>-->
+                <!--</h3>-->
                 {{-- <p class="text-white-70 mb-0">Let visitors to view your content from their choice of device.</p> --}}
               </div>
             </div>
@@ -251,14 +259,15 @@
           <div class="col-lg-6 position-relative">
             <!-- Image Gallery -->
             <div class="row mx-gutters-2">
+            <!--
               <div class="col-5 align-self-end px-2 mb-3">
-                <!-- Fancybox -->
+                
                 <a class="js-fancybox u-media-viewer" href="javascript:;"
-                   data-src="{{ asset("pron/img/1920x1080/img2.jpg")}}"
+                   data-src="{{ asset("pron/img/gratis/iso_1.png")}}"
                    data-fancybox="lightbox-gallery-hidden"
                    data-caption="Front in frames - image #01"
                    data-speed="700">
-                  <img class="img-fluid rounded" src="{{ asset("pron/img/320x320/img1.jpg")}}" alt="Image Description">
+                  <img class="img-fluid rounded" src="{{ asset("pron/img/gratis/iso_1.png")}}" alt="Image Description">
 
                   <span class="u-media-viewer__container">
                     <span class="u-media-viewer__icon">
@@ -266,17 +275,17 @@
                     </span>
                   </span>
                 </a>
-                <!-- End Fancybox -->
+                
               </div>
-
-              <div class="col-7 px-2 mb-3">
+                -->
+              <div class="col-12 px-2 mb-1">
                 <!-- Fancybox -->
                 <a class="js-fancybox u-media-viewer" href="javascript:;"
-                   data-src="{{ asset("pron/img/1920x1080/img4.jpg")}}"
+                   data-src="{{ asset("pron/img/brosur_2.jpg")}}"
                    data-fancybox="lightbox-gallery-hidden"
                    data-caption="Front in frames - image #02"
                    data-speed="700">
-                  <img class="img-fluid rounded" src="{{ asset("pron/img/450x450/img1.jpg")}}" alt="Image Description">
+                  <img class="img-fluid rounded" src="{{ asset("pron/img/brosur_2.jpg")}}" alt="Image Description">
 
                   <span class="u-media-viewer__container">
                     <span class="u-media-viewer__icon">
@@ -331,11 +340,11 @@
               <div class="col-5 align-self-end px-2 mb-3">
                 <!-- Fancybox -->
                 <a class="js-fancybox u-media-viewer" href="javascript:;"
-                   data-src="{{ asset("pron/img/1920x1080/img2.jpg")}}"
+                   data-src="{{ asset("pron/img/prinsip/prinsip_1.jpg")}}"
                    data-fancybox="lightbox-gallery-hidden"
                    data-caption="Front in frames - image #01"
                    data-speed="700">
-                  <img class="img-fluid rounded" src="{{ asset("pron/img/320x320/img1.jpg")}}" alt="Image Description">
+                  <img class="img-fluid rounded" src="{{ asset("pron/img/prinsip/prinsip_1.jpg")}}" alt="Image Description">
 
                   <span class="u-media-viewer__container">
                     <span class="u-media-viewer__icon">
@@ -349,11 +358,11 @@
               <div class="col-7 px-2 mb-3">
                 <!-- Fancybox -->
                 <a class="js-fancybox u-media-viewer" href="javascript:;"
-                   data-src="{{ asset("pron/img/1920x1080/img4.jpg")}}"
+                   data-src="{{ asset("pron/img/prinsip/prinsip_2.png")}}"
                    data-fancybox="lightbox-gallery-hidden"
                    data-caption="Front in frames - image #02"
                    data-speed="700">
-                  <img class="img-fluid rounded" src="{{ asset("pron/img/450x450/img1.jpg")}}" alt="Image Description">
+                  <img class="img-fluid rounded" src="{{ asset("pron/img/prinsip/prinsip_2.png")}}" alt="Image Description">
 
                   <span class="u-media-viewer__container">
                     <span class="u-media-viewer__icon">
@@ -367,11 +376,11 @@
               <div class="col-5 offset-1 px-2 mb-3">
                 <!-- Fancybox -->
                 <a class="js-fancybox u-media-viewer" href="javascript:;"
-                   data-src="{{ asset("pron/img/1920x1920/img1.jpg")}}"
+                   data-src="{{ asset("pron/img/prinsip/prinsip_3.jpg")}}"
                    data-fancybox="lightbox-gallery-hidden"
                    data-caption="Front in frames - image #03"
                    data-speed="700">
-                  <img class="img-fluid rounded" src="{{ asset("pron/img/280x310/img1.jpg")}}" alt="Image Description">
+                  <img class="img-fluid rounded" src="{{ asset("pron/img/prinsip/prinsip_3.jpg")}}" alt="Image Description">
 
                   <span class="u-media-viewer__container">
                     <span class="u-media-viewer__icon">
@@ -445,16 +454,17 @@
               <!-- Title -->
               <div class="mb-7">
                 <!-- <span class="u-label u-label--sm u-label--success mb-2">Tentang Workshop</span> -->
-                <h2 class="text-primary">Materi : 
+                <h2 class="text-primary">Target Workshop : 
                   <!-- <span class="font-weight-semi-bold">digital</span> -->
                 </h2>
                 <p>
                   <ul>
-                    <li>Mengenal Konsep dan Tujuan Penerapan Mutu</li>
-                    <li>Memahami perkembangan ISO 9000 seri dan konsep-konsep sistem manajemen mutu</li>
-                    <li>Memahami Konsep Sistem Manajemen Mutu ISO 9001:2015</li>
+                    <li>Memahami perkembangan ISO 9001 Seri</li>
+                    <li>Konsep-konsep sistem manajemen mutu</li>
                     <li>Memahami persyaratan-persyaratan standar ISO 9001: 2015</li>
-                    <li>Strategi Implementasi Sistem Manajemen Mutu </li>
+                    <li>Mampu menetapkan langkah- langkah yang dibutuhkan untuk mengembangkan sistem manajemen mutu</li>
+                    <li>Mampu mengidentifikasi sumber daya</li>
+                    <li>Mampu mengembangkan Sistem Manajemen Mutu menjadi sesuai dengan standar terbaru ISO 9001: 2015</li>
                   </ul>
                 </p>
               </div>
@@ -488,11 +498,11 @@
               <div class="col-5 align-self-end px-2 mb-3">
                 <!-- Fancybox -->
                 <a class="js-fancybox u-media-viewer" href="javascript:;"
-                   data-src="{{ asset("pron/img/1920x1080/img2.jpg")}}"
+                   data-src="{{ asset("pron/img/materi/materi_1.jpg")}}"
                    data-fancybox="lightbox-gallery-hidden"
                    data-caption="Front in frames - image #01"
                    data-speed="700">
-                  <img class="img-fluid rounded" src="{{ asset("pron/img/320x320/img1.jpg")}}" alt="Image Description">
+                  <img class="img-fluid rounded" src="{{ asset("pron/img/materi/materi_1.jpg")}}" alt="Image Description">
 
                   <span class="u-media-viewer__container">
                     <span class="u-media-viewer__icon">
@@ -506,11 +516,11 @@
               <div class="col-7 px-2 mb-3">
                 <!-- Fancybox -->
                 <a class="js-fancybox u-media-viewer" href="javascript:;"
-                   data-src="{{ asset("pron/img/1920x1080/img4.jpg")}}"
+                   data-src="{{ asset("pron/img/materi/materi_2.png")}}"
                    data-fancybox="lightbox-gallery-hidden"
                    data-caption="Front in frames - image #02"
                    data-speed="700">
-                  <img class="img-fluid rounded" src="{{ asset("pron/img/450x450/img1.jpg")}}" alt="Image Description">
+                  <img class="img-fluid rounded" src="{{ asset("pron/img/materi/materi_2.png")}}" alt="Image Description">
 
                   <span class="u-media-viewer__container">
                     <span class="u-media-viewer__icon">
@@ -524,11 +534,11 @@
               <div class="col-5 offset-1 px-2 mb-3">
                 <!-- Fancybox -->
                 <a class="js-fancybox u-media-viewer" href="javascript:;"
-                   data-src="{{ asset("pron/img/1920x1920/img1.jpg")}}"
+                   data-src="{{ asset("pron/img/materi/materi_5.jpg")}}"
                    data-fancybox="lightbox-gallery-hidden"
                    data-caption="Front in frames - image #03"
                    data-speed="700">
-                  <img class="img-fluid rounded" src="{{ asset("pron/img/280x310/img1.jpg")}}" alt="Image Description">
+                  <img class="img-fluid rounded" src="{{ asset("pron/img/materi/materi_5.jpg")}}" alt="Image Description">
 
                   <span class="u-media-viewer__container">
                     <span class="u-media-viewer__icon">
@@ -542,11 +552,11 @@
               <div class="col-5 px-2 mb-3">
                 <!-- Fancybox -->
                 <a class="js-fancybox u-media-viewer" href="javascript:;"
-                   data-src="{{ asset("pron/img/1920x1080/img3.jpg")}}"
+                   data-src="{{ asset("pron/img/materi/materi_4.jpg")}}"
                    data-fancybox="lightbox-gallery-hidden"
                    data-caption="Front in frames - image #04"
                    data-speed="700">
-                  <img class="img-fluid rounded" src="{{ asset("pron/img/300x180/img1.jpg")}}" alt="Image Description">
+                  <img class="img-fluid rounded" src="{{ asset("pron/img/materi/materi_4.jpg")}}" alt="Image Description">
 
                   <span class="u-media-viewer__container">
                     <span class="u-media-viewer__icon">
@@ -589,11 +599,11 @@
         </div>
         <div class="w-md-80 w-lg-50 mx-md-auto">
             <h4 class="h4 text-white">
-            <span class="font-weight-semi-bold">Hadiah</span>  bagi <span class="font-weight-semi-bold">3</span> peserta terbanyak mengajak peserta lain melalui link registrasi
+            <span class="font-weight-semi-bold">Hadiah Bagi 3 Orang, yang paling banyak mendapatkan peserta yang terdaftar Melalui link registrasi Anda (anda akan dapatkan setelah anda mendaftar)
             </h4>
             <blockquote class="h4 text-white font-weight-light mb-0">
               <ul class="text-white">
-                <li>Hadiah 1 	: 2.000.000,-</li>
+                <li>Hadiah 1 	: 1.500.000,-</li>
                 <li>Hadiah 2	: 1.000.000,-</li>
                 <li>Hadiah 3	:  500.000,-</li>
               </ul>
@@ -627,11 +637,13 @@
         <div class="u-devices-v2__tablet">
           <div class="w-75 u-devices-v2__tablet-svg">
             <figure class="ie-devices-v2-tablet">
+              <!--
               <img class="js-svg-injector" src="{{ asset("pron/svg/components/tablet.svg")}}" alt="Image Description"
                    data-img-paths='[
                      {"targetId": "#SVGtabletImg1", "newPath": "{{ asset("pron/img/282x500/img1.jpg")}}"}
                    ]'
                    data-parent="#SVGSubscribe">
+              -->
             </figure>
           </div>
         </div>
@@ -641,11 +653,13 @@
         <div class="u-devices-v2__phone">
           <div class="w-75 u-devices-v2__phone-svg">
             <figure class="ie-devices-v2-iphone">
+              <!--
               <img class="js-svg-injector" src="{{ asset("pron/svg/components/iphone.svg")}}" alt="Image Description"
                    data-img-paths='[
                      {"targetId": "#SVGiphoneImg1", "newPath": "{{ asset("pron/img/282x500/img1.jpg")}}"}
                    ]'
                    data-parent="#SVGSubscribe">
+              -->
             </figure>
           </div>
         </div>
@@ -663,7 +677,7 @@
     <!-- End Devices v2 Section -->
 
     <!-- Team Section -->
-    <div class="container space-top-2 space-top-md-2" id="daftar_section">
+    <div class="container space-top-2 space-top-md-2 text-center" id="daftar_section">
       <!-- Title -->
       <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-9 text-center">
         <span class="u-label u-label--sm u-label--success mb-2">LPKN</span>
@@ -748,11 +762,15 @@
               </form>
           </div>
       </div>
+      <button type="button" class="btn btn-warning mt-4" data-toggle="modal" data-target="#refModal">
+          Sudah mendaftar? check referral anda.
+        </button>
       @else
         <a class="btn btn-sm btn-primary transition-3d-hover text-center mb-5" href="{{ route('referral.pendaftaran') }}">
             Referral Saya
         </a>
       @endif
+      
       {{-- <!-- Slick Carousel -->
       <div class="js-slick-carousel u-slick u-slick--gutters-3"
            data-slides-show="2"
@@ -1150,6 +1168,37 @@
       </ul> --}}
       <!-- End Social Networks -->
     </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="refModal" tabindex="-1" aria-labelledby="refModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Harap masukan email anda..</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <form id="refGetForm" action="{{ route('referral.set.sess') }}" method="POST">
+          <div class="modal-body">
+                <div class="form-group">
+                        <label for="exampleFormControlInput1">Email address</label>
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroup-sizing-sm"><i class="fas fa-envelope-open text-dark"></i></span>
+                            </div>
+                            <input type="text" name="email" class="form-control" placeholder="user@example.com" required>
+                        </div>
+                    </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button class="btn btn-primary">Submit</button>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </footer>
   <!-- ========== END FOOTER ========== -->
 
@@ -1267,9 +1316,38 @@
             }
         });
     });
+    
+    $('#refGetForm').submit(function(e) {
+        e.preventDefault();
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
+        $.ajax({
+            type: 'post',
+            url: $(this).attr("action"),
+            data: new FormData($('#refGetForm')[0]),
+            dataType: 'json',
+            processData: false,
+            contentType: false,
+            success: function(data) {
+                if(data.status == "ok"){
+                    window.location.href = data.route;
+                }
+            },
+            error: function(data){
+                var data = data.responseJSON;
+                if(data.status == "fail"){
+                     toastr["error"](data.messages);
+                }
+            }
+        });
+    });
 
     // Set the date we're counting down to
-    var countDownDate = new Date("Nov 5, 2020 13:00:00").getTime();
+    var countDownDate = new Date("Nov 12, 2020 13:00:00").getTime();
 
     // Update the count down every 1 second
     var x = setInterval(function() {

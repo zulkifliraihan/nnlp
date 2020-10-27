@@ -10,6 +10,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
+use App\Mail\OrderShipped;
+use Illuminate\Support\Facades\Mail;
+
 use App\Models\User;
 
 class RegisterController extends Controller
@@ -20,6 +23,8 @@ class RegisterController extends Controller
         if(session("lpkn_ref_email")){
             return redirect()->route('referral.pendaftaran');
         }
+        
+        return redirect()->route('landing');
 
         $params = $request->all();
 
@@ -67,6 +72,10 @@ class RegisterController extends Controller
         $user = User::firstOrCreate($input);
 
         Session::put('lpkn_ref_email', $data['email']);
+        
+        // $user = User::with('mengundang:ref_by,name,instansi','diundang')->where('email', $data['email'])->first();
+
+        // Mail::to($data['email'])->send(new OrderShipped('Pendaftaran Berhasil!', $user));
 
         return response()->json([
             'status'    => "ok",

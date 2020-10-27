@@ -19,7 +19,7 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        $users = User::with('mengundang','diundang')->get();
+        $users = User::query()->with('mengundang','diundang');
         $pemenang = ReferrCount::with('user')->orderBy('jumlah', 'desc')->limit(3)->get();
 
         $data = array(

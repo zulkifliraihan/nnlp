@@ -3,51 +3,122 @@
 <!-- BEGIN: Top Bar -->
 <div class="top-bar">
     <!-- BEGIN: Breadcrumb -->
-    <div class="-intro-x breadcrumb mr-auto hidden sm:flex"> <a href="{{ route("landing") }}" class="">Acara Gratis</a> <i data-feather="chevron-right" class="breadcrumb__icon"></i> <a href="#" class="breadcrumb--active">Seminar Nasional</a> </div>
+    <div class="-intro-x breadcrumb mr-auto hidden sm:flex"> <a href="{{ route("landing") }}" class="">Acara Gratis</a> <i data-feather="chevron-right" class="breadcrumb__icon"></i> <a href="#" class="breadcrumb--active">Workshop Geratis</a> </div>
     <!-- END: Breadcrumb -->
 </div>
 <!-- END: Top Bar -->
 <h2 class="intro-y text-lg font-medium mt-10 mb-5">
     {{ $user->name }}
 </h2>
+    <div class="intro-y col-span-12 flex flex-wrap sm:flex-no-wrap mt-2">
+        <h2 class="intro-y text-lg">Silahkan Registrasi kembali melalui Link Zoom berikut</h2>
+        <!--<h2 class="intro-y text-lg">Link Zoom</h2>-->
+    </div>
+
 <div class="flex flex-wrap sm:flex-no-wrap w-full sm:w-auto mt-8 sm:mt-0 sm:ml-auto md:ml-0">
     <div class="w-5/6 sm:w-5/6 lg:w-1/2 relative text-gray-700 dark:text-gray-300">
-        <input type="text" class="input w-full box placeholder-theme-13" placeholder="Your Referral" value="{{ route('landing') }}?ref={{ $user['ref'] }}" id="ref_link">
+        <input type="text" class="input w-full box placeholder-theme-13" placeholder="Your Referral" value="http://bit.ly/OnlineManajemenMutu">
     </div>
+    <a href="http://bit.ly/OnlineManajemenMutu" class="button text-white bg-theme-1 shadow-md ml-2" target="blank_">Go</a>
+</div>
+
+<div class="intro-y col-span-12 flex flex-wrap sm:flex-no-wrap mt-2">
+    <h2 class="intro-y text-lg">Silahkan bergabung juga ke grup telegram</h2>
+    <!--<h2 class="intro-y text-lg">Link Zoom</h2>-->
+</div>
+
+<div class="flex flex-wrap sm:flex-no-wrap w-full sm:w-auto mt-8 sm:mt-0 sm:ml-auto md:ml-0">
+    <div class="w-5/6 sm:w-5/6 lg:w-1/2 relative text-gray-700 dark:text-gray-300">
+        <input type="text" class="input w-full box placeholder-theme-13" placeholder="Link grup telegram" value="https://t.me/joinchat/CLaSQlXiAWCk0VFKmd0TlA">
+    </div>
+    <a href="https://t.me/joinchat/CLaSQlXiAWCk0VFKmd0TlA" class="button text-white bg-theme-1 shadow-md ml-2" target="blank_">Go</a>
+</div>
+
+    <div class="intro-y col-span-12 flex flex-wrap sm:flex-no-wrap mt-2">
+        <h2 class="intro-y text-lg">Text Untuk Dibagikan ke Rekan-rekan Anda (Berhadiah)</h2>
+    </div>
+<div class="flex flex-wrap sm:flex-no-wrap w-full sm:w-auto mt-8 sm:mt-0 sm:ml-auto md:ml-0">
+    <!--
+    <div class="w-5/6 sm:w-5/6 lg:w-1/2 relative text-gray-700 dark:text-gray-300">
+        <input type="text" class="input w-full box placeholder-theme-13" placeholder="Your Referral" value="{{ route('landing') }}?ref={{ $user['ref'] }}" id="ref_link_">
+    </div>
+    -->
+        <textarea class="input w-full box placeholder-theme-13" rows="25" id="ref_link">
+*Ikuti Workshop Online – GRATIS*
+*SISTEM MANAJEMEN MUTU*
+(Understanding and Implementing ISO 9001 : 2015)
+
+Hari *Kamis, 12 November 2020*
+Jam *13.00 – 15.00 WIB*
+
+*Target Workshop :*
+•  Memahami perkembangan ISO 9000 seri
+•  Konsep-konsep sistem manajemen mutu
+•  Memahami persyaratan-persyaratan standar ISO 9001: 2015 
+•  Mampu menetapkan langkah-langkah pengembangan
+•  Mampu mengidentifikasi sumber daya 
+•  Mampu mengembangkan Sistem Manajemen Mutu 
+*Fasilitas Gratis:*
+•  Mengikuti Workshop
+•  Materi Pelatihan
+•  E-Sertifikat
+•  Video Pembelajaran
+Buruan daftar, *Terbatas Hanya untuk 5.000 Peserta*
+
+Selengkapnya :Klik {{ route('landing') }}?ref={{ $user['ref'] }}
+
+Sampai Ketemu Via Online pada Kamis, 12 November 2020
+        </textarea>
+
     <button class="button text-white bg-theme-1 shadow-md ml-2" id="button_copy"> <i class="w-4 h-4" data-feather="copy"></i> </button>
 </div>
 <div class="grid grid-cols-12 gap-6 mt-5" id="terundang">
     <div v-cloak style="display: none">{{ "wow" }}</div>
     {{-- BEGIN: Button share --}}
+    <div class="intro-y col-span-12 flex flex-wrap sm:flex-no-wrap mt-2">
+        <h2 class="intro-y text-lg">Bagikan Melalui</h2>
+    </div>
     <div class="intro-y col-span-12  flex flex-wrap sm:flex-no-wrap mt-2">
-        <a href="https://api.whatsapp.com/send?text={{ urlencode($msg_wa.route('acara.pendaftaran').'?ref='.$user['ref']) }}" target="_blank" class="button text-white bg-green-600 shadow-md mr-2" id="button_copy"> WhatsApp </a>
-        <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('acara.pendaftaran').'?ref='.$user['ref']) }}&quote={{ urlencode($msg_fb.route('acara.pendaftaran').'?ref='.$user['ref']) }}" target="_blank" class="button text-white bg-blue-800 shadow-md mr-2" id="button_copy"> Facebook </a>
-        <a href="https://twitter.com/intent/tweet?text={{ urlencode($msg_twitter.route('acara.pendaftaran').'?ref='.$user['ref']) }}" target="_blank" class="button text-white bg-blue-500 shadow-md mr-2" id="button_copy"> Twitter </a>
+        <a href="https://api.whatsapp.com/send?text={{ urlencode($msg_wa.route('acara.pendaftaran').'?ref='.$user['ref'].$msg_akhir_wa) }}" target="_blank" class="button text-white bg-green-600 shadow-md mr-2" id="button_copy"> WhatsApp </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('acara.pendaftaran').'?ref='.$user['ref']) }}&quote={{ urlencode($msg_fb.route('acara.pendaftaran').'?ref='.$user['ref']).$msg_akhir }}" target="_blank" class="button text-white bg-blue-800 shadow-md mr-2" id="button_copy"> Facebook </a>
+        <a href="https://twitter.com/intent/tweet?text={{ urlencode($msg_twitter.route('acara.pendaftaran').'?ref='.$user['ref'].$msg_akhir) }}" target="_blank" class="button text-white bg-blue-500 shadow-md mr-2" id="button_copy"> Twitter </a>
     </div>
     {{-- END: Button share --}}
+    <!--
     <div class="intro-y col-span-12 flex flex-wrap sm:flex-no-wrap mt-2">
-        <textarea class="input w-full box placeholder-theme-13" rows="5">
-KABAR GEMBIRA
+        <h2 class="intro-y text-lg">Copy Text Dibawah ini Untuk Anda Bagikan <br/>(Semakin banyak Anda bagikan, semakin anda berpeluang mendapatkan hadiah)</h2>
+    </div>
+    <div class="intro-y col-span-12 flex flex-wrap sm:flex-no-wrap mt-2">
+        <textarea class="input w-full box placeholder-theme-13" rows="5" id="ref_link">
+*Ikuti Workshop Online – GRATIS*
+*SISTEM MANAJEMEN MUTU*
+(Understanding and Implementing ISO 9001 : 2015)
 
-Ikuti Seminar Bisnis Digital
+Hari *Kamis, 12 November 2020*
+Jam *13.00 – 15.00 WIB*
 
-*100% GRATIS* dan seminar ini sudah mendapatkan *REKOR MURI* sebagai *Seminar Digital Dengan Peserta TERBANYAK di Indonesia*
+*Target Workshop :*
+•  Memahami perkembangan ISO 9000 seri
+•  Konsep-konsep sistem manajemen mutu
+•  Memahami persyaratan-persyaratan standar ISO 9001: 2015 
+•  Mampu menetapkan langkah-langkah pengembangan
+•  Mampu mengidentifikasi sumber daya 
+•  Mampu mengembangkan Sistem Manajemen Mutu 
+*Fasilitas Gratis:*
+•  Mengikuti Workshop
+•  Materi Pelatihan
+•  E-Sertifikat
+•  Video Pembelajaran
+Buruan daftar, *Terbatas Hanya untuk 5.000 Peserta*
 
-*Seminarnya ONLINE* pakai Aplikasi *ZOOM*
-Hari *Minggu, 25 Okt 2020*
-Jam *08:30 Sampai 11:30 WIB*
+Selengkapnya :Klik {{ route('landing') }}?ref={{ $user['ref'] }}
 
-Anda akan belajar Bagaimana *Membangun Bisnis Semakin DAHSYAT di ERA DIGITAL & TANPA BIAYA IKLAN*
-
-Ya, anda *tidak perlu lagi keluar biaya iklan setelah ikuti Seminar Ini*
-
-Buruan daftar, *Terbatas Hanya untuk 10.000 Peserta*
-
-*Info Lengkap dan Pendaftaran* :
-Klik {{ route('landing') }}?ref={{ $user['ref'] }}
+Sampai Ketemu Via Online pada Kamis, 12 November 2020
         </textarea>
 
     </div>
+        <button class="button text-white bg-theme-1 shadow-md ml-2" id="button_copy"> <i class="w-4 h-4" data-feather="copy"></i> </button>
+-->
     <div class="intro-y col-span-12 flex flex-wrap sm:flex-no-wrap mt-2">
         <div class="block text-gray-600"><span class="text-orange-600">@{{ terundang.length }}</span> orang mendaftar menggunakan link yang Anda bagikan</div>
         <div class="w-full sm:w-auto mt-3 sm:mt-0 ml-auto sm:ml-auto md:ml-auto">

@@ -4611,7 +4611,7 @@ Panitia : 0811 1102 991 / 0813 1888 6103
                             </div>
                             <div class="elementor-widget-container mt-3">
                               <div class="elementor-text-editor elementor-clearfix">
-                                <p style="text-align: center;">@{{ terundang.length }}<span style="color: #ff9900;">orang mendaftar
+                                <p style="text-align: center;">{{ $jumlah_affiliate }} <span style="color: #ff9900;">orang mendaftar
                                     menggunakan link yang Anda bagikan</span></p>
                                  @php
                                     $no = 0;
@@ -4656,7 +4656,7 @@ Panitia : 0811 1102 991 / 0813 1888 6103
 
                                         <div class="table-wrapper">
                                             <!--Table-->
-                                            <table class="table table-hover mb-0 table-responsive">
+                                            <table class="table table-hover mb-0 table-responsive" id="affiliate_table">
 
                                             <!--Table head-->
                                             <thead>

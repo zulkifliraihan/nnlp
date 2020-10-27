@@ -21,6 +21,7 @@ class ReferralController extends Controller
         }
 
         $user = User::with('mengundang:ref_by,name,instansi','diundang')->where('email', session('lpkn_ref_email'))->first();
+        $jumlah_affiliate = $user->mengundang->count();
         $ref_count = ReferrCount::with('user')->orderBy('jumlah', 'desc')->get();
         $pemenang = ReferrCount::with('user')->orderBy('jumlah', 'desc')->limit(3)->get();
 
@@ -42,6 +43,7 @@ class ReferralController extends Controller
             "msg_akhir_wa" =>"*\n\nSampai Ketemu Via Online pada Sabtu, 21 November 2020",
             "msg_akhir" =>"Download Brosur ".url('/download_brosur'),
             "user" => $user,
+            "jumlah_affiliate" => $jumlah_affiliate,
             "ref_count" => $ref_count,
             "pemenang" => $pemenang
         ];

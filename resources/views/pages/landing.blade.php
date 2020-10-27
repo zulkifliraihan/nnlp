@@ -730,14 +730,14 @@
                     <div class="form-group col-md-3">
                         <label for="exampleFormControlInput1">Jenis Kelamin</label>
                         <div class="custom-control custom-radio">
-                          <input type="radio" id="Laki-laki" name="jenis_kelamin" class="custom-control-input" value="Laki-laki" require>
+                          <input type="radio" id="Laki-laki" name="jenis_kelamin" class="custom-control-input" value="0" require>
                           <label class="custom-control-label" for="Laki-laki">Laki-laki</label>
                         </div>
                     </div>
                     <div class="form-group col-md-3">
                         <label for="exampleFormControlInput1"></label>
                         <div class="custom-control custom-radio mt-2">
-                          <input type="radio" id="Perempuan" name="jenis_kelamin" class="custom-control-input" value="Perempuan" requireC>
+                          <input type="radio" id="Perempuan" name="jenis_kelamin" class="custom-control-input" value="1" requireC>
                           <label class="custom-control-label" for="Perempuan">Perempuan</label>
                         </div>
                     </div>

@@ -19,7 +19,7 @@ class UserSeeder extends Seeder
     {
         $faker = Faker::create('id_ID');
  
-    	for($i = 1; $i <= 100; $i++){
+    	for($i = 1; $i <= 500000; $i++){
             
             $ref = $this->generate_referral(6);
 
@@ -31,7 +31,7 @@ class UserSeeder extends Seeder
                     'hp' =>"08387192083". $i,
                     'instansi' => "LPKN",
                     'ref' => $ref,
-                    'ref_by' => "ZJC6M4"
+                    'ref_by' => "3BM9YO"
                 ]
             );
  

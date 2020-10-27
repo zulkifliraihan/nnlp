@@ -158,67 +158,6 @@
                             <th class="text-center whitespace-no-wrap bg-white">DIUNDANG OLEH</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        @forelse ($users as $user)
-                        <tr class="intro-x">
-                            <td class="w-40">
-                                @if(isset($user->mengundang) && !empty($user->mengundang))
-                                <div class="flex">
-                                    @php
-                                    $counter = 0;
-                                    @endphp
-                                    @forelse ($user->mengundang as $mengundang)
-                                    @if ($counter > 2)
-                                    @php
-                                    break;
-                                    @endphp
-                                    @else
-                                    <div class="w-10 h-10 image-fit zoom-in">
-                                        <img alt="img" class="tooltip rounded-full"
-                                            src="https://avatars.dicebear.com/api/initials/{{ $mengundang->name }}.svg"
-                                            title="{{ $mengundang->name }}">
-                                    </div>
-                                    @php
-                                    $counter++;
-                                    @endphp
-                                    @endif
-                                    @empty
-
-                                    @endforelse
-
-                                    @if ($counter > 2 && ($user->mengundang->count() - $counter) != 0)
-                                    <div class="w-10 h-10 image-fit">
-                                        <div class="rounded-full text-center">
-                                            {{ $user->mengundang->count() - $counter }} +
-                                        </div>
-                                    </div>
-                                    @endif
-
-                                </div>
-                                @endif
-                            </td>
-                            <td>
-                                <a href="" class="font-medium whitespace-no-wrap">{{ $user->name }}</a>
-                                <div class="text-gray-600 text-xs whitespace-no-wrap">{{ $user->instansi }}</div>
-                            </td>
-                            <td class="text-center">{{ isset($user->mengundang) ? count($user->mengundang) : 0 }}</td>
-                            <td class="w-40">
-                                <div class="flex items-center justify-center text-theme-9">
-                                    {{ $user->ref }}
-                                </div>
-                            </td>
-                            <td class="table-report__action w-56">
-                                <div class="flex justify-center items-center">
-                                    @isset($user->diundang->name)
-                                    {{ $user->diundang->name }}
-                                    @endisset
-                                </div>
-                            </td>
-                        </tr>
-                        @empty
-
-                        @endforelse
-                    </tbody>
                 </table>
             </div>
             <!-- END: Weekly Top Products -->
@@ -231,9 +170,19 @@
 <script>
     var table = $('#userTableData').DataTable({
         dom : 'Brtp',
+        processing: true,
+        serverSide: true,
+        ajax: "{{ route('admin.dashboard') }}",
         aaSorting: [],
         pageLength: 5,
-        order: [[ 2, "desc" ]]
+        columns: [
+            {data: 'mengundang', name: 'mengundang', orderable: false, searchable: false},
+            // {data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: false, searchable: false},
+            {data: 'name', name: 'name'},
+            {data: 'total_mengundang', name: 'total_mengundang'},
+            {data: 'ref', name: 'ref'},
+            {data: 'diundang_oleh', name: 'diundang_oleh'}
+        ]
     });
 
     $('#db-search').keyup(function(){

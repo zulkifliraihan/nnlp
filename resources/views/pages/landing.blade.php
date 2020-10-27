@@ -4338,7 +4338,7 @@ var okewa_ui_data = {"z_index":"1"};
         n.push=n;n.loaded=!0;n.version='2.0';n.agent='dvpixelcaffeinewordpress';n.queue=[];t=b.createElement(e);t.async=!0;
         t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
         document,'script','https://connect.facebook.net/en_US/fbevents.js');
-      
+
       var aepc_pixel = {"pixel_id":"324138344664067","user":{},"enable_advanced_events":"yes","fire_delay":"0"},
         aepc_pixel_args = {},
         aepc_extend_args = function( args ) {
@@ -5299,14 +5299,16 @@ var okewa_ui_data = {"z_index":"1"};
           <span class="elementor-button-text">Daftar Sekarang</span>
         </span>
       </a> -->
-															<a href="javascript:0"
-																class="elementor-button-link elementor-button elementor-size-xl elementor-animation-grow"
-																data-toggle="modal" data-target="#fullHeightModalRight">
-																<span class="elementor-button-content-wrapper">
-																	<span class="elementor-button-text">Daftar
-																		Sekarang</span>
-																</span>
-															</a>
+                                                            @if (!session('lpkn_ref_email'))
+                                                                <a href="javascript:0"
+                                                                    class="elementor-button-link elementor-button elementor-size-xl elementor-animation-grow"
+                                                                    data-toggle="modal" data-target="#fullHeightModalRight">
+                                                                    <span class="elementor-button-content-wrapper">
+                                                                        <span class="elementor-button-text">Daftar
+                                                                            Sekarang</span>
+                                                                    </span>
+                                                                </a>
+                                                            @endif
 														</div>
 													</div>
 												</div>
@@ -5595,21 +5597,6 @@ var okewa_ui_data = {"z_index":"1"};
 								<input type="email" name="email" id="email_id" class="form-control mb-4"
 									placeholder="E-mail">
 
-								<!-- No HP -->
-								<input type="text" name="no_hp" id="no_hp_id" class="form-control mb-4"
-									placeholder="No Whatsapp">
-
-								<!-- Profesi -->
-								<input type="text" name="nama_instansi" id="nama_instansi_id" class="form-control mb-4"
-									placeholder="Profesi">
-
-								<!-- Jenis Kelamin -->
-								<select name="jenis_kelamin" class="browser-default custom-select">
-									<option disabled selected>Pilih Jenis Kelamin</option>
-									<option value="0">Laki-laki</option>
-									<option value="1">Perempuan</option>
-								</select>
-
 								@isset($ref)
 								<input hidden type="text" name="ref" id="ref_field" value="{{ $ref }}" class="form-control mb-4"
 									placeholder="Profesi">
@@ -5711,28 +5698,28 @@ var okewa_ui_data = {"z_index":"1"};
                             Cookies.set("okewaclose", 1, { expires : 1 });
                             $("#okewa-floating_popup").removeClass('bounceInUp');
                             $("#okewa-floating_popup").addClass('bounceOutDown');
-                            $("#okewa-floating_popup").delay(1000).hide(0);  
+                            $("#okewa-floating_popup").delay(1000).hide(0);
                         });
                         $("#okewa-floating_popup div[id*='cs_'] .okewa-header .okewa-close").click(function() {
                           $("#okewa-floating_popup div[id*='cs_']").removeClass('active animated fadeIn').hide();
                           $('#okewa-floating_popup .okewa-multiple_cs').show().addClass('animated fadeIn');
                         });
-                                    
 
-                                            
-                    
+
+
+
                       $('#okewa-floating_popup .okewa-input .okewa-input_icon').click(function() {
                           var message = $(this).closest('.okewa-input').find('.okewa-input_content').val();
                           var number = $(this).closest('.okewa-input').find('.okewa-input_content').data('no');
                                                         window.location.href = "https://www.sekolahpengadaan.id/wp-content/plugins/okewa/okewa-send.php?no="+number+"&msg="+message+"";
-                                            
+
                       });
                       $("#okewa-floating_popup .okewa-input .okewa-input_content").keypress(function(e) {
                         if(e.which == 13) {
                           var message = $(this).val();
                           var number = $(this).data('no');
                                                         window.location.href = "https://www.sekolahpengadaan.id/wp-content/plugins/okewa/okewa-send.php?no="+number+"&msg="+message+"";
-                                            
+
                         }
                         });
                         $('#okewa-floating_popup .okewa-multiple_cs .okewa-chat div[class*="list-cs_"]:not(".offline")').click(function() {
@@ -5740,12 +5727,12 @@ var okewa_ui_data = {"z_index":"1"};
                           var number = $(this).data('no');
                           window.location.href = "https://www.sekolahpengadaan.id/wp-content/plugins/okewa/okewa-send.php?no="+number+"";
                           }
-                        });    
+                        });
                       if ($(window).width() > 767) {
                                                     // Open chat after x seconds on desktop
                                                         setTimeout(function() {
                                                                 if ( $("#okewa-floating_popup").css('display') == 'none' ) {
-                                                  
+
                               if (!Cookies.get('okewaclose')) {
                                       $("#okewa-floating_cta").trigger('click');
                                     }
@@ -5856,7 +5843,7 @@ var aepc_pixel_events = {"custom_events":{"AdvancedEvents":[{"params":{"login_st
 				id="landingpress-js">
 			</script>
 			<script>
-				jQuery(function($){ $(".widget_meta a[href='https://www.sekolahpengadaan.id/comments/feed/']").parent().remove(); }); 
+				jQuery(function($){ $(".widget_meta a[href='https://www.sekolahpengadaan.id/comments/feed/']").parent().remove(); });
 			</script>
 
 			<script type="text/javascript">
@@ -5900,7 +5887,7 @@ var aepc_pixel_events = {"custom_events":{"AdvancedEvents":[{"params":{"login_st
             }
         });
     });
-    
+
     $('#refGetForm').submit(function(e) {
         e.preventDefault();
         $.ajaxSetup({
@@ -5933,3 +5920,4 @@ var aepc_pixel_events = {"custom_events":{"AdvancedEvents":[{"params":{"login_st
 </body>
 
 </html>
+

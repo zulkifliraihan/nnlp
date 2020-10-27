@@ -54,10 +54,10 @@ Jam *13.00 – 15.00 WIB*
 *Target Workshop :*
 •  Memahami perkembangan ISO 9000 seri
 •  Konsep-konsep sistem manajemen mutu
-•  Memahami persyaratan-persyaratan standar ISO 9001: 2015 
+•  Memahami persyaratan-persyaratan standar ISO 9001: 2015
 •  Mampu menetapkan langkah-langkah pengembangan
-•  Mampu mengidentifikasi sumber daya 
-•  Mampu mengembangkan Sistem Manajemen Mutu 
+•  Mampu mengidentifikasi sumber daya
+•  Mampu mengembangkan Sistem Manajemen Mutu
 *Fasilitas Gratis:*
 •  Mengikuti Workshop
 •  Materi Pelatihan
@@ -100,10 +100,10 @@ Jam *13.00 – 15.00 WIB*
 *Target Workshop :*
 •  Memahami perkembangan ISO 9000 seri
 •  Konsep-konsep sistem manajemen mutu
-•  Memahami persyaratan-persyaratan standar ISO 9001: 2015 
+•  Memahami persyaratan-persyaratan standar ISO 9001: 2015
 •  Mampu menetapkan langkah-langkah pengembangan
-•  Mampu mengidentifikasi sumber daya 
-•  Mampu mengembangkan Sistem Manajemen Mutu 
+•  Mampu mengidentifikasi sumber daya
+•  Mampu mengembangkan Sistem Manajemen Mutu
 *Fasilitas Gratis:*
 •  Mengikuti Workshop
 •  Materi Pelatihan

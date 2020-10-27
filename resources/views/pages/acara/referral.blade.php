@@ -4340,7 +4340,7 @@ document,'script','https://connect.facebook.net/en_US/fbevents.js');
                 n.push=n;n.loaded=!0;n.version='2.0';n.agent='dvpixelcaffeinewordpress';n.queue=[];t=b.createElement(e);t.async=!0;
                 t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
                 document,'script','https://connect.facebook.net/en_US/fbevents.js');
-            
+
             var aepc_pixel = {"pixel_id":"324138344664067","user":{},"enable_advanced_events":"yes","fire_delay":"0"},
                 aepc_pixel_args = {},
                 aepc_extend_args = function( args ) {
@@ -4378,15 +4378,13 @@ document,'script','https://connect.facebook.net/en_US/fbevents.js');
 <body
   class="page-template page-template-elementor_canvas page page-id-8078 header-active header-menu-active header-menu-sticky header-menu-after footer-active elementor-default elementor-template-canvas elementor-kit-6581 elementor-page elementor-page-8078"
   data-elementor-device-mode="desktop">
-  @if ($user->status_pembayaran == 0)  
+  @if ($user->status_pembayaran == 0)
   <div class="alert alert-danger text-center" role="alert">
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true">&times;</span>
     </button>
-    <h4 class="alert-heading">Anda Belum Melakukan Pembayaran</h4>
-    <p>Harap Lakukan Pembayaran dengan Klik Tombol Berikut :</p>
-    <a target="_blank" style="color: white" href="https://lpkn.orderonline.id/PanduanInstalasiReferral"
-      class="btn btn-warning">Klik untuk Melakukan Pembayaran</a>
+    <h4 class="alert-heading">Harap Lakukan Pembayaran dengan Klik Tombol Berikut :</h4>
+	  <a target="_blank" style="color: white" href="https://lpkn.orderonline.id/PanduanInstalasiReferral" class="btn btn-dark mt-4">Klik disini untuk Melakukan Pembayaran</a>
     <br><br>
     <b>*Jika Telah Melakukan Pembayaran Harap Abaikan Notifikasi Ini</b>
   </div>
@@ -4457,22 +4455,22 @@ document,'script','https://connect.facebook.net/en_US/fbevents.js');
                     <div class="elementor-element elementor-element-221c6426 elementor-widget elementor-widget-heading"
                       data-id="221c6426" data-element_type="widget" data-widget_type="heading.default">
                       <div class="elementor-widget-container mb-3">
-                        <p class="elementor-heading-title elementor-size-default mb-2">Apakah anda tertarik bergabung
-                          <span style="color: #FFA300;">menjadi affiliate kami?</span> Berpeluang mendapatkan hadiah</p>
+                        <p class="elementor-heading-title elementor-size-default mb-2">Apakah anda tertarik bergabung  <span style="color: #FFA300;">menjadi affiliate kami?</span></p>
+                        <h4>Silahkan share Informasi ini, Anda berpeluang mendapatkan Hadiah.<br> Juara berdasarkan Jumlah terbanyak dari peserta yang daftar melalui Link registrasi Anda.</h4>
                         <span class="fas fa-gift text-warning fa-3x btn-icon__inner"></span>
                       </div>
                       <h5 class="mb-3"><span class="elementor-icon-list-icon">
-                          <i class="fas fa-check"></i>
-                        </span><b>Juara 1 :</b> Rp. 3.000.000,-</h5>
-                      <h5 class="mb-3"><span class="elementor-icon-list-icon">
-                          <i class="fas fa-check"></i>
-                        </span><b>Juara 2 :</b> Rp. 2.000.000,-</h5>
-                      <h5 class="mb-3"><span class="elementor-icon-list-icon">
-                          <i class="fas fa-check"></i>
-                        </span><b>Juara 3 :</b> Rp. 1.000.000,-</h5>
-                      <h5><span class="elementor-icon-list-icon">
-                          <i class="fas fa-check"></i>
-                        </span><b>Juara 4-10 :</b> Rp. 500.000</h5>
+                        <i class="fas fa-check"></i>
+                        </span><b>Juara 1 :</b> Rp. 2.000.000,-</h5>
+                        <h5 class="mb-3"><span class="elementor-icon-list-icon">
+                            <i class="fas fa-check"></i>
+                        </span><b>Juara 2 :</b> Rp. 1.000.000,-</h5>
+                        <h5 class="mb-3"><span class="elementor-icon-list-icon">
+                            <i class="fas fa-check"></i>
+                        </span><b>Juara 3 :</b> Rp. 750.000,-</h5>
+                        <h5><span class="elementor-icon-list-icon">
+                            <i class="fas fa-check"></i>
+                        </span><b>Juara 4-10   :</b>  @ Rp. 500.000</h5>
                     </div>
                     <!-- <div class="elementor-element elementor-element-b6a929b elementor-widget elementor-widget-text-editor" data-id="b6a929b" data-element_type="widget" data-widget_type="text-editor.default">
                 <div class="elementor-widget-container">
@@ -4510,6 +4508,11 @@ document,'script','https://connect.facebook.net/en_US/fbevents.js');
                           data-id="afcd5bf" data-element_type="widget" data-widget_type="icon-list.default">
                           <div class="elementor-widget-container">
                             <ul class="elementor-icon-list-items">
+                                <li class="elementor-icon-list-item">
+									<span class="elementor-icon-list-icon">
+									    <i aria-hidden="true" class="fas fa-clipboard-list"></i>						</span>
+								    <span class="elementor-icon-list-text">Hadiah diperuntukkan untuk 10 orang.</span>
+							    </li>
                               <li class="elementor-icon-list-item">
                                 <span class="elementor-icon-list-icon">
                                   <i aria-hidden="true" class="fas fa-clipboard-list"></i> </span>
@@ -4553,39 +4556,44 @@ document,'script','https://connect.facebook.net/en_US/fbevents.js');
                           class="elementor-element elementor-element-2b873f05 elementor-widget elementor-widget-heading"
                           data-id="2b873f05" data-element_type="widget" data-widget_type="heading.default">
                           <div class="elementor-widget-container">
-                            <h3>Text untuk dibagikan ke Rekan-rekan anda</h3>
+                            <h3>Bahan promosi untuk dibagikan ke rekan-rekan anda</h3>
                           </div>
                         </div>
                         <div
                           class="elementor-element elementor-element-4960bd4d elementor-widget elementor-widget-text-editor"
                           data-id="4960bd4d" data-element_type="widget" data-widget_type="text-editor.default">
                           <div class="elementor-widget-container">
-                            <textarea class="input w-full box placeholder-theme-13" rows="18" style="font-size: 14pt">
-*Ikuti Workshop Online*
-*SISTEM MANAJEMEN MUTU*
-(Understanding and Implementing ISO 9001 : 2015)
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <img width="905" height="1280" src="{{ asset("brosur_instalasi.jpg") }}" alt="" loading="lazy">
+                                    <a href="{{ route('download.brosur') }}"><i class="fas fa-download"></i> Download Brosur</a>
+                                </div>
+                                <div class="col-md-7">
+<textarea class="input w-full box placeholder-theme-13" rows="19" style="font-size: 12pt">
+*WORKSHOP ONLINE*
+*Panduan Instalasi Program Bermanfaat ke Pikiran Bawah Sadar*
+*+ Bonus Kelas “8 Life Skills Untuk Meraih Sukses”*
 
-Hari *Kamis, 12 November 2020*
-Jam *13.00 – 15.00 WIB*
+Bagaimana cara menanamkan program sukses di pikiran bawah sadar, sehingga apapun goal yang Anda inginkan, dapat lebih mudah dan lebih cepat tercapai?
 
-*Target Workshop :*
-•  Memahami perkembangan ISO 9000 seri
-•  Konsep-konsep sistem manajemen mutu
-•  Memahami persyaratan-persyaratan standar ISO 9001: 2015 
-•  Mampu menetapkan langkah-langkah pengembangan
-•  Mampu mengidentifikasi sumber daya 
-•  Mampu mengembangkan Sistem Manajemen Mutu 
-*Fasilitas Gratis:*
-•  Mengikuti Workshop
-•  Materi Pelatihan
-•  E-Sertifikat
-•  Video Pembelajaran
-Buruan daftar, *Terbatas Hanya untuk 5.000 Peserta*
+*Sabtu, 21 November 2020, 09.30 – 15.00 WIB*
 
-Selengkapnya :Klik {{ route("landing") }}?ref=0EO4DX
+Harga Promosi Rp. 145.000,-
+(GRATIS Bonus Kelas SenilaI Rp. 450.000,-)
 
-Sampai Ketemu Via Online pada Kamis, 12 November 2020
+*Fasilitas*
+•	Mengikuti 2 sesi Kelas
+•	Materi Paparan
+•	E- Sertifikat
+•	Video Rekaman
+•	Bonus Kelas Senilasi Rp. 450.000,-
+
+Selengkapnya :Klik {{ route("landing") }}?ref={{ $user->ref }}
+
+Panitia : 0811 1102 991 / 0813 1888 6103
 </textarea>
+                                </div>
+                            </div>
 
                             <h4 class="mt-3">Bagikan Melalui : </h4>
                             <div class="row">
@@ -4603,11 +4611,97 @@ Sampai Ketemu Via Online pada Kamis, 12 November 2020
                             </div>
                             <div class="elementor-widget-container mt-3">
                               <div class="elementor-text-editor elementor-clearfix">
-                                <p style="text-align: center;">0 <span style="color: #ff9900;">orang mendaftar
+                                <p style="text-align: center;">@{{ terundang.length }}<span style="color: #ff9900;">orang mendaftar
                                     menggunakan link yang Anda bagikan</span></p>
-                                <p style="text-align: center;">Anda berada diurutan : </p>
+                                 @php
+                                    $no = 0;
+                                @endphp
+
+                                @forelse ($ref_count as $item)
+                                    @php
+                                        $no +=1;
+                                    @endphp
+                                    @if ($item->ref_by == $user->ref)
+                                    <p style="text-align: center;">Anda berada diurutan : {{$no}}</p>
+                                    @else
+                                    @endif
+                                @empty
+                                @endforelse
                               </div>
                             </div>
+
+                            <!-- Table with panel -->
+                            <div class="card card-cascade narrower">
+
+                                <!--Card image-->
+                                <div
+                                class="view view-cascade gradient-card-header primary-color-dark narrower py-2 mx-4 mb-3 d-flex justify-content-between align-items-center">
+
+                                <div>
+                                </div>
+
+                                <a href="" class="white-text mx-3">Daftar Member Affiliate</a>
+
+                                <div>
+
+                                </div>
+
+                                </div>
+                                <!--/Card image-->
+
+                                <div class="row">
+                                    <div class="col-md-2"></div>
+                                    <div class="col-md-10">
+                                        <div class="px-4">
+
+                                        <div class="table-wrapper">
+                                            <!--Table-->
+                                            <table class="table table-hover mb-0 table-responsive">
+
+                                            <!--Table head-->
+                                            <thead>
+                                                <tr>
+                                                <th class="th-lg">
+                                                    <a>Nama Lengkap
+                                                    </a>
+                                                </th>
+                                                <th class="th-lg">
+                                                    <a href="">Jumlah Mengundang
+                                                    </a>
+                                                </th>
+                                                <th class="th-lg">
+                                                    <a href="">Status
+                                                    </a>
+                                                </th>
+                                                </tr>
+                                            </thead>
+                                            <!--Table head-->
+
+                                            <!--Table body-->
+                                            <tbody>
+                                                <tr>
+                                                <td>Mark</td>
+                                                <td>Otto</td>
+                                                <td><span class="badge badge-pill badge-success">Sudah Bayar</span></td>
+                                                </tr>
+                                                <tr>
+                                                <td>Mark</td>
+                                                <td>Otto</td>
+                                                <td><span class="badge badge-pill badge-danger">Teregistrasi</span></td>
+                                                </tr>
+                                            </tbody>
+                                            <!--Table body-->
+                                            </table>
+                                            <!--Table-->
+                                        </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2"></div>
+                                </div>
+
+                            </div>
+                            <!-- Table with panel -->
 
                           </div>
                         </div>
@@ -4805,28 +4899,28 @@ Sampai Ketemu Via Online pada Kamis, 12 November 2020
                             Cookies.set("okewaclose", 1, { expires : 1 });
                             $("#okewa-floating_popup").removeClass('bounceInUp');
                             $("#okewa-floating_popup").addClass('bounceOutDown');
-                            $("#okewa-floating_popup").delay(1000).hide(0);  
+                            $("#okewa-floating_popup").delay(1000).hide(0);
                         });
                         $("#okewa-floating_popup div[id*='cs_'] .okewa-header .okewa-close").click(function() {
                           $("#okewa-floating_popup div[id*='cs_']").removeClass('active animated fadeIn').hide();
                           $('#okewa-floating_popup .okewa-multiple_cs').show().addClass('animated fadeIn');
                         });
-                                            
 
-                                            
-                    
+
+
+
                       $('#okewa-floating_popup .okewa-input .okewa-input_icon').click(function() {
                           var message = $(this).closest('.okewa-input').find('.okewa-input_content').val();
                           var number = $(this).closest('.okewa-input').find('.okewa-input_content').data('no');
                                                         window.location.href = "https://www.sekolahpengadaan.id/wp-content/plugins/okewa/okewa-send.php?no="+number+"&msg="+message+"";
-                                                  
+
                       });
                       $("#okewa-floating_popup .okewa-input .okewa-input_content").keypress(function(e) {
                         if(e.which == 13) {
                           var message = $(this).val();
                           var number = $(this).data('no');
                                                         window.location.href = "https://www.sekolahpengadaan.id/wp-content/plugins/okewa/okewa-send.php?no="+number+"&msg="+message+"";
-                                                  
+
                         }
                         });
                         $('#okewa-floating_popup .okewa-multiple_cs .okewa-chat div[class*="list-cs_"]:not(".offline")').click(function() {
@@ -4834,12 +4928,12 @@ Sampai Ketemu Via Online pada Kamis, 12 November 2020
                           var number = $(this).data('no');
                           window.location.href = "https://www.sekolahpengadaan.id/wp-content/plugins/okewa/okewa-send.php?no="+number+"";
                           }
-                        });    
+                        });
                       if ($(window).width() > 767) {
                                                     // Open chat after x seconds on desktop
                                                         setTimeout(function() {
                                                                 if ( $("#okewa-floating_popup").css('display') == 'none' ) {
-                                                        
+
                                     if (!Cookies.get('okewaclose')) {
                                       $("#okewa-floating_cta").trigger('click');
                                     }
@@ -4945,7 +5039,7 @@ var aepc_pixel_events = {"custom_events":{"AdvancedEvents":[{"params":{"login_st
         id="landingpress-js">
       </script>
       <script>
-        jQuery(function($){ $(".widget_meta a[href='https://www.sekolahpengadaan.id/comments/feed/']").parent().remove(); }); 
+        jQuery(function($){ $(".widget_meta a[href='https://www.sekolahpengadaan.id/comments/feed/']").parent().remove(); });
       </script>
 
       <script type="text/javascript">

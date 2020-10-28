@@ -135,7 +135,7 @@ class DashboardController extends Controller
 
         $user = User::with('mengundang:ref_by,name,instansi','diundang')->where('id', $id)->first();
 
-        // Mail::to($user->email)->send(new OrderShipped('Pendaftaran Berhasil!', $user));
+        Mail::to($user->email)->send(new OrderShipped('Pendaftaran Berhasil!', $user));
 
         return response([
             'ok' => true,

@@ -23,6 +23,7 @@ class User extends Authenticatable
         'jenis_kelamin',
         'hp',
         'instansi',
+        'kota',
         'ref',
         'ref_by',
     ];

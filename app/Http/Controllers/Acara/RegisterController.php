@@ -76,6 +76,7 @@ class RegisterController extends Controller
         $user = User::firstOrCreate($input);
 
         Session::put('lpkn_ref_email', $data['email']);
+        Session::put('selesai_pendaftaran', $data['email']);
         
         // $user = User::with('mengundang:ref_by,name,instansi','diundang')->where('email', $data['email'])->first();
 

@@ -71,7 +71,7 @@ class DashboardController extends Controller
                     return isset($query->diundang) ? $query->diundang->name : "";
                 })
                 ->addColumn('bukti_pembayaran', function($query){
-                    return isset($query->pembayaran) && isset($query->pembayaran->file) ? "<img src='".asset('uploads/'.$query->pembayaran->file->path)."' data-action='zoom'>" : "";
+                    return isset($query->pembayaran) && isset($query->pembayaran->file) ? "<img src='".asset('uploads/'.$query->pembayaran->file->path)."' class='h-16 w-auto' data-action='zoom'>" : "";
                 })
                 ->addColumn('status_pembayaran', function($query){
                     if($query->status_pembayaran == 0){

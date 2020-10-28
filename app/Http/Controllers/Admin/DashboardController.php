@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use View;
+use Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -18,6 +19,12 @@ use Maatwebsite\Excel\Facades\Excel;
 
 class DashboardController extends Controller
 {
+    public function __construct(){
+        if (!Auth::check()) {
+            return redirect('admin/login');
+        }
+    }
+
     public function index()
     {
         if(request()->ajax()) {
@@ -76,7 +83,15 @@ class DashboardController extends Controller
                         ';
                     }
                 })
-                ->rawColumns(['mengundang', 'total_mengundang', 'diundang_oleh', 'status_pembayaran'])
+                ->addColumn('button_proses', function($query){
+                    if ($query->status_pembayaran == 1) {
+                        return '<button class="button inline-block bg-gray-700 text-white float-right" disabled>Proses</button';
+                    } else {
+                        return '<button class="button inline-block bg-theme-1 text-white float-right" onclick="proses_pembayaran('.$query->id.')">Proses</button';
+                    }
+                    
+                })
+                ->rawColumns(['mengundang', 'total_mengundang', 'diundang_oleh', 'status_pembayaran', 'button_proses'])
                 ->addIndexColumn()
                 ->make(true);
         }
@@ -90,6 +105,29 @@ class DashboardController extends Controller
         );
 
         return View::make('pages.admin.dashboard', $data);
+    }
+
+    public function proses($id){
+        $user = User::find($id);
+
+        if (!$user) {
+            return response([
+                'ok' => false,
+                'data' => [
+                    'message' => 'Pendaftar tidak ditemukan'
+                ]
+            ],422);
+        }
+
+        $user->status_pembayaran = 1;
+        $user->save();
+
+        return response([
+            'ok' => true,
+            'data' => [
+                'message' => 'Pendaftar Status berhasil diproses'
+            ]
+        ],200);
     }
 
     public function export() 

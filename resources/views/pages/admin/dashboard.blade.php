@@ -196,8 +196,8 @@
                             <th class="whitespace-no-wrap bg-white">NAMA LENGKAP</th>
                             <th class="text-center whitespace-no-wrap bg-white">JUMLAH TERUNDANG</th>
                             <th class="text-center whitespace-no-wrap bg-white">KODE REFFERENSI</th>
-                            <th class="text-center whitespace-no-wrap bg-white">DIUNDANG OLEH</th>
                             <th class="text-center whitespace-no-wrap bg-white">STATUS PEMBAYARAN</th>
+                            <th class="text-center whitespace-no-wrap bg-white">PROSES</th>
                         </tr>
                     </thead>
                 </table>
@@ -210,6 +210,34 @@
 <!-- END: Content -->
 
 <script>
+    function proses_pembayaran(id) {
+        Swal.fire({
+            title: 'Apa anda yakin?',
+            text: "Proses pembayaran akan terverifikasi!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Ya, verifikasi!'
+            }).then((result) => {
+            if (result.isConfirmed) {
+                return fetch(`{{ route('admin.proses.pembayaran') }}/`+id)
+                    .then(response => {
+                        if (!response.ok) {
+                        throw new Error(response.data.message)
+                        }
+                        $('#userTableData').DataTable().draw(false);
+                        return response.json()
+                    })
+                    .catch(error => {
+                        Swal.showValidationMessage(
+                        `Request failed: ${error}`
+                        )
+                    })
+            }
+        })
+    }
+
     var table = $('#userTableData').DataTable({
         dom : 'Brtp',
         processing: true,
@@ -223,8 +251,9 @@
             {data: 'name', name: 'name'},
             {data: 'total_mengundang', name: 'total_mengundang'},
             {data: 'ref', name: 'ref'},
-            {data: 'diundang_oleh', name: 'diundang_oleh'},
+            // {data: 'diundang_oleh', name: 'diundang_oleh'},
             {data: 'status_pembayaran', name: 'status_pembayaran', orderable: false, searchable: false},
+            {data: 'button_proses', name: 'button_proses', orderable: false, searchable: false}
         ]
     });
 

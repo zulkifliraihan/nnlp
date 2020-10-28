@@ -4420,6 +4420,66 @@ document,'script','https://connect.facebook.net/en_US/fbevents.js');
                         </div>
                         <div class="col-md-3"></div>
                       </div>
+                      @if (session('lpkn_ref_email') && isset($user) && $user->status_pembayaran == 0)
+                        @if (isset($user->pembayaran))
+                          <div class="alert alert-info text-center" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="alert-heading">Bukti pembayaran sudah terupload</h4>
+                            <a style="color: white" data-toggle="modal" data-target="#modalPembayaran" class="btn btn-dark mt-4">Update bukti pembayaran</a>
+                            <br><br>
+                          </div>
+                        @else
+                        <div class="row">
+                          @if (session('lpkn_ref_email'))
+                          @php
+                          $harga = 145000;
+                          $total_harga = (int) $harga + $user->id;
+                          @endphp
+                          <div class="col-12">
+                            <p class="h6 mb-2 text-white">Silahkan transfer sejumlah <b> @if (session('lpkn_ref_email')) Rp.
+                                {{ number_format($total_harga, 0 , ",", ".") }} @endif </b> ke rekening berikut :
+                            </p>
+                          </div>
+                          @endif
+                            <div class="col-md-6 offset-md-3">
+                              <form id="uploadPembayaranForm" action="{{ route('acara.pembayaran') }}" method="POST">
+                                <div class="text-center border border-light p-3 mb-4">
+                                  <center>
+                                    <img width="120" height="30" src="{{ asset("instalasi/BRI.png") }}"
+                                      class="attachment-large size-large" alt="" loading="lazy">
+                                  </center>
+                                  <p class="text-white mb-2">No. Rek. 213501000250301</p>
+                                  <p style="font-size: 10pt" class="text-white">Atas Nama: <b>Lembaga Pengembangan dan Konsultasi
+                                      Nasional</b></p>
+                                </div>
+      
+                                {{-- <input type="text" name="nama_rekening" id="nama_rekening_id" class="form-control mb-4"
+                                  placeholder="Nama Pemilik Rekening" required>
+      
+                                <input type="text" id="defaultLoginFormEmail" class="form-control mb-4"
+                                  placeholder="No Rekening" required>
+      
+                                <input type="text" id="defaultLoginFormEmail" class="form-control mb-4"
+                                  placeholder="Jumlah Transfer" required> --}}
+      
+                                <div class="input-group">
+                                  <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroupFileAddon01"><i
+                                        class="fas fa-file-upload"></i></span>
+                                  </div>
+                                  <div class="custom-file">
+                                    <input type="file" name="file" class="custom-file-input" id="inputGroupFile01"
+                                      aria-describedby="inputGroupFileAddon01" required>
+                                    <label class="custom-file-label" for="inputGroupFile01">Bukti Transfer</label>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        @endif
+                      @endif
                     </div>
 
                   </div>
@@ -5073,5 +5133,35 @@ var aepc_pixel_events = {"custom_events":{"AdvancedEvents":[{"params":{"login_st
 
     </b></b><span id="elementor-device-mode" class="elementor-screen-only"></span>
 </body>
+<script>
+  $('#uploadPembayaranForm').submit(function(e) {
+      e.preventDefault();
+      $.ajaxSetup({
+          headers: {
+              'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+          }
+      });
 
+      $.ajax({
+          type: 'post',
+          url: $(this).attr("action"),
+          data: new FormData($('#uploadPembayaranForm')[0]),
+          dataType: 'json',
+          processData: false,
+          contentType: false,
+          success: function(data) {
+              if(data.status == "ok"){
+        toastr["success"](data.messages);
+        location.reload();
+              }
+          },
+          error: function(data){
+              var data = data.responseJSON;
+              if(data.status == "fail"){
+                    toastr["error"](data.messages);
+              }
+          }
+      });
+  });
+</script>
 </html>

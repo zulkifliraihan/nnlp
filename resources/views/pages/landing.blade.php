@@ -4376,6 +4376,28 @@ var okewa_ui_data = {"z_index":"1"};
 <body
 	class="page-template page-template-elementor_canvas page page-id-8078 header-active header-menu-active header-menu-sticky header-menu-after footer-active elementor-default elementor-template-canvas elementor-kit-6581 elementor-page elementor-page-8078"
 	data-elementor-device-mode="desktop">
+	@if (session('lpkn_ref_email') && $user->status_pembayaran == 0)
+		@if (isset($user->pembayaran))
+			<div class="alert alert-info text-center" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="alert-heading">Bukti pembayaran sudah terupload</h4>
+				<a style="color: white" data-toggle="modal" data-target="#modalPembayaran" class="btn btn-dark mt-4">Update bukti pembayaran</a>
+				<br><br>
+			</div>
+		@else
+			<div class="alert alert-danger text-center" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="alert-heading">Pembayaran belum terverifikasi, harap upload bukti pembayaran: </h4>
+				<a style="color: white" data-toggle="modal" data-target="#modalPembayaran" class="btn btn-dark mt-4">Upload bukti pembayaran</a>
+				<br><br>
+				<b>*Jika Telah Upload Bukti Pembayaran Harap Abaikan Notifikasi Ini</b>
+			</div>
+		@endif
+	@endif
 	<div data-elementor-type="wp-page" data-elementor-id="8078" class="elementor elementor-8078"
 		data-elementor-settings="[]">
 		<div class="elementor-inner">
@@ -4454,7 +4476,8 @@ var okewa_ui_data = {"z_index":"1"};
 														</span>
 													</a>
 													<br>
-													<button type="button" class="btn btn-info mt-4" data-toggle="modal" data-target="#refModal">
+													<button type="button" class="btn btn-info mt-4" data-toggle="modal"
+														data-target="#refModal">
 														Sudah mendaftar? check referral anda.
 													</button>
 													@endif
@@ -5299,16 +5322,16 @@ var okewa_ui_data = {"z_index":"1"};
           <span class="elementor-button-text">Daftar Sekarang</span>
         </span>
       </a> -->
-                                                            @if (!session('lpkn_ref_email'))
-                                                                <a href="javascript:0"
-                                                                    class="elementor-button-link elementor-button elementor-size-xl elementor-animation-grow"
-                                                                    data-toggle="modal" data-target="#fullHeightModalRight">
-                                                                    <span class="elementor-button-content-wrapper">
-                                                                        <span class="elementor-button-text">Daftar
-                                                                            Sekarang</span>
-                                                                    </span>
-                                                                </a>
-                                                            @endif
+															@if (!session('lpkn_ref_email'))
+															<a href="javascript:0"
+																class="elementor-button-link elementor-button elementor-size-xl elementor-animation-grow"
+																data-toggle="modal" data-target="#fullHeightModalRight">
+																<span class="elementor-button-content-wrapper">
+																	<span class="elementor-button-text">Daftar
+																		Sekarang</span>
+																</span>
+															</a>
+															@endif
 														</div>
 													</div>
 												</div>
@@ -5533,35 +5556,37 @@ var okewa_ui_data = {"z_index":"1"};
 		</div><b><b>
 			</b></b>
 	</div><b><b>
-		<div class="modal fade" id="refModal" tabindex="-1" aria-labelledby="refModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
-			  <div class="modal-content">
-				<div class="modal-header">
-				  <h5 class="modal-title" id="exampleModalLabel">Harap masukan email anda..</h5>
-				  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				  </button>
+			<div class="modal fade" id="refModal" tabindex="-1" aria-labelledby="refModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">Harap masukan email anda..</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<form id="refGetForm" action="{{ route('referral.set.sess') }}" method="POST">
+							<div class="modal-body">
+								<div class="form-group">
+									<label for="exampleFormControlInput1">Email address</label>
+									<div class="input-group input-group-sm mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text" id="inputGroup-sizing-sm"><i
+													class="fas fa-envelope-open text-dark"></i></span>
+										</div>
+										<input type="text" name="email" class="form-control"
+											placeholder="user@example.com" required>
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								<button class="btn btn-primary">Submit</button>
+							</div>
+						</form>
+					</div>
 				</div>
-				<form id="refGetForm" action="{{ route('referral.set.sess') }}" method="POST">
-				<div class="modal-body">
-					  <div class="form-group">
-							  <label for="exampleFormControlInput1">Email address</label>
-							  <div class="input-group input-group-sm mb-3">
-								  <div class="input-group-prepend">
-									  <span class="input-group-text" id="inputGroup-sizing-sm"><i class="fas fa-envelope-open text-dark"></i></span>
-								  </div>
-								  <input type="text" name="email" class="form-control" placeholder="user@example.com" required>
-							  </div>
-						  </div>
-				</div>
-				<div class="modal-footer">
-				  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-				  <button class="btn btn-primary">Submit</button>
-				</div>
-				</form>
-			  </div>
 			</div>
-		  </div>
 			<!-- Modal Daftar -->
 			<div class="modal fade right" id="fullHeightModalRight" tabindex="-1" role="dialog"
 				aria-labelledby="myModalLabel" aria-hidden="true">
@@ -5610,8 +5635,8 @@ var okewa_ui_data = {"z_index":"1"};
 								</select>
 
 								@isset($ref)
-								<input hidden type="text" name="ref" id="ref_field" value="{{ $ref }}" class="form-control mb-4"
-									placeholder="Profesi">
+								<input hidden type="text" name="ref" id="ref_field" value="{{ $ref }}"
+									class="form-control mb-4" placeholder="Profesi">
 								@endisset
 
 								<!-- Sign in button -->
@@ -5645,8 +5670,18 @@ var okewa_ui_data = {"z_index":"1"};
 							</button>
 						</div>
 						<div class="modal-body">
-							<p class="h6 mb-2">Silahkan transfer sejumlah <b>Rp.145.000</b> ke rekening berikut :</p>
-							<form action="#!">
+
+							@if (session('lpkn_ref_email'))
+							@php
+							$harga = 145000;
+							$total_harga = (int) $harga + $user->id;
+							@endphp
+							<p class="h6 mb-2">Silahkan transfer sejumlah <b> @if (session('lpkn_ref_email')) Rp.
+									{{ number_format($total_harga, 0 , ",", ".") }} @endif </b> ke rekening berikut :
+							</p>
+							@endif
+
+							<form id="uploadPembayaranForm" action="{{ route('acara.pembayaran') }}" method="POST">
 								<div class="text-center border border-light p-3 mb-4">
 									<img width="120" height="30" src="{{ asset("instalasi/BRI.png") }}"
 										class="attachment-large size-large" alt="" loading="lazy">
@@ -5655,16 +5690,14 @@ var okewa_ui_data = {"z_index":"1"};
 											Nasional</b></p>
 								</div>
 
-								<p class="h6 mb-3 text-center"> Upload Bukti Pembayaran</p>
-
-								<input type="text" id="defaultLoginFormEmail" class="form-control mb-4"
+								{{-- <input type="text" name="nama_rekening" id="nama_rekening_id" class="form-control mb-4"
 									placeholder="Nama Pemilik Rekening" required>
 
 								<input type="text" id="defaultLoginFormEmail" class="form-control mb-4"
 									placeholder="No Rekening" required>
 
 								<input type="text" id="defaultLoginFormEmail" class="form-control mb-4"
-									placeholder="Jumlah Transfer" required>
+									placeholder="Jumlah Transfer" required> --}}
 
 								<div class="input-group">
 									<div class="input-group-prepend">
@@ -5672,17 +5705,17 @@ var okewa_ui_data = {"z_index":"1"};
 												class="fas fa-file-upload"></i></span>
 									</div>
 									<div class="custom-file">
-										<input type="file" class="custom-file-input" id="inputGroupFile01"
+										<input type="file" name="file" class="custom-file-input" id="inputGroupFile01"
 											aria-describedby="inputGroupFileAddon01" required>
 										<label class="custom-file-label" for="inputGroupFile01">Bukti Transfer</label>
 									</div>
 								</div>
-							</form>
 						</div>
 						<div class="modal-footer justify-content-center">
 							<button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
-							<button type="button" style="color: white" class="btn btn-warning">Simpan</button>
+							<button style="color: white" class="btn btn-warning">Simpan</button>
 						</div>
+						</form>
 					</div>
 				</div>
 			</div>
@@ -5927,9 +5960,38 @@ var aepc_pixel_events = {"custom_events":{"AdvancedEvents":[{"params":{"login_st
                 }
             }
         });
+	});
+	
+    $('#uploadPembayaranForm').submit(function(e) {
+        e.preventDefault();
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
+        $.ajax({
+            type: 'post',
+            url: $(this).attr("action"),
+            data: new FormData($('#uploadPembayaranForm')[0]),
+            dataType: 'json',
+            processData: false,
+            contentType: false,
+            success: function(data) {
+                if(data.status == "ok"){
+					toastr["success"](data.messages);
+					location.reload();
+                }
+            },
+            error: function(data){
+                var data = data.responseJSON;
+                if(data.status == "fail"){
+                     toastr["error"](data.messages);
+                }
+            }
+        });
     });
 	</script>
 </body>
 
 </html>
-

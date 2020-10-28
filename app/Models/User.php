@@ -55,4 +55,8 @@ class User extends Authenticatable
     public function diundang(){
         return $this->hasOne('App\Models\User','ref','ref_by');
     }
+
+    public function pembayaran(){
+        return $this->hasOne('App\Models\UserPayments','user_id','id');
+    }
 }

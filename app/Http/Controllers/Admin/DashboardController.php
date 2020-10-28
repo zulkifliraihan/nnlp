@@ -14,7 +14,7 @@ use App\Mail\OrderShipped;
 use Illuminate\Support\Facades\Mail;
 
 use App\Models\User;
-use App\Models\ReferrCount;
+use App\Models\ReferrCountTerverifikasi;
 
 use App\Exports\UsersExport;
 use App\Imports\OrderOnlineImport;
@@ -107,10 +107,11 @@ class DashboardController extends Controller
         }
 
         $users = User::query()->with('mengundang','diundang')->where('email', '!=', 'admin@lpkn.org');
-        $pemenang = ReferrCount::with('user')->orderBy('jumlah', 'desc')->limit(10)->get();
+        $pemenang = ReferrCountTerverifikasi::with('user')->orderBy('jumlah', 'desc')->limit(10)->get();
 
         $data = array(
             'total_user' => $users->count(),
+            'total_user_terverifikasi' => $users->where('status_pembayaran', 1)->count(),
             'pemenang' => $pemenang
         );
 
@@ -134,7 +135,7 @@ class DashboardController extends Controller
 
         $user = User::with('mengundang:ref_by,name,instansi','diundang')->where('id', $id)->first();
 
-        Mail::to($user->email)->send(new OrderShipped('Pendaftaran Berhasil!', $user));
+        // Mail::to($user->email)->send(new OrderShipped('Pendaftaran Berhasil!', $user));
 
         return response([
             'ok' => true,

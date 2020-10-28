@@ -4670,7 +4670,7 @@ Panitia : 0811 1102 991 / 0813 1888 6103
                                     $no = 0;
                                 @endphp
 
-                                @forelse ($ref_count as $item)
+                                @forelse ($ref_count_terverifikasi as $item)
                                     @php
                                         $no +=1;
                                     @endphp

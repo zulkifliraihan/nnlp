@@ -44,7 +44,7 @@
 
     <!-- END: Top Bar -->
     <div class="grid grid-cols-12 gap-6">
-        <div class="col-span-12 xxl:col-span-9 grid grid-cols-12 gap-6">
+        <div class="col-span-12 xxl:col-span-9 grid grid-cols-12 gap-6" id="contentReport">
             <!-- BEGIN: General Report -->
             <div class="col-span-12 mt-8">
                 <div class="intro-y flex items-center h-10">
@@ -69,6 +69,9 @@
                                 <div class="text-3xl font-bold leading-8 mt-6">
                                     {{ number_format($total_user, 0, ',', '.') }}</div>
                                 <div class="text-base text-gray-600 mt-1">Total Pendaftar</div>
+                                <div class="text-3xl font-bold leading-8 mt-6">
+                                    {{ number_format($total_user_terverifikasi, 0, ',', '.') }}</div>
+                                <div class="text-base text-gray-600 mt-1">Total Terverifikasi</div>
                             </div>
 
                         </div>
@@ -127,7 +130,10 @@
                                     {{ isset($item->user) ? $item->user->name : "Belum ada pemenang" }}
                                 </div>
                                 <div class="text-base text-gray-600 mt-1">
-                                    {{ isset($item->user) ? number_format($item->jumlah,0,',','.') : 0 }} Undangan
+                                    {{ isset($item->user) ? number_format($item->jumlah_undangan,0,',','.') : 0 }} Total Undangan
+                                </div>
+                                <div class="text-base text-gray-600 mt-1">
+                                    {{ isset($item->user) ? number_format($item->jumlah,0,',','.') : 0 }} Undangan Terverifikasi
                                 </div>
                             </div>
                         </div>

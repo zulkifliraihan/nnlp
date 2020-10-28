@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Validator;
 
 use App\Models\User;
 use App\Models\ReferrCount;
+use App\Models\ReferrCountTerverifikasi;
 
 class ReferralController extends Controller
 {
@@ -24,7 +25,8 @@ class ReferralController extends Controller
         $jumlah_affiliate = $user->mengundang->count();
         $jumlah_affiliate_terverifikasi = $user->mengundang_terverifikasi->count();
         $ref_count = ReferrCount::with('user')->orderBy('jumlah', 'desc')->get();
-        $pemenang = ReferrCount::with('user')->orderBy('jumlah', 'desc')->limit(10)->get();
+        $ref_count_terverifikasi = ReferrCountTerverifikasi::with('user')->orderBy('jumlah', 'desc')->get();
+        $pemenang = ReferrCountTerverifikasi::with('user')->orderBy('jumlah', 'desc')->limit(10)->get();
 
         // $data = [
         //     "msg_wa" => "*Ikuti Workshop Online – GRATIS*\n*SISTEM MANAJEMEN MUTU*\n(Understanding and Implementing ISO 9001 : 2015)\n\nHari *Kamis, 12 November 2020*\nJam *13.00 – 15.00 WIB*\n\n*Target Workshop :*\n•  Memahami perkembangan ISO 9000 seri\n•  Konsep-konsep sistem manajemen mutu\n•  Memahami persyaratan-persyaratan standar ISO 9001: 2015 \n•  Mampu menetapkan langkah-langkah pengembangan\n•  Mampu mengidentifikasi sumber daya \n•  Mampu mengembangkan Sistem Manajemen Mutu \n*Fasilitas Gratis:*\n•  Mengikuti Workshop\n•  Materi Pelatihan\n•  E-Sertifikat\n•  Video Pembelajaran\nBuruan daftar, *Terbatas Hanya untuk 5.000 Peserta*\n\n*Selengkapnya :Klik ",
@@ -47,6 +49,7 @@ class ReferralController extends Controller
             "jumlah_affiliate" => $jumlah_affiliate,
             "jumlah_affiliate_terverifikasi" => $jumlah_affiliate_terverifikasi,
             "ref_count" => $ref_count,
+            "ref_count_terverifikasi" => $ref_count_terverifikasi,
             "pemenang" => $pemenang
         ];
 

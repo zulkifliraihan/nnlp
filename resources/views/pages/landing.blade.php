@@ -5625,14 +5625,17 @@ var okewa_ui_data = {"z_index":"1"};
 								<input type="text" name="no_hp" id="no_hp_id" class="form-control mb-4"
 									placeholder="Nomer Whatsapp *" required>
 
-								<input type="text" name="kota" id="kota_id" class="form-control mb-4"
-									placeholder="Kecamatan / Kota *" required>
+								<input type="text" name="instansi" id="instansi_id" class="form-control mb-4"
+									placeholder="Professi *" required>
 
-								<select required class="form-control mb-4" name="jenis_kelamin" id="jenis_kelamin_id">
+								{{-- <input type="text" name="kota" id="kota_id" class="form-control mb-4"
+									placeholder="Kecamatan / Kota *" required> --}}
+
+								{{-- <select required class="form-control mb-4" name="jenis_kelamin" id="jenis_kelamin_id">
 									<option disabled selected> Pilih jenis kelamin *</option>
 									<option value="0"> Laki-laki </option>
 									<option value="1"> Perempuan </option>
-								</select>
+								</select> --}}
 
 								@isset($ref)
 								<input hidden type="text" name="ref" id="ref_field" value="{{ $ref }}"
@@ -5991,7 +5994,7 @@ var aepc_pixel_events = {"custom_events":{"AdvancedEvents":[{"params":{"login_st
             success: function(data) {
                 if(data.status == "ok"){
 					toastr["success"](data.messages);
-					location.reload();
+					window.location.href = data.route;
                 }
             },
             error: function(data){

@@ -48,8 +48,9 @@ class RegisterController extends Controller
             'nama_lengkap' => "required",
             'email' => "required|unique:users",
             'no_hp' => "required",
-            'kota' => "required",
-            'jenis_kelamin' => "required",
+            'instansi' => "required",
+            // 'kota' => "required",
+            // 'jenis_kelamin' => "required",
             'ref' => "sometimes",
         ));
 
@@ -67,8 +68,9 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($ref),
             'hp' => $data['no_hp'],
-            'jenis_kelamin' => $data['jenis_kelamin'],
-            'kota' => $data['kota'],
+            'hp' => $data['instansi'],
+            // 'jenis_kelamin' => $data['jenis_kelamin'],
+            // 'kota' => $data['kota'],
             'ref' => $ref,
             'ref_by' => isset($data['ref']) ? $data['ref'] : null,
         );
@@ -136,7 +138,7 @@ class RegisterController extends Controller
             return response()->json([
                 'status'    => "ok",
                 'messages' => "Berhasil registrasi acara",
-                'route' => route('landing')
+                'route' => route('referral.pendaftaran')
             ], 200);
         }else{
             return response()->json([

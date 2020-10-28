@@ -5626,7 +5626,7 @@ var okewa_ui_data = {"z_index":"1"};
 									placeholder="Nomer Whatsapp *" required>
 
 								<input type="text" name="instansi" id="instansi_id" class="form-control mb-4"
-									placeholder="Professi *" required>
+									placeholder="Profesi *" required>
 
 								{{-- <input type="text" name="kota" id="kota_id" class="form-control mb-4"
 									placeholder="Kecamatan / Kota *" required> --}}

@@ -4,7 +4,12 @@
     <head>
         <meta charset="utf-8">
         <meta name="csrf-token" content="{{ csrf_token() }}" />
-        <link href="{{ asset('mone/images/logo.svg') }}" rel="shortcut icon">
+        <link rel="icon" href="https://www.sekolahpengadaan.id/wp-content/uploads/2018/07/cropped-LOGO-LPKN2-32x32.png"
+            sizes="32x32">
+        <link rel="icon" href="https://www.sekolahpengadaan.id/wp-content/uploads/2018/07/cropped-LOGO-LPKN2-192x192.png"
+            sizes="192x192">
+        <link rel="apple-touch-icon"
+            href="https://www.sekolahpengadaan.id/wp-content/uploads/2018/07/cropped-LOGO-LPKN2-180x180.png">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Pembelajaran dan pelatihan gratis">
         <meta name="keywords" content="LPKN - Referal registration Pembelajaran dan pelatihan gratis">
@@ -14,6 +19,8 @@
         <!-- BEGIN: CSS Assets-->
         <link rel="stylesheet" href="{{ asset('mone/css/app.css') }}" />
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.css"/>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.7.1/viewer.css">
         <!-- END: CSS Assets-->
 
         <!-- BEGIN: JS Assets-->
@@ -26,6 +33,9 @@
 
         <!-- SweetAlert2 -->
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+        {{-- Viewer JS --}}
+        <script srv="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.7.1/viewer.min.js"></script>
         <!-- END: JS Assets-->
     </head>
     <!-- END: Head -->

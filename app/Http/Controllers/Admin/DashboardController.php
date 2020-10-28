@@ -10,6 +10,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
+use App\Mail\OrderShipped;
+use Illuminate\Support\Facades\Mail;
+
 use App\Models\User;
 use App\Models\ReferrCount;
 
@@ -86,7 +89,7 @@ class DashboardController extends Controller
                         ';
                     }else{
                         return '
-                        <span class="px-2 py-1 rounded-full bg-theme-1 text-white mr-1">Pembayaran terverifikasi</span>
+                        <span class="px-2 py-1 rounded-full bg-theme-1 text-white mr-1">Terverifikasi</span>
                         ';
                     }
                 })
@@ -128,6 +131,10 @@ class DashboardController extends Controller
 
         $user->status_pembayaran = 1;
         $user->save();
+
+        $user = User::with('mengundang:ref_by,name,instansi','diundang')->where('id', $id)->first();
+
+        Mail::to($user->email)->send(new OrderShipped('Pendaftaran Berhasil!', $user));
 
         return response([
             'ok' => true,

@@ -74,7 +74,7 @@
                   </tr>
                   <tr>
                     <td class="h1" style="padding: 5px 0 0 0;">
-                      Konsep dan Implementasi Sistem Manajemen Mutu
+                      WORKSHOP ONLINE - Panduan Instalasi Program Bermanfaat ke Pikiran Bawah Sadar
                     </td>
                   </tr>
                 </table>
@@ -93,12 +93,14 @@
           <table width="100%" border="0" cellspacing="0" cellpadding="0">
             <tr>
               <td class="h2">
-                Terima Kasih Telah Mendaftar!
+                Terimakasih telah melakukan konfirmasi pembayaran
               </td>
             </tr>
             <tr>
               <td class="bodycopy">
-                Anda telah terdaftar pada seminar gratis dari <strong>LPKN Training Center</strong> yang bertemakan <strong>Konsep dan Implementasi Sistem Manajemen Mutu</strong>.
+                <strong>WORKSHOP ONLINE - Panduan Instalasi Program Bermanfaat ke Pikiran Bawah Sadar</strong>.<br>
+                Untuk memudahkan koordinasi kegiatan, silahkan join di Group Telegram kami:<br>
+                <a href="https://t.me/joinchat/CLaSQlcHSPjkNxZIi2z4AQ">https://t.me/joinchat/CLaSQlcHSPjkNxZIi2z4AQ</a>
               </td>
             </tr>
           </table>
@@ -124,7 +126,7 @@
                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                   <tr>
                     <td class="bodycopy">
-                    Dapatkan hadiah menarik dengan mengundang orang-orang untuk mendaftar pada seminar ini dengan menggunakan link berikut ({{ url('/') }}?ref={{ $user['ref'] }}).
+                    Silahkan registrasi kembali di link zoom berikut.
                     </td>
                   </tr>
                   <tr>
@@ -132,7 +134,7 @@
                       <table class="buttonwrapper" bgcolor="#233289" border="0" cellspacing="0" cellpadding="0">
                         <tr>
                           <td class="button" height="45">
-                            <a href="#">Link Zoom!</a>
+                            <a href="http://bit.ly/InstalasiAlamBawahSadar">Link Zoom!</a>
                           </td>
                         </tr>
                       </table>
@@ -164,6 +166,7 @@
           <table width="100%" border="0" cellspacing="0" cellpadding="0">
             <tr>
               <td align="center" class="footercopy">
+                Panitia : 0811 1102 991 / 0813 1888 6103<br>
                 &reg; LPKN Training Center, Jakarta 2020<br/>
               </td>
             </tr>

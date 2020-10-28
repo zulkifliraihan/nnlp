@@ -4376,7 +4376,7 @@ var okewa_ui_data = {"z_index":"1"};
 <body
 	class="page-template page-template-elementor_canvas page page-id-8078 header-active header-menu-active header-menu-sticky header-menu-after footer-active elementor-default elementor-template-canvas elementor-kit-6581 elementor-page elementor-page-8078"
 	data-elementor-device-mode="desktop">
-	@if (session('lpkn_ref_email'))
+	@if (session('lpkn_ref_email') && isset($user) && $user->status_pembayaran == 0)
 		@if (isset($user->pembayaran))
 			<div class="alert alert-info text-center" role="alert">
 				<button type="button" class="close" data-dismiss="alert" aria-label="Close">

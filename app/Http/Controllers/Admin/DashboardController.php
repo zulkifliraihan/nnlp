@@ -97,7 +97,7 @@ class DashboardController extends Controller
                 ->make(true);
         }
 
-        $users = User::query()->with('mengundang','diundang');
+        $users = User::query()->with('mengundang','diundang')->where('email', '!=', 'admin@lpkn.org');
         $pemenang = ReferrCount::with('user')->orderBy('jumlah', 'desc')->limit(10)->get();
 
         $data = array(

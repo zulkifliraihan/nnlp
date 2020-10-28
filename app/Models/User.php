@@ -53,6 +53,10 @@ class User extends Authenticatable
         return $this->hasMany('App\Models\User','ref_by','ref');
     }
 
+    public function mengundang_terverifikasi(){
+        return $this->hasMany('App\Models\User','ref_by','ref')->where('status_pembayaran', 1);
+    }
+
     public function diundang(){
         return $this->hasOne('App\Models\User','ref','ref_by');
     }

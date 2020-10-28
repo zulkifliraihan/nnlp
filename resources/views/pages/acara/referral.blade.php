@@ -4665,6 +4665,7 @@ Panitia : 0811 1102 991 / 0813 1888 6103
                               <div class="elementor-text-editor elementor-clearfix">
                                 <p style="text-align: center;">{{ $jumlah_affiliate }} <span style="color: #ff9900;">orang mendaftar
                                     menggunakan link yang Anda bagikan</span></p>
+                                <p style="text-align: center;">{{ $jumlah_affiliate_terverifikasi }} <span style="color: #016b21;">orang telah terverifikasi</span></p>
                                  @php
                                     $no = 0;
                                 @endphp

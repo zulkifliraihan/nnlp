@@ -193,11 +193,11 @@
                     <thead>
                         <tr>
                             <th class="whitespace-no-wrap bg-white">MENGUNDANG</th>
-                            <th class="whitespace-no-wrap bg-white">NAMA LENGKAP</th>
-                            <th class="text-center whitespace-no-wrap bg-white">JUMLAH TERUNDANG</th>
-                            {{-- <th class="text-center whitespace-no-wrap bg-white">KODE REFFERENSI</th> --}}
-                            <th class="text-center whitespace-no-wrap bg-white">BUKTI PEMBAYARAN</th>
-                            <th class="text-center whitespace-no-wrap bg-white">STATUS PEMBAYARAN</th>
+                            <th class="whitespace-no-wrap bg-white">NAMA<br>LENGKAP</th>
+                            <th class="text-center whitespace-no-wrap bg-white">JUMLAH<br>TERUNDANG</th>
+                            <th class="text-center whitespace-no-wrap bg-white">TOTAL<br>TAGIHAN</th>
+                            <th class="text-center whitespace-no-wrap bg-white">BUKTI<br>PEMBAYARAN</th>
+                            <th class="text-center whitespace-no-wrap bg-white">STATUS<br>PEMBAYARAN</th>
                             <th class="text-center whitespace-no-wrap bg-white">PROSES</th>
                         </tr>
                     </thead>
@@ -253,6 +253,7 @@
             {data: 'total_mengundang', name: 'total_mengundang'},
             // {data: 'ref', name: 'ref'},
             // {data: 'diundang_oleh', name: 'diundang_oleh'},
+            {data: 'total_tagihan', name: 'total_tagihan'},
             {data: 'bukti_pembayaran', name: 'bukti_pembayaran', orderable: false, searchable: false},
             {data: 'status_pembayaran', name: 'status_pembayaran', orderable: false, searchable: false},
             {data: 'button_proses', name: 'button_proses', orderable: false, searchable: false}

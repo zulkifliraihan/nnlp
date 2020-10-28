@@ -26,7 +26,7 @@ class DashboardController extends Controller
         }
         
         if(request()->ajax()) {
-            $query = User::with('mengundang','diundang', 'pembayaran.file')->where('email', '!=', 'admin@lpkn.org');
+            $query = User::with('mengundang','diundang', 'pembayaran.file')->where('email', '!=', 'admin@lpkn.org')->orderBy('id', 'desc');
 
             return datatables()->of($query)
                 ->addColumn('mengundang', function($query){
@@ -72,6 +72,12 @@ class DashboardController extends Controller
                 })
                 ->addColumn('bukti_pembayaran', function($query){
                     return isset($query->pembayaran) && isset($query->pembayaran->file) ? "<img src='".asset('uploads/'.$query->pembayaran->file->path)."' class='h-16 w-auto' data-action='zoom'>" : "";
+                })
+                ->addColumn('total_tagihan', function($query){
+                    $id = $query->id;
+                    $total = 145000 + $id;
+
+                    return 'Rp ' . number_format($total,0, ',', '.');
                 })
                 ->addColumn('status_pembayaran', function($query){
                     if($query->status_pembayaran == 0){

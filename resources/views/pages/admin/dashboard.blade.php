@@ -75,35 +75,35 @@
                     </div>
 
                     @php
-                        $color = array(
-                            'bg-theme-12',
-                            'bg-theme-1',
-                            'bg-theme-9',
-                            'bg-theme-12',
-                            'bg-theme-1',
-                            'bg-theme-9',
-                            'bg-theme-12',
-                            'bg-theme-1',
-                            'bg-theme-9',
-                            'bg-theme-12',
-                            'bg-theme-1',
-                            'bg-theme-9',
-                            'bg-theme-12',
-                            'bg-theme-1',
-                            'bg-theme-9',
-                        );
-                        $rank = array(
-                            'st',
-                            'nd',
-                            'rd',
-                            'th',
-                            'th',
-                            'th',
-                            'th',
-                            'th',
-                            'th',
-                            'th'
-                        );
+                    $color = array(
+                    'bg-theme-12',
+                    'bg-theme-1',
+                    'bg-theme-9',
+                    'bg-theme-12',
+                    'bg-theme-1',
+                    'bg-theme-9',
+                    'bg-theme-12',
+                    'bg-theme-1',
+                    'bg-theme-9',
+                    'bg-theme-12',
+                    'bg-theme-1',
+                    'bg-theme-9',
+                    'bg-theme-12',
+                    'bg-theme-1',
+                    'bg-theme-9',
+                    );
+                    $rank = array(
+                    'st',
+                    'nd',
+                    'rd',
+                    'th',
+                    'th',
+                    'th',
+                    'th',
+                    'th',
+                    'th',
+                    'th'
+                    );
                     @endphp
 
                     @forelse ($pemenang as $item)
@@ -113,7 +113,9 @@
                                 <div class="flex">
                                     {{-- <span class="text-base report-box__indicator bg-yellow-500">1 <sup>st</sup> Winner</span> --}}
                                     <div class="mt-3">
-                                        <span class="px-2 py-1 rounded-full {{ $color[$loop->index] }} text-white mr-1">{{ $loop->index + 1 }}<sup>{{ $rank[$loop->index] }}</sup> Winner</span>
+                                        <span
+                                            class="px-2 py-1 rounded-full {{ $color[$loop->index] }} text-white mr-1">{{ $loop->index + 1 }}<sup>{{ $rank[$loop->index] }}</sup>
+                                            Winner</span>
                                     </div>
                                     {{-- <div class="ml-auto">
                                         <div class="report-box__indicator bg-theme-9 tooltip cursor-pointer"
@@ -162,10 +164,30 @@
                     </select>
                     <a href="{{ route('admin.export.user') }}" target="_blank">
                         <button class="button box flex items-center bg-green-800 text-white dark:text-white-300"> <i
-                            data-feather="file-text" class="hidden sm:block w-4 h-4 mr-2"></i> Export to Excel </button>
+                                data-feather="file-text" class="hidden sm:block w-4 h-4 mr-2"></i> Export to Excel
+                        </button>
                     </a>
+                    <div class="text-center"> <a href="javascript:;" data-toggle="modal" data-target="#modalImport"
+                            class="button inline-block bg-theme-1 text-white">Import Order Online</a> </div>
                 </div>
             </div>
+
+            <div class="modal" id="modalImport">
+                <div class="modal__content">
+                    <div class="flex items-center px-5 py-5 sm:py-3 border-b border-gray-200 dark:border-dark-5">
+                        <h2 class="font-medium text-base mr-auto">Import Order Online</h2> 
+                    </div>
+                    <div class="w-full">
+                        <form id="importOrderOnlineForm" method="POST" action="{{ route('admin.import.user') }}">
+                            <input name="file" type="file" /> 
+                        
+                    </div>
+                    <div class="px-5 py-3 text-right border-t border-gray-200 dark:border-dark-5"> 
+                        <button class="button w-20 bg-theme-1 text-white">Upload</button> </div>
+                    </form>
+                </div>
+            </div>
+
             <div class="intro-y overflow-auto lg:overflow-visible mt-8 sm:mt-0 my-3">
                 <table class="table table-report sm:mt-2" id="userTableData">
                     <thead>
@@ -175,6 +197,7 @@
                             <th class="text-center whitespace-no-wrap bg-white">JUMLAH TERUNDANG</th>
                             <th class="text-center whitespace-no-wrap bg-white">KODE REFFERENSI</th>
                             <th class="text-center whitespace-no-wrap bg-white">DIUNDANG OLEH</th>
+                            <th class="text-center whitespace-no-wrap bg-white">STATUS PEMBAYARAN</th>
                         </tr>
                     </thead>
                 </table>
@@ -200,7 +223,8 @@
             {data: 'name', name: 'name'},
             {data: 'total_mengundang', name: 'total_mengundang'},
             {data: 'ref', name: 'ref'},
-            {data: 'diundang_oleh', name: 'diundang_oleh'}
+            {data: 'diundang_oleh', name: 'diundang_oleh'},
+            {data: 'status_pembayaran', name: 'status_pembayaran', orderable: false, searchable: false},
         ]
     });
 
@@ -210,6 +234,36 @@
 
     $('#db-jumlah').on('change', function(){
         table.page.len($(this).val()).draw();
+    });
+
+    $('#importOrderOnlineForm').submit(function(e) {
+        e.preventDefault();
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
+        $.ajax({
+            type: 'post',
+            url: $(this).attr("action"),
+            data: new FormData($('#importOrderOnlineForm')[0]),
+            dataType: 'json',
+            processData: false,
+            contentType: false,
+            success: function(data) {
+                if(data.status == "ok"){
+                    toastr["success"](data.messages);
+                    location.reload();
+                }
+            },
+            error: function(data){
+                var data = data.responseJSON;
+                if(data.status == "fail"){
+                     toastr["error"](data.messages);
+                }
+            }
+        });
     });
 </script>
 @endsection

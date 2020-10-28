@@ -1,0 +1,5 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^mind\.diklatonline\.id$
+RewriteRule ^/?$ "https\:\/\/mind\.diklatonline\.id\/" [R=301,L]
+

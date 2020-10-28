@@ -24,4 +24,6 @@ RewriteCond %{HTTP:X-Forwarded-SSL} !on
 RewriteCond %{HTTP_HOST} ^iso\.diklatonline\.id$ [OR]
 RewriteCond %{HTTP_HOST} ^www\.iso\.diklatonline\.id$
 RewriteRule ^/?$ "https\:\/\/iso\.diklatonline\.id\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^mind\.diklatonline\.id$
+RewriteRule ^/?$ "https\:\/\/mind\.diklatonline\.id\/" [R=301,L]
 

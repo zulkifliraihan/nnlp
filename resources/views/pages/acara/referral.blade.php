@@ -66,6 +66,11 @@
     type="text/css" media="all">
   <link rel="stylesheet" id="elementor-frontend-css" href="{{ asset("pron/instalasi/frontend.min.css") }}"
     type="text/css" media="all">
+
+  <!-- toastr -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css">
+
   <style id="elementor-frontend-inline-css" type="text/css">
     .elementor-kit-6581 {
       --e-global-color-primary: #FFFFFF;
@@ -4427,8 +4432,6 @@ document,'script','https://connect.facebook.net/en_US/fbevents.js');
                               <span aria-hidden="true">&times;</span>
                             </button>
                             <h4 class="alert-heading">Bukti pembayaran sudah terupload</h4>
-                            <a style="color: white" data-toggle="modal" data-target="#modalPembayaran" class="btn btn-dark mt-4">Update bukti pembayaran</a>
-                            <br><br>
                           </div>
                         @else
                         <div class="row">
@@ -4475,6 +4478,7 @@ document,'script','https://connect.facebook.net/en_US/fbevents.js');
                                     <label class="custom-file-label" for="inputGroupFile01">Bukti Transfer</label>
                                   </div>
                                 </div>
+                                <button type="submit" class="btn btn-yellow text-black">Upload</button>
                               </form>
                             </div>
                           </div>
@@ -5151,14 +5155,14 @@ var aepc_pixel_events = {"custom_events":{"AdvancedEvents":[{"params":{"login_st
           contentType: false,
           success: function(data) {
               if(data.status == "ok"){
-        toastr["success"](data.messages);
-        location.reload();
+                // toastr["success"](data.messages);
+                window.location.replace('{{ route("referral.pendaftaran") }}');
               }
           },
           error: function(data){
               var data = data.responseJSON;
               if(data.status == "fail"){
-                    toastr["error"](data.messages);
+                    // toastr["error"](data.messages);
               }
           }
       });

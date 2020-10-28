@@ -8,6 +8,7 @@
     Route::get('/download_brosur', 'ReferralController@download_brosur')->name('download.brosur');
     Route::get('/acara/pendaftaran', 'Acara\RegisterController@index')->name('acara.pendaftaran');
     Route::post('/acara/pendaftaran', 'Acara\RegisterController@store')->name('acara.daftar');
+    Route::post('/acara/pembayaran', 'Acara\RegisterController@update')->name('acara.pembayaran');
 
 
     require 'auth/index.php';

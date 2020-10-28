@@ -19,14 +19,12 @@ use Maatwebsite\Excel\Facades\Excel;
 
 class DashboardController extends Controller
 {
-    public function __construct(){
+    public function index()
+    {
         if (!Auth::check()) {
             return redirect('admin/login');
         }
-    }
-
-    public function index()
-    {
+        
         if(request()->ajax()) {
             $query = User::with('mengundang','diundang', 'pembayaran.file');
 

@@ -12,8 +12,12 @@ use Illuminate\Support\Facades\Validator;
 
 use App\Mail\OrderShipped;
 use Illuminate\Support\Facades\Mail;
+use Webpatser\Uuid\Uuid;
 
 use App\Models\User;
+use App\Models\File;
+use App\Models\UserPayments;
+use Illuminate\Support\Facades\Storage;
 
 class RegisterController extends Controller
 {
@@ -80,8 +84,66 @@ class RegisterController extends Controller
         return response()->json([
             'status'    => "ok",
             'messages' => "Berhasil registrasi acara",
-            'route' => route('referral.pendaftaran')
+            'route' => route('landing')
         ], 200);
+
+    }
+
+    public function update(Request $request){
+        $data = $request->all();
+
+        $validator = Validator::make($data, array(
+            'file' => "required|mimes:jpg,jpeg,png"
+        ));
+
+        if ($validator->fails()) {
+            return response()->json([
+                'status'    => "fail",
+                'messages' => $validator->errors()->first(),
+            ], 422);
+        }
+
+        $user = User::where('email', session('lpkn_ref_email'))->first();
+
+        if($user){
+            $uId = (string) Uuid::generate();
+            $folder = "upload_pembayaran";
+            $path = 'dokumen/'. ((int) ($user->id / 100)) . "/". $user->id . "/". $folder;
+            $fileName = $request->file->getClientOriginalName();
+    
+            $path = Storage::disk('public_uploads')->put(
+                $path,
+                $request->file('file')
+            );
+    
+            $filedata = [
+                'name' => $fileName,
+                'address' => $uId,
+                'path' => $path,
+                'folder' => $folder,
+                'created_by' => $user->id,
+                'updated_by' => $user->id
+            ];
+            $file = File::firstOrCreate($filedata);
+    
+            $input = array(
+                'file_id' => $file->id
+            );
+    
+            $UserPayments = UserPayments::updateOrCreate(['user_id' => $user->id], $input);
+
+            return response()->json([
+                'status'    => "ok",
+                'messages' => "Berhasil registrasi acara",
+                'route' => route('landing')
+            ], 200);
+        }else{
+            return response()->json([
+                'status'    => "fail",
+                'messages' => "Session anda telah berakhir harap refresh halaman..",
+            ], 422);
+        }
+
 
     }
 

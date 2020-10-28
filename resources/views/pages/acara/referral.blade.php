@@ -4377,17 +4377,6 @@ document,'script','https://connect.facebook.net/en_US/fbevents.js');
 <body
   class="page-template page-template-elementor_canvas page page-id-8078 header-active header-menu-active header-menu-sticky header-menu-after footer-active elementor-default elementor-template-canvas elementor-kit-6581 elementor-page elementor-page-8078"
   data-elementor-device-mode="desktop">
-  @if ($user->status_pembayaran == 0)
-  <div class="alert alert-danger text-center" role="alert">
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-    <h4 class="alert-heading">Harap Lakukan Pembayaran dengan Klik Tombol Berikut :</h4>
-	  <a target="_blank" style="color: white" href="https://lpkn.orderonline.id/PanduanInstalasiReferral" class="btn btn-dark mt-4">Klik disini untuk Melakukan Pembayaran</a>
-    <br><br>
-    <b>*Jika Telah Melakukan Pembayaran Harap Abaikan Notifikasi Ini</b>
-  </div>
-  @endif
   <div data-elementor-type="wp-page" data-elementor-id="8078" class="elementor elementor-8078"
     data-elementor-settings="[]">
     <div class="elementor-inner">

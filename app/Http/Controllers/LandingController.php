@@ -28,6 +28,10 @@ class LandingController extends Controller
             $data['ref'] = $params['ref'];
         }
 
+        if(session('lpkn_ref_email')){
+            $data['user'] = User::with('pembayaran.file')->where('email', session('lpkn_ref_email'))->first();
+        }
+
         return view('pages.landing', $data);
     }
     

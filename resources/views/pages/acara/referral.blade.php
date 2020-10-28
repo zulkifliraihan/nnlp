@@ -4427,11 +4427,11 @@ document,'script','https://connect.facebook.net/en_US/fbevents.js');
                       </div>
                       @if (session('lpkn_ref_email') && isset($user) && $user->status_pembayaran == 0)
                         @if (isset($user->pembayaran))
-                          <div class="alert alert-info text-center" role="alert">
+                          <div class="alert alert-danger text-center" role="alert">
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                               <span aria-hidden="true">&times;</span>
                             </button>
-                            <h4 class="alert-heading">Bukti pembayaran sudah terupload</h4>
+                            <h2 class="alert-heading">Setelah pembayaran terverifikasi, kami akan segera mengirimkan Anda email, mohon periksa kotak masuk atau kotak spam email Anda secara berkala.</h2>
                           </div>
                         @else
                         <div class="row">

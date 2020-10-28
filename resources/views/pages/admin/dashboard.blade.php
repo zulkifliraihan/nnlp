@@ -222,11 +222,19 @@
             confirmButtonText: 'Ya, verifikasi!'
             }).then((result) => {
             if (result.isConfirmed) {
+                Swal.fire({
+                    text : "Mengirim email ke peserta..."
+                });
+                swal.showLoading();
+
                 return fetch(`{{ route('admin.proses.pembayaran') }}/`+id)
                     .then(response => {
+                        swal.close();
+
                         if (!response.ok) {
-                        throw new Error(response.data.message)
+                            throw new Error(response.data.message)
                         }
+
                         $('#userTableData').DataTable().draw(false);
                         return response.json()
                     })

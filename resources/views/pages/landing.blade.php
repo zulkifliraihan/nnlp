@@ -5591,11 +5591,23 @@ var okewa_ui_data = {"z_index":"1"};
 
 								<!-- Nama -->
 								<input type="text" name="nama_lengkap" id="nama_lengkap_id" class="form-control mb-4"
-									placeholder="Nama di e-Sertifikat">
+									placeholder="Nama Lengkap (Untuk di e-sertifikat) *" required>
 
 								<!-- Email -->
 								<input type="email" name="email" id="email_id" class="form-control mb-4"
-									placeholder="E-mail">
+									placeholder="E-mail *" required>
+
+								<input type="text" name="no_hp" id="no_hp_id" class="form-control mb-4"
+									placeholder="Nomer Whatsapp *" required>
+
+								<input type="text" name="kota" id="kota_id" class="form-control mb-4"
+									placeholder="Kecamatan / Kota *" required>
+
+								<select required class="form-control mb-4" name="jenis_kelamin" id="jenis_kelamin_id">
+									<option disabled selected> Pilih jenis kelamin *</option>
+									<option value="0"> Laki-laki </option>
+									<option value="1"> Perempuan </option>
+								</select>
 
 								@isset($ref)
 								<input hidden type="text" name="ref" id="ref_field" value="{{ $ref }}" class="form-control mb-4"

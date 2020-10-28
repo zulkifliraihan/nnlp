@@ -4415,7 +4415,7 @@ document,'script','https://connect.facebook.net/en_US/fbevents.js');
                       data-id="2f2e7ebc" data-element_type="widget" data-widget_type="heading.default">
                       <div class="elementor-widget-container">
                         <p style="font-size: 15pt" class="elementor-heading-title elementor-size-default"><span
-                            style="color: #FFA300;">Referral Saya</span></p>
+                            style="color: #FFA300;">Kode Referral Anda</span></p>
                         <p style="font-size: 25pt" class="elementor-heading-title elementor-size-default">
                           {{ $user->ref }}</p>
                       </div>

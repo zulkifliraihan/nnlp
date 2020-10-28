@@ -196,6 +196,7 @@
                             <th class="whitespace-no-wrap bg-white">NAMA LENGKAP</th>
                             <th class="text-center whitespace-no-wrap bg-white">JUMLAH TERUNDANG</th>
                             <th class="text-center whitespace-no-wrap bg-white">KODE REFFERENSI</th>
+                            <th class="text-center whitespace-no-wrap bg-white">BUKTI PEMBAYARAN</th>
                             <th class="text-center whitespace-no-wrap bg-white">STATUS PEMBAYARAN</th>
                             <th class="text-center whitespace-no-wrap bg-white">PROSES</th>
                         </tr>
@@ -252,6 +253,7 @@
             {data: 'total_mengundang', name: 'total_mengundang'},
             {data: 'ref', name: 'ref'},
             // {data: 'diundang_oleh', name: 'diundang_oleh'},
+            {data: 'bukti_pembayaran', name: 'bukti_pembayaran', orderable: false, searchable: false},
             {data: 'status_pembayaran', name: 'status_pembayaran', orderable: false, searchable: false},
             {data: 'button_proses', name: 'button_proses', orderable: false, searchable: false}
         ]

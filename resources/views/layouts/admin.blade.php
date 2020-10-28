@@ -4,7 +4,12 @@
     <head>
         <meta charset="utf-8">
         <meta name="csrf-token" content="{{ csrf_token() }}" />
-        <link href="{{ asset('mone/images/logo.svg') }}" rel="shortcut icon">
+        <link rel="icon" href="https://www.sekolahpengadaan.id/wp-content/uploads/2018/07/cropped-LOGO-LPKN2-32x32.png"
+            sizes="32x32">
+        <link rel="icon" href="https://www.sekolahpengadaan.id/wp-content/uploads/2018/07/cropped-LOGO-LPKN2-192x192.png"
+            sizes="192x192">
+        <link rel="apple-touch-icon"
+            href="https://www.sekolahpengadaan.id/wp-content/uploads/2018/07/cropped-LOGO-LPKN2-180x180.png">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Pembelajaran dan pelatihan gratis">
         <meta name="keywords" content="LPKN - Referal registration Pembelajaran dan pelatihan gratis">

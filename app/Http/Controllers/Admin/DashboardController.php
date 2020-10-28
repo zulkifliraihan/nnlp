@@ -28,7 +28,7 @@ class DashboardController extends Controller
     public function index()
     {
         if(request()->ajax()) {
-            $query = User::with('mengundang','diundang');
+            $query = User::with('mengundang','diundang', 'pembayaran.file');
 
             return datatables()->of($query)
                 ->addColumn('mengundang', function($query){
@@ -72,6 +72,9 @@ class DashboardController extends Controller
                 ->addColumn('diundang_oleh', function($query){
                     return isset($query->diundang) ? $query->diundang->name : "";
                 })
+                ->addColumn('bukti_pembayaran', function($query){
+                    return "<img src='".asset('uploads/'.$query->path)."'>";
+                })
                 ->addColumn('status_pembayaran', function($query){
                     if($query->status_pembayaran == 0){
                         return '
@@ -91,7 +94,7 @@ class DashboardController extends Controller
                     }
                     
                 })
-                ->rawColumns(['mengundang', 'total_mengundang', 'diundang_oleh', 'status_pembayaran', 'button_proses'])
+                ->rawColumns(['mengundang', 'total_mengundang', 'diundang_oleh', 'status_pembayaran', 'bukti_pembayaran', 'button_proses'])
                 ->addIndexColumn()
                 ->make(true);
         }

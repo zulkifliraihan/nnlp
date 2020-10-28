@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Validator;
 
 use App\Mail\OrderShipped;
 use Illuminate\Support\Facades\Mail;
+use Webpatser\Uuid\Uuid;
 
 use App\Models\User;
 use App\Models\File;
@@ -110,7 +111,7 @@ class RegisterController extends Controller
             $path = 'dokumen/'. ((int) ($user->id / 100)) . "/". $user->id . "/". $folder;
             $fileName = $request->file->getClientOriginalName();
     
-            $path = Storage::putFile(
+            $path = Storage::disk('public_uploads')->put(
                 $path,
                 $request->file('file')
             );

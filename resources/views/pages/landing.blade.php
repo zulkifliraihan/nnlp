@@ -4376,7 +4376,7 @@ var okewa_ui_data = {"z_index":"1"};
 <body
 	class="page-template page-template-elementor_canvas page page-id-8078 header-active header-menu-active header-menu-sticky header-menu-after footer-active elementor-default elementor-template-canvas elementor-kit-6581 elementor-page elementor-page-8078"
 	data-elementor-device-mode="desktop">
-	@if (session('lpkn_ref_email') && $user->status_pembayaran == 0)
+	@if (session('lpkn_ref_email'))
 		@if (isset($user->pembayaran))
 			<div class="alert alert-info text-center" role="alert">
 				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -5901,6 +5901,14 @@ var aepc_pixel_events = {"custom_events":{"AdvancedEvents":[{"params":{"login_st
 		</b></b><span id="elementor-device-mode" class="elementor-screen-only"></span>
 
 	<script>
+
+		@if(session('selesai_pendaftaran'))
+			$('#modalPembayaran').modal('show');
+			@php
+				Session::forget('selesai_pendaftaran');
+			@endphp
+		@endif
+
 		$('#acaraForm').submit(function(e) {
         e.preventDefault();
         $.ajaxSetup({
@@ -5920,8 +5928,11 @@ var aepc_pixel_events = {"custom_events":{"AdvancedEvents":[{"params":{"login_st
             contentType: false,
             success: function(data) {
                 if(data.status == "ok"){
-                    $('#ref_field').attr('disabled', 'disbled');
-                    window.location.href = data.route;
+					$('#ref_field').attr('disabled', 'disbled');
+					toastr["success"](data.messages);
+					location.reload();
+					// $('#modalPembayaran').modal('show');
+					// $('#fullHeightModalRight').modal('hide');
                 }
             },
             error: function(data){

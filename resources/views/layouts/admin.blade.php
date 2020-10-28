@@ -19,8 +19,6 @@
         <!-- BEGIN: CSS Assets-->
         <link rel="stylesheet" href="{{ asset('mone/css/app.css') }}" />
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.css"/>
-
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.7.1/viewer.css">
         <!-- END: CSS Assets-->
 
         <!-- BEGIN: JS Assets-->
@@ -33,9 +31,6 @@
 
         <!-- SweetAlert2 -->
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-
-        {{-- Viewer JS --}}
-        <script srv="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.7.1/viewer.min.js"></script>
         <!-- END: JS Assets-->
     </head>
     <!-- END: Head -->

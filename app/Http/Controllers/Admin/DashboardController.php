@@ -26,7 +26,7 @@ class DashboardController extends Controller
         }
         
         if(request()->ajax()) {
-            $query = User::with('mengundang','diundang', 'pembayaran.file');
+            $query = User::with('mengundang','diundang', 'pembayaran.file')->where('email', '!=', 'admin@lpkn.org');
 
             return datatables()->of($query)
                 ->addColumn('mengundang', function($query){

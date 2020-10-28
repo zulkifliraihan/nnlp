@@ -195,7 +195,7 @@
                             <th class="whitespace-no-wrap bg-white">MENGUNDANG</th>
                             <th class="whitespace-no-wrap bg-white">NAMA LENGKAP</th>
                             <th class="text-center whitespace-no-wrap bg-white">JUMLAH TERUNDANG</th>
-                            <th class="text-center whitespace-no-wrap bg-white">KODE REFFERENSI</th>
+                            {{-- <th class="text-center whitespace-no-wrap bg-white">KODE REFFERENSI</th> --}}
                             <th class="text-center whitespace-no-wrap bg-white">BUKTI PEMBAYARAN</th>
                             <th class="text-center whitespace-no-wrap bg-white">STATUS PEMBAYARAN</th>
                             <th class="text-center whitespace-no-wrap bg-white">PROSES</th>
@@ -251,7 +251,7 @@
             // {data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: false, searchable: false},
             {data: 'name', name: 'name'},
             {data: 'total_mengundang', name: 'total_mengundang'},
-            {data: 'ref', name: 'ref'},
+            // {data: 'ref', name: 'ref'},
             // {data: 'diundang_oleh', name: 'diundang_oleh'},
             {data: 'bukti_pembayaran', name: 'bukti_pembayaran', orderable: false, searchable: false},
             {data: 'status_pembayaran', name: 'status_pembayaran', orderable: false, searchable: false},

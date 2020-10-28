@@ -4603,7 +4603,7 @@ Panitia : 0811 1102 991 / 0813 1888 6103
                                 <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('landing').'?ref='.$user['ref']) }}&quote={{ urlencode($msg_fb.route('landing').'?ref='.$user['ref'].$msg_akhir) }}"
                                 target="_blank" type="button" style="color: white" class="btn btn-primary"><i
                                     class="fab fa-facebook-f pr-1"></i> Facebook</a>
-                                <a href="https://twitter.com/intent/tweet?text={{ urlencode($msg_twitter.route('landing').'?ref='.$user['ref'].$msg_akhir) }}"
+                                <a href="https://twitter.com/intent/tweet?text={{ urlencode($msg_twitter.route('landing').'?ref='.$user['ref']) }}"
                                   target="_blank" style="color: white" type="button" class="btn btn-info"><i
                                     class="fab fa-twitter pr-1"></i> Twitter</a>
                               </div>

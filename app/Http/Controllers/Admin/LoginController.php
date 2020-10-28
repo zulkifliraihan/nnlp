@@ -40,18 +40,13 @@ class LoginController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        // $this->middleware('guest')->except('logout');
-        if (Auth::check()) {
-            return redirect('admin/dasboard');
-        }
-
-        // $this->vmsLogin();
-    }
-
+  
     public function index()
     {
+        if (Auth::check()) {
+            return redirect('admin/dashboard');
+        }
+
         return view('pages.admin.login');
     }
 
